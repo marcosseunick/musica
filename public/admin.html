@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Harmonia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="font-sans text-zinc-300 antialiased bg-zinc-950 min-h-screen flex hidden" id="admin-body">
+  
+  <!-- Sidebar -->
+  <aside class="w-64 border-r border-zinc-800 bg-zinc-900/50 flex flex-col hidden md:flex shrink-0">
+    <div class="h-16 flex items-center px-6 border-b border-zinc-800">
+      <a href="dashboard.html" class="flex items-center gap-2 text-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-white"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span class="font-display font-bold">Admin Harmonia</span>
+      </a>
+    </div>
+    <nav class="flex-1 px-4 py-6 space-y-2">
+      <a href="#section-song" class="block px-3 py-2 rounded-md text-sm font-medium bg-zinc-800 text-white">Músicas</a>
+      <a href="#section-module" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Níveis (Módulos)</a>
+      <a href="#section-lesson" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Aulas</a>
+      <a href="#section-material" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Materiais</a>
+    </nav>
+    <div class="p-4 border-t border-zinc-800">
+      <a href="dashboard.html" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition text-center">Voltar ao App</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col min-w-0">
+    <!-- Header Mobile -->
+    <header class="md:hidden h-16 border-b border-zinc-800 flex items-center px-4 justify-between shrink-0">
+      <span class="font-display font-bold text-white">Admin Harmonia</span>
+      <a href="dashboard.html" class="text-sm font-medium text-zinc-400 hover:text-white">Voltar ao App</a>
+    </header>
+
+    <div class="flex-1 overflow-y-auto p-4 sm:p-8 space-y-12">
+      
+      <!-- Toast/Feedback -->
+      <div id="toast" class="hidden rounded-lg p-4 mb-8">
+        <span id="toast-message" class="text-sm font-medium"></span>
+      </div>
+
+      <!-- Section: Músicas -->
+      <section id="section-song" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+        <h2 class="font-display text-xl font-semibold text-white mb-6">Nova Música</h2>
+        <form id="form-song" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Título</label>
+            <input type="text" name="title" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Artista/Banda</label>
+            <input type="text" name="artist" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Instrumento Principal</label>
+            <select name="instrument_id" id="select-instruments" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Música</button>
+        </form>
+      </section>
+
+      <!-- Section: Níveis (Módulo) -->
+      <section id="section-module" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+        <h2 class="font-display text-xl font-semibold text-white mb-6">Novo Nível (Módulo)</h2>
+        <form id="form-module" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Música (Trilha)</label>
+            <select name="song_instrument_id" id="select-song-instruments" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Nível</label>
+            <select name="difficulty_level" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="1">1 - Fácil</option>
+              <option value="2">2 - Médio</option>
+              <option value="3">3 - Difícil</option>
+              <option value="4">4 - Avançado</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Descrição do Nível</label>
+            <textarea name="description" required rows="2" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6"></textarea>
+          </div>
+          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Nível</button>
+        </form>
+      </section>
+
+      <!-- Section: Aulas -->
+      <section id="section-lesson" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+        <h2 class="font-display text-xl font-semibold text-white mb-6">Nova Aula</h2>
+        <form id="form-lesson" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Módulo (Nível)</label>
+            <select name="module_id" id="select-modules" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Título da Aula</label>
+            <input type="text" name="title" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">URL do Vídeo (Embed)</label>
+            <input type="url" name="video_url" required placeholder="https://www.youtube.com/embed/..." class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Ordem (Índice)</label>
+            <input type="number" name="order_index" required value="0" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Aula</button>
+        </form>
+      </section>
+
+      <!-- Section: Materiais -->
+      <section id="section-material" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+        <h2 class="font-display text-xl font-semibold text-white mb-6">Novo Material</h2>
+        <form id="form-material" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Aula</label>
+            <select name="lesson_id" id="select-lessons" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Título do Arquivo</label>
+            <input type="text" name="title" required placeholder="Ex: Partitura Fácil" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">URL do Arquivo</label>
+            <input type="url" name="file_url" required placeholder="https://..." class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-zinc-300">Tipo</label>
+            <select name="type" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+              <option value="pdf">PDF</option>
+              <option value="cifra">Cifra</option>
+              <option value="gp">Guitar Pro</option>
+              <option value="link">Link</option>
+            </select>
+          </div>
+          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Anexar Material</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

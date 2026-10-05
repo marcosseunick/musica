@@ -1,0 +1,87 @@
+// Schema - Plataforma de cursos de música (VOD) - Fase 2
+// Convenção: campos em snake_case no banco, conforme especificação do TCC.
+//
+// Hierarquia didática:
+//   Song + Instrument -> SongInstrument (a "trilha")
+//     -> Module (nível de dificuldade 1..4)
+//       -> Lesson (aulas em vídeo, ordenadas por order_index)
+//         -> Material (PDFs de apoio da aula)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      Int         @id @default(autoincrement())
+  name                    String
+  email                   String      @unique
+  password                String // hash bcrypt (nunca texto puro)
+  role                    String      @default("USER") // "USER" | "ADMIN"
+  preferred_instrument_id Int?
+  preferred_instrument    Instrument? @relation(fields: [preferred_instrument_id], references: [id], onDelete: SetNull)
+}
+
+model Instrument {
+  id    Int              @id @default(autoincrement())
+  name  String
+  songs SongInstrument[]
+  users User[]
+}
+
+model Song {
+  id          Int              @id @default(autoincrement())
+  title       String
+  artist      String
+  instruments SongInstrument[]
+}
+
+// Tabela pivô: a combinação Música + Instrumento
+model SongInstrument {
+  id            Int        @id @default(autoincrement())
+  song_id       Int
+  instrument_id Int
+  song          Song       @relation(fields: [song_id], references: [id], onDelete: Cascade)
+  instrument    Instrument @relation(fields: [instrument_id], references: [id], onDelete: Cascade)
+  modules       Module[]
+
+  @@unique([song_id, instrument_id])
+}
+
+// Nível de dificuldade: 1 = Fácil, 2 = Médio, 3 = Difícil, 4 = Avançado
+model Module {
+  id                 Int            @id @default(autoincrement())
+  song_instrument_id Int
+  difficulty_level   Int
+  description        String
+  song_instrument    SongInstrument @relation(fields: [song_instrument_id], references: [id], onDelete: Cascade)
+  lessons            Lesson[]
+
+  @@unique([song_instrument_id, difficulty_level])
+}
+
+// Aula em vídeo dentro de um nível
+model Lesson {
+  id          Int        @id @default(autoincrement())
+  module_id   Int
+  title       String
+  video_url   String
+  order_index Int        @default(0)
+  module      Module     @relation(fields: [module_id], references: [id], onDelete: Cascade)
+  materials   Material[]
+
+  @@index([module_id, order_index])
+}
+
+model Material {
+  id        Int    @id @default(autoincrement())
+  lesson_id Int
+  title     String
+  file_url  String
+  type      String // ex.: "pdf"
+  lesson    Lesson @relation(fields: [lesson_id], references: [id], onDelete: Cascade)
+}

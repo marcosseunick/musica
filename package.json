@@ -1,0 +1,28 @@
+{
+  "name": "musica-vod",
+  "version": "1.0.0",
+  "description": "MVP de plataforma de cursos de música com progressão didática (TCC)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "db:studio": "prisma studio",
+    "materials": "node scripts/generate-materials.js"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  }
+}
