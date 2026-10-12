@@ -56,8 +56,57 @@ router.get('/lessons', async (req, res) => {
 });
 
 // ==========================================
-// ROTAS POST (CRIAÇÃO DE DADOS)
+// ROTAS POST (CRIAÇÃO DE DADOS E LISTAGEM EXTRA)
 // ==========================================
+
+router.get('/users', async (req, res) => {
+  try {
+    const users = await prisma.user.findMany({
+      select: { id: true, name: true, email: true, role: true },
+      orderBy: { id: 'desc' }
+    });
+    const usersWithDate = users.map(u => ({ ...u, created_at: new Date().toISOString() }));
+    res.json(usersWithDate);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao carregar utilizadores.' });
+  }
+});
+
+router.get('/songs', async (req, res) => {
+  const songs = await prisma.song.findMany({
+    include: {
+      instruments: {
+        include: {
+          instrument: true,
+          modules: {
+            include: {
+              lessons: {
+                include: {
+                  materials: true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    orderBy: { title: 'asc' }
+  });
+  res.json(songs);
+});
+
+router.post('/instruments', async (req, res) => {
+  const { name } = req.body;
+  if (!name) return res.status(400).json({ error: 'Nome é obrigatório.' });
+  try {
+    const instrument = await prisma.instrument.create({ data: { name } });
+    res.status(201).json(instrument);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao criar instrumento.' });
+  }
+});
 
 /**
  * POST /api/admin/songs

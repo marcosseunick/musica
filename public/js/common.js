@@ -60,7 +60,9 @@ function escapeHtml(value) {
 // fetch + JSON com mensagem de erro amigável vinda da API
 async function fetchJSON(url) {
   const token = localStorage.getItem('token');
-  const headers = {};
+  const headers = {
+    'Content-Type': 'application/json'
+  };
   if (token) {
     headers['Authorization'] = 'Bearer ' + token;
   }

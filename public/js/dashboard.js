@@ -180,9 +180,14 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (currentUser && currentUser.name) {
+  if (currentUser) {
     const greeting = document.getElementById('user-greeting');
-    if (greeting) greeting.textContent = `Olá, ${currentUser.name.split(' ')[0]}`;
+    if (greeting && currentUser.name) greeting.textContent = `Olá, ${currentUser.name.split(' ')[0]}`;
+    
+    if (currentUser.role === 'ADMIN') {
+      const adminLink = document.getElementById('admin-link');
+      if (adminLink) adminLink.classList.remove('hidden');
+    }
   }
 
   const logoutBtn = document.getElementById('logout-btn');

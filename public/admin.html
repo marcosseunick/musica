@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin | Harmonia</title>
+  <title>Estúdio | Harmonia</title>
+  <meta name="description" content="Estúdio de criação da Harmonia" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,78 +13,279 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .studio-label { @apply block text-sm font-medium text-zinc-200; }
+      .studio-hint { @apply mt-1 text-xs text-zinc-500; }
+      .studio-field {
+        @apply mt-2 block w-full rounded-lg border-0 bg-zinc-950/60 px-4 py-3 text-[15px] text-white
+               shadow-sm ring-1 ring-inset ring-zinc-800 placeholder:text-zinc-600
+               transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-500;
+      }
+      .studio-btn {
+        @apply inline-flex items-center justify-center rounded-lg bg-zinc-100 px-5 py-2.5 text-sm font-semibold
+               text-zinc-900 shadow-sm transition hover:bg-white focus:outline-none focus-visible:ring-2
+               focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900;
+      }
+      .studio-btn-ghost {
+        @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium text-zinc-400
+               transition hover:bg-zinc-800 hover:text-white;
+      }
+      .nav-link {
+        @apply flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-400 transition
+               hover:bg-zinc-800/60 hover:text-zinc-100;
+      }
+      .nav-link.is-active { @apply bg-zinc-800 text-white; }
+      .nav-link.is-active svg { @apply text-white; }
+      .nav-link svg { @apply h-[18px] w-[18px] shrink-0 text-zinc-500 transition; }
+      .tab-link {
+        @apply whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium text-zinc-400 transition hover:text-white;
+      }
+      .tab-link.is-active { @apply bg-zinc-800 text-white; }
+    }
+    .section-enter { animation: sectionIn .22s ease-out; }
+    @keyframes sectionIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    /* Simple modal styles */
+    .modal-overlay {
+      @apply fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden flex items-center justify-center p-4;
+    }
+    .modal-content {
+      @apply bg-zinc-900 border border-zinc-800 rounded-2xl w-full max-w-lg shadow-2xl relative;
+    }
+  </style>
 </head>
 <body class="font-sans text-zinc-300 antialiased bg-zinc-950 min-h-screen flex hidden" id="admin-body">
-  
+
   <!-- Sidebar -->
-  <aside class="w-64 border-r border-zinc-800 bg-zinc-900/50 flex flex-col hidden md:flex shrink-0">
+  <aside class="w-64 border-r border-zinc-800 bg-zinc-900/40 hidden md:flex flex-col shrink-0 sticky top-0 h-screen">
     <div class="h-16 flex items-center px-6 border-b border-zinc-800">
-      <a href="dashboard.html" class="flex items-center gap-2 text-white">
+      <a href="dashboard.html" class="flex items-center gap-2.5 text-white">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-white"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display font-bold">Admin Harmonia</span>
+        <span class="font-display font-bold tracking-tight">Harmonia <span class="text-zinc-500 font-medium">Estúdio</span></span>
       </a>
     </div>
-    <nav class="flex-1 px-4 py-6 space-y-2">
-      <a href="#section-song" class="block px-3 py-2 rounded-md text-sm font-medium bg-zinc-800 text-white">Músicas</a>
-      <a href="#section-module" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Níveis (Módulos)</a>
-      <a href="#section-lesson" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Aulas</a>
-      <a href="#section-material" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition">Materiais</a>
+
+    <nav class="flex-1 px-3 py-6 space-y-1" id="studio-nav">
+      <p class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-zinc-600">Conteúdo</p>
+
+      <a href="#songs" data-section="songs" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        Músicas
+      </a>
+      
+      <p class="px-3 pt-6 pb-2 text-[11px] font-semibold uppercase tracking-wider text-zinc-600">Configurações</p>
+      
+      <a href="#instruments" data-section="instruments" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Instrumentos
+      </a>
+      <a href="#users" data-section="users" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Utilizadores
+      </a>
     </nav>
-    <div class="p-4 border-t border-zinc-800">
-      <a href="dashboard.html" class="block px-3 py-2 rounded-md text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition text-center">Voltar ao App</a>
+
+    <div class="p-3 border-t border-zinc-800">
+      <a href="dashboard.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Voltar ao App
+      </a>
     </div>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 flex flex-col min-w-0">
+  <main class="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
     <!-- Header Mobile -->
-    <header class="md:hidden h-16 border-b border-zinc-800 flex items-center px-4 justify-between shrink-0">
-      <span class="font-display font-bold text-white">Admin Harmonia</span>
-      <a href="dashboard.html" class="text-sm font-medium text-zinc-400 hover:text-white">Voltar ao App</a>
+    <header class="md:hidden border-b border-zinc-800 shrink-0">
+      <div class="h-14 flex items-center px-4 justify-between">
+        <span class="font-display font-bold text-white">Harmonia <span class="text-zinc-500 font-medium">Estúdio</span></span>
+        <a href="dashboard.html" class="text-sm font-medium text-zinc-400 hover:text-white">Sair</a>
+      </div>
+      <nav class="flex gap-1 overflow-x-auto px-3 pb-3" id="studio-tabs">
+        <a href="#songs" data-section="songs" class="tab-link">Músicas</a>
+        <a href="#instruments" data-section="instruments" class="tab-link">Instrumentos</a>
+        <a href="#users" data-section="users" class="tab-link">Utilizadores</a>
+      </nav>
     </header>
 
-    <div class="flex-1 overflow-y-auto p-4 sm:p-8 space-y-12">
-      
-      <!-- Toast/Feedback -->
-      <div id="toast" class="hidden rounded-lg p-4 mb-8">
+    <div class="flex-1 overflow-y-auto px-4 py-8 sm:px-10 sm:py-10" id="main-scroll-area">
+
+      <!-- Toast -->
+      <div id="toast" class="hidden rounded-lg p-4 mb-8 z-50">
         <span id="toast-message" class="text-sm font-medium"></span>
       </div>
 
-      <!-- Section: Músicas -->
-      <section id="section-song" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
-        <h2 class="font-display text-xl font-semibold text-white mb-6">Nova Música</h2>
-        <form id="form-song" class="space-y-4">
+      <!-- ============================================== -->
+      <!-- SECTION: MÚSICAS (LISTA) -->
+      <!-- ============================================== -->
+      <div id="section-songs" class="studio-section hidden max-w-6xl mx-auto">
+        <header class="flex items-center justify-between mb-8">
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Título</label>
-            <input type="text" name="title" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <h1 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">Gestão de Músicas</h1>
+            <p class="mt-2 text-zinc-500">Adicione novas músicas ou selecione uma para gerir o seu conteúdo (Aulas, Níveis).</p>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-zinc-300">Artista/Banda</label>
-            <input type="text" name="artist" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-zinc-300">Instrumento Principal</label>
-            <select name="instrument_id" id="select-instruments" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Música</button>
-        </form>
-      </section>
+          <button onclick="openModal('modal-add-song')" class="studio-btn gap-2">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 4v16m8-8H4"/></svg>
+            Adicionar Música
+          </button>
+        </header>
 
-      <!-- Section: Níveis (Módulo) -->
-      <section id="section-module" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
-        <h2 class="font-display text-xl font-semibold text-white mb-6">Novo Nível (Módulo)</h2>
-        <form id="form-module" class="space-y-4">
+        <div id="songs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cards injetados via JS -->
+          <div class="text-zinc-500 col-span-full">A carregar músicas...</div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- SECTION: MÚSICA (EDIÇÃO/DETALHE) -->
+      <!-- ============================================== -->
+      <div id="section-song-edit" class="studio-section hidden max-w-5xl mx-auto">
+        <header class="mb-8 flex items-start gap-4">
+          <button onclick="showSection('songs')" class="mt-1 p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          </button>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Música (Trilha)</label>
-            <select name="song_instrument_id" id="select-song-instruments" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-              <option value="">Carregando...</option>
-            </select>
+            <h1 id="edit-song-title" class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">A Carregar...</h1>
+            <p id="edit-song-artist" class="mt-1 text-zinc-400">...</p>
+          </div>
+        </header>
+
+        <!-- Container dinâmico com o conteúdo da música -->
+        <div id="song-edit-content" class="space-y-12">
+          <!-- JS vai injetar: Trilhas (Instrumentos) -> Níveis -> Aulas -> Materiais -->
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- SECTION: INSTRUMENTOS -->
+      <!-- ============================================== -->
+      <div id="section-instruments" class="studio-section hidden max-w-3xl mx-auto">
+        <header class="mb-8">
+          <h1 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">Instrumentos</h1>
+          <p class="mt-2 text-zinc-500">Faça a gestão dos instrumentos suportados na plataforma.</p>
+        </header>
+
+        <section class="bg-zinc-900 border border-zinc-800 rounded-2xl mb-12">
+          <form id="form-instrument">
+            <div class="p-6 sm:p-8 space-y-6">
+              <h2 class="text-lg font-medium text-white mb-2">Adicionar Novo Instrumento</h2>
+              <div>
+                <label class="studio-label">Nome do Instrumento</label>
+                <input type="text" name="name" required placeholder="Ex: Guitarra Clássica" class="studio-field">
+              </div>
+              <div>
+                <label class="studio-label">URL do Ícone (Opcional)</label>
+                <input type="url" name="icon_url" placeholder="https://..." class="studio-field">
+              </div>
+            </div>
+            <div class="flex items-center justify-end gap-3 border-t border-zinc-800 px-6 py-4">
+              <button type="submit" class="studio-btn">Adicionar</button>
+            </div>
+          </form>
+        </section>
+
+        <h3 class="text-lg font-medium text-white mb-4">Instrumentos Registados</h3>
+        <ul id="instruments-list" class="space-y-2">
+          <!-- Injetado via JS -->
+        </ul>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- SECTION: UTILIZADORES -->
+      <!-- ============================================== -->
+      <div id="section-users" class="studio-section hidden max-w-5xl mx-auto">
+        <header class="mb-8">
+          <h1 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">Utilizadores</h1>
+          <p class="mt-2 text-zinc-500">Lista de acessos à plataforma.</p>
+        </header>
+
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+          <table class="w-full text-sm text-left text-zinc-300">
+            <thead class="text-xs text-zinc-400 uppercase bg-zinc-950/50 border-b border-zinc-800">
+              <tr>
+                <th class="px-6 py-4">Nome</th>
+                <th class="px-6 py-4">E-mail</th>
+                <th class="px-6 py-4">Função</th>
+                <th class="px-6 py-4">Data de Registo</th>
+              </tr>
+            </thead>
+            <tbody id="users-tbody" class="divide-y divide-zinc-800/50">
+              <!-- Injetado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================== -->
+  <!-- MODAIS -->
+  <!-- ============================================== -->
+
+  <!-- Modal Adicionar Música -->
+  <div id="modal-add-song" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-white">Adicionar Música</h2>
+        <button onclick="closeModal('modal-add-song')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <form id="form-song">
+        <div class="p-6 space-y-6">
+          <div>
+            <label class="studio-label">Título da Música</label>
+            <input type="text" name="title" required placeholder="Ex: Wonderwall" class="studio-field">
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Nível</label>
-            <select name="difficulty_level" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <label class="studio-label">Artista / Banda</label>
+            <input type="text" name="artist" required placeholder="Ex: Oasis" class="studio-field">
+          </div>
+          <div>
+            <label class="studio-label">Instrumento da Primeira Trilha</label>
+            <select name="instrument_id" id="modal-select-instruments" required class="studio-field">
+              <!-- JS Injects -->
+            </select>
+          </div>
+        </div>
+        <div class="p-6 border-t border-zinc-800 bg-zinc-950/30 rounded-b-2xl flex justify-end gap-3">
+          <button type="button" onclick="closeModal('modal-add-song')" class="studio-btn-ghost">Cancelar</button>
+          <button type="submit" class="studio-btn">Criar Música</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Adicionar Trilha (Instrumento à Música) -->
+  <div id="modal-add-song-instrument" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-white">Adicionar Trilha (Instrumento)</h2>
+        <button onclick="closeModal('modal-add-song-instrument')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <!-- To simplify the MVP, we assume the backend endpoint POST /api/admin/song-instruments exists or we will just use the edit view to manage what's already there. The user didn't ask for a new instrument track per song endpoint explicitly, but it's logical. For now, I'll focus on Modules/Lessons/Materials -->
+      <div class="p-6">
+        <p class="text-zinc-400 text-sm">Funcionalidade a implementar: Associar outro instrumento a esta música.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Adicionar Módulo (Nível) -->
+  <div id="modal-add-module" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-white">Adicionar Nível</h2>
+        <button onclick="closeModal('modal-add-module')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <form id="form-module">
+        <input type="hidden" name="song_instrument_id" id="module-song-instrument-id">
+        <div class="p-6 space-y-6">
+          <div>
+            <label class="studio-label">Nível de Dificuldade</label>
+            <select name="difficulty_level" required class="studio-field">
               <option value="1">1 - Fácil</option>
               <option value="2">2 - Médio</option>
               <option value="3">3 - Difícil</option>
@@ -91,72 +293,84 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Descrição do Nível</label>
-            <textarea name="description" required rows="2" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6"></textarea>
+            <label class="studio-label">Descrição</label>
+            <textarea name="description" required rows="3" placeholder="O que vai ser ensinado?" class="studio-field"></textarea>
           </div>
-          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Nível</button>
-        </form>
-      </section>
+        </div>
+        <div class="p-6 border-t border-zinc-800 bg-zinc-950/30 rounded-b-2xl flex justify-end gap-3">
+          <button type="button" onclick="closeModal('modal-add-module')" class="studio-btn-ghost">Cancelar</button>
+          <button type="submit" class="studio-btn">Salvar Nível</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-      <!-- Section: Aulas -->
-      <section id="section-lesson" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
-        <h2 class="font-display text-xl font-semibold text-white mb-6">Nova Aula</h2>
-        <form id="form-lesson" class="space-y-4">
+  <!-- Modal Adicionar Aula -->
+  <div id="modal-add-lesson" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-white">Adicionar Aula</h2>
+        <button onclick="closeModal('modal-add-lesson')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <form id="form-lesson">
+        <input type="hidden" name="module_id" id="lesson-module-id">
+        <div class="p-6 space-y-6">
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Módulo (Nível)</label>
-            <select name="module_id" id="select-modules" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-              <option value="">Carregando...</option>
-            </select>
+            <label class="studio-label">Título da Aula</label>
+            <input type="text" name="title" required placeholder="Ex: Aula 1 - Acordes Básicos" class="studio-field">
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Título da Aula</label>
-            <input type="text" name="title" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <label class="studio-label">URL do Vídeo (Embed)</label>
+            <input type="url" name="video_url" required placeholder="https://www.youtube.com/embed/..." class="studio-field">
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">URL do Vídeo (Embed)</label>
-            <input type="url" name="video_url" required placeholder="https://www.youtube.com/embed/..." class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <label class="studio-label">Ordem (Índice)</label>
+            <input type="number" name="order_index" required value="0" class="studio-field">
           </div>
-          <div>
-            <label class="block text-sm font-medium text-zinc-300">Ordem (Índice)</label>
-            <input type="number" name="order_index" required value="0" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-          </div>
-          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Cadastrar Aula</button>
-        </form>
-      </section>
+        </div>
+        <div class="p-6 border-t border-zinc-800 bg-zinc-950/30 rounded-b-2xl flex justify-end gap-3">
+          <button type="button" onclick="closeModal('modal-add-lesson')" class="studio-btn-ghost">Cancelar</button>
+          <button type="submit" class="studio-btn">Salvar Aula</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-      <!-- Section: Materiais -->
-      <section id="section-material" class="max-w-2xl bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
-        <h2 class="font-display text-xl font-semibold text-white mb-6">Novo Material</h2>
-        <form id="form-material" class="space-y-4">
+  <!-- Modal Adicionar Material -->
+  <div id="modal-add-material" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-white">Adicionar Material</h2>
+        <button onclick="closeModal('modal-add-material')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <form id="form-material">
+        <input type="hidden" name="lesson_id" id="material-lesson-id">
+        <div class="p-6 space-y-6">
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Aula</label>
-            <select name="lesson_id" id="select-lessons" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-              <option value="">Carregando...</option>
-            </select>
+            <label class="studio-label">Título do Material</label>
+            <input type="text" name="title" required placeholder="Ex: Partitura em PDF" class="studio-field">
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">Título do Arquivo</label>
-            <input type="text" name="title" required placeholder="Ex: Partitura Fácil" class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <label class="studio-label">URL do Arquivo</label>
+            <input type="url" name="file_url" required placeholder="https://..." class="studio-field">
           </div>
           <div>
-            <label class="block text-sm font-medium text-zinc-300">URL do Arquivo</label>
-            <input type="url" name="file_url" required placeholder="https://..." class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-zinc-300">Tipo</label>
-            <select name="type" required class="mt-1 block w-full rounded-md border-0 bg-zinc-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-400 sm:text-sm sm:leading-6">
+            <label class="studio-label">Tipo de Arquivo</label>
+            <select name="type" required class="studio-field">
               <option value="pdf">PDF</option>
               <option value="cifra">Cifra</option>
               <option value="gp">Guitar Pro</option>
-              <option value="link">Link</option>
+              <option value="link">Link Externo</option>
             </select>
           </div>
-          <button type="submit" class="rounded-md bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-300">Anexar Material</button>
-        </form>
-      </section>
-
+        </div>
+        <div class="p-6 border-t border-zinc-800 bg-zinc-950/30 rounded-b-2xl flex justify-end gap-3">
+          <button type="button" onclick="closeModal('modal-add-material')" class="studio-btn-ghost">Cancelar</button>
+          <button type="submit" class="studio-btn">Salvar Material</button>
+        </div>
+      </form>
     </div>
-  </main>
+  </div>
 
   <script src="js/common.js"></script>
   <script src="js/admin.js"></script>
