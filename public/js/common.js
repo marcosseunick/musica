@@ -47,6 +47,22 @@ function instrumentIcon(name) {
   return INSTRUMENT_ICONS[String(name).toLowerCase()] || INSTRUMENT_ICONS.default;
 }
 
+// Decodifica o payload do JWT (sem validar assinatura; a validação real é do backend).
+// Retorna null se não houver token ou se ele for inválido.
+function getTokenPayload() {
+  const t = localStorage.getItem('token');
+  if (!t) return null;
+  try {
+    const b64 = t.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+    const json = decodeURIComponent(
+      atob(b64).split('').map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')
+    );
+    return JSON.parse(json);
+  } catch (e) {
+    return null;
+  }
+}
+
 // Evita injeção de HTML ao interpolar dados da API em template strings
 function escapeHtml(value) {
   return String(value ?? '')

@@ -13,6 +13,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
+  <script>
+    // Usuário já autenticado: vai direto ao dashboard, sem deslogar.
+    if (localStorage.getItem('token')) window.location.replace('/dashboard.html');
+  </script>
 </head>
 <body class="font-sans text-zinc-300 antialiased bg-zinc-950">
   <header class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md sticky top-0 z-40">

@@ -65,8 +65,7 @@ router.get('/users', async (req, res) => {
       select: { id: true, name: true, email: true, role: true },
       orderBy: { id: 'desc' }
     });
-    const usersWithDate = users.map(u => ({ ...u, created_at: new Date().toISOString() }));
-    res.json(usersWithDate);
+    res.json(users);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Erro ao carregar utilizadores.' });
@@ -100,6 +99,8 @@ router.post('/instruments', async (req, res) => {
   const { name } = req.body;
   if (!name) return res.status(400).json({ error: 'Nome é obrigatório.' });
   try {
+    const existing = await prisma.instrument.findFirst({ where: { name } });
+    if (existing) return res.status(400).json({ error: 'Este instrumento já está cadastrado.' });
     const instrument = await prisma.instrument.create({ data: { name } });
     res.status(201).json(instrument);
   } catch (err) {

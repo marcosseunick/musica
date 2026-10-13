@@ -51,8 +51,10 @@
     }
     /* Simple modal styles */
     .modal-overlay {
-      @apply fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden flex items-center justify-center p-4;
+      @apply fixed inset-0 bg-black/80 backdrop-blur-sm z-40 items-center justify-center p-4;
+      display: flex;
     }
+    .modal-overlay.hidden { display: none; }
     .modal-content {
       @apply bg-zinc-900 border border-zinc-800 rounded-2xl w-full max-w-lg shadow-2xl relative;
     }
@@ -210,7 +212,6 @@
                 <th class="px-6 py-4">Nome</th>
                 <th class="px-6 py-4">E-mail</th>
                 <th class="px-6 py-4">Função</th>
-                <th class="px-6 py-4">Data de Registo</th>
               </tr>
             </thead>
             <tbody id="users-tbody" class="divide-y divide-zinc-800/50">
@@ -228,7 +229,7 @@
   <!-- ============================================== -->
 
   <!-- Modal Adicionar Música -->
-  <div id="modal-add-song" class="modal-overlay">
+  <div id="modal-add-song" class="modal-overlay hidden">
     <div class="modal-content">
       <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
         <h2 class="text-xl font-semibold text-white">Adicionar Música</h2>
@@ -260,7 +261,7 @@
   </div>
 
   <!-- Modal Adicionar Trilha (Instrumento à Música) -->
-  <div id="modal-add-song-instrument" class="modal-overlay">
+  <div id="modal-add-song-instrument" class="modal-overlay hidden">
     <div class="modal-content">
       <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
         <h2 class="text-xl font-semibold text-white">Adicionar Trilha (Instrumento)</h2>
@@ -274,7 +275,7 @@
   </div>
 
   <!-- Modal Adicionar Módulo (Nível) -->
-  <div id="modal-add-module" class="modal-overlay">
+  <div id="modal-add-module" class="modal-overlay hidden">
     <div class="modal-content">
       <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
         <h2 class="text-xl font-semibold text-white">Adicionar Nível</h2>
@@ -306,7 +307,7 @@
   </div>
 
   <!-- Modal Adicionar Aula -->
-  <div id="modal-add-lesson" class="modal-overlay">
+  <div id="modal-add-lesson" class="modal-overlay hidden">
     <div class="modal-content">
       <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
         <h2 class="text-xl font-semibold text-white">Adicionar Aula</h2>
@@ -337,7 +338,7 @@
   </div>
 
   <!-- Modal Adicionar Material -->
-  <div id="modal-add-material" class="modal-overlay">
+  <div id="modal-add-material" class="modal-overlay hidden">
     <div class="modal-content">
       <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
         <h2 class="text-xl font-semibold text-white">Adicionar Material</h2>

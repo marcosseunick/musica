@@ -30,6 +30,36 @@ document.addEventListener('DOMContentLoaded', async () => {
 // UTILITÁRIOS
 // ==========================================
 
+// Único ponto de acesso à API do admin: SEMPRE envia o cabeçalho Authorization.
+function adminFetch(url, options = {}) {
+  return fetch(url, {
+    ...options,
+    headers: {
+      'Authorization': 'Bearer ' + localStorage.getItem('token'),
+      'Content-Type': 'application/json'
+    }
+  });
+}
+
+// GET/POST + JSON. Só lança erro se a API realmente falhar.
+async function adminFetchJSON(url, options = {}) {
+  let res;
+  try {
+    res = await adminFetch(url, options);
+  } catch (networkErr) {
+    throw new Error('Não foi possível comunicar com o servidor. Verifique a conexão.');
+  }
+  const data = await res.json().catch(() => ({}));
+  if (res.status === 401 || res.status === 403) {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    window.location.href = 'login.html';
+    throw new Error(data.error || 'Sessão expirada ou sem permissão.');
+  }
+  if (!res.ok) throw new Error(data.error || `Falha na requisição (HTTP ${res.status}).`);
+  return data;
+}
+
 function showToast(message, isError = false) {
   const toast = document.getElementById('toast');
   const msgEl = document.getElementById('toast-message');
@@ -139,7 +169,7 @@ function initSPA() {
 
 async function loadInstrumentsSelect() {
   try {
-    const instruments = await fetchJSON('/api/admin/instruments');
+    const instruments = await adminFetchJSON('/api/admin/instruments');
     const select = document.getElementById('modal-select-instruments');
     select.innerHTML = '<option value="">Selecione...</option>' + 
       instruments.map(i => `<option value="${i.id}">${escapeHtml(i.name)}</option>`).join('');
@@ -150,7 +180,7 @@ async function loadInstrumentsSelect() {
 
 async function loadInstrumentsList() {
   try {
-    const instruments = await fetchJSON('/api/admin/instruments');
+    const instruments = await adminFetchJSON('/api/admin/instruments');
     const list = document.getElementById('instruments-list');
     if (instruments.length === 0) {
       list.innerHTML = '<p class="text-zinc-500 text-sm">Nenhum instrumento cadastrado.</p>';
@@ -169,7 +199,7 @@ async function loadInstrumentsList() {
 
 async function loadUsers() {
   try {
-    const users = await fetchJSON('/api/admin/users');
+    const users = await adminFetchJSON('/api/admin/users');
     const tbody = document.getElementById('users-tbody');
     tbody.innerHTML = users.map(u => `
       <tr class="hover:bg-zinc-800/50 transition">
@@ -180,7 +210,6 @@ async function loadUsers() {
             ${u.role}
           </span>
         </td>
-        <td class="px-6 py-4 text-zinc-500">${new Date(u.created_at).toLocaleDateString('pt-BR')}</td>
       </tr>
     `).join('');
   } catch (err) {
@@ -190,7 +219,7 @@ async function loadUsers() {
 
 async function loadSongsGrid() {
   try {
-    const songs = await fetchJSON('/api/admin/songs');
+    const songs = await adminFetchJSON('/api/admin/songs');
     currentSongsData = songs;
     const grid = document.getElementById('songs-grid');
     
@@ -222,7 +251,7 @@ async function loadSongEditData(songId) {
   // Ensure we have data
   if (currentSongsData.length === 0) {
     try {
-      currentSongsData = await fetchJSON('/api/admin/songs');
+      currentSongsData = await adminFetchJSON('/api/admin/songs');
     } catch (e) {
       showToast('Erro ao carregar música', true);
       return;
@@ -353,17 +382,11 @@ function handleFormSubmit(formId, endpoint, modalIdToClose, reloadCallback) {
     submitBtn.textContent = 'Aguarde...';
 
     try {
-      const res = await fetch(endpoint, {
+      const json = await adminFetchJSON(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + localStorage.getItem('token')
-        },
         body: JSON.stringify(data)
       });
       
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Erro na requisição');
 
       showToast('Criado com sucesso!');
       if (modalIdToClose) closeModal(modalIdToClose);
@@ -380,23 +403,26 @@ function handleFormSubmit(formId, endpoint, modalIdToClose, reloadCallback) {
 }
 
 // Configura os forms
-handleFormSubmit('form-instrument', '/api/admin/instruments', null, loadInstrumentsList);
+handleFormSubmit('form-instrument', '/api/admin/instruments', null, async () => {
+  await loadInstrumentsList();
+  await loadInstrumentsSelect();
+});
 
 handleFormSubmit('form-song', '/api/admin/songs', 'modal-add-song', async () => {
   await loadSongsGrid();
 });
 
 handleFormSubmit('form-module', '/api/admin/modules', 'modal-add-module', async () => {
-  currentSongsData = await fetchJSON('/api/admin/songs'); // reload global state
+  currentSongsData = await adminFetchJSON('/api/admin/songs'); // reload global state
   if (activeSongId) loadSongEditData(activeSongId);
 });
 
 handleFormSubmit('form-lesson', '/api/admin/lessons', 'modal-add-lesson', async () => {
-  currentSongsData = await fetchJSON('/api/admin/songs');
+  currentSongsData = await adminFetchJSON('/api/admin/songs');
   if (activeSongId) loadSongEditData(activeSongId);
 });
 
 handleFormSubmit('form-material', '/api/admin/materials', 'modal-add-material', async () => {
-  currentSongsData = await fetchJSON('/api/admin/songs');
+  currentSongsData = await adminFetchJSON('/api/admin/songs');
   if (activeSongId) loadSongEditData(activeSongId);
 });

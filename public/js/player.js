@@ -10,6 +10,12 @@ const params = new URLSearchParams(window.location.search);
 const songId = params.get('songId');
 const instrumentId = params.get('instrumentId');
 
+// Trava de trilha: o aluno só acessa aulas do instrumento escolhido no cadastro.
+const userPayload = getTokenPayload();
+if (token && (!userPayload || Number(instrumentId) !== Number(userPayload.preferred_instrument_id))) {
+  window.location.replace('/dashboard.html');
+}
+
 // Estado da aula
 let modulosDaAula = [];
 let currentModuleIndex = -1;
@@ -62,7 +68,7 @@ function renderHeader(lesson) {
   document.title = `${song.title} – ${instrument.name} | Harmonia`;
 
   // "Voltar" retorna ao Dashboard já com o instrumento selecionado
-  document.querySelector('#back-btn').href = `index.html?instrumentId=${instrument.id}`;
+  document.querySelector('#back-btn').href = 'dashboard.html';
 }
 
 function renderTabs() {

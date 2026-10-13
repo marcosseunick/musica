@@ -30,6 +30,10 @@ router.post('/register', async (req, res) => {
     return res.status(400).json({ error: 'Nome, email e senha são obrigatórios.' });
   }
 
+  if (!preferred_instrument_id) {
+    return res.status(400).json({ error: 'A escolha de um instrumento é obrigatória' });
+  }
+
   try {
     // Verifica se email já existe
     const existingUser = await prisma.user.findUnique({ where: { email } });
@@ -44,7 +48,7 @@ router.post('/register', async (req, res) => {
         name,
         email,
         password: hashedPassword,
-        preferred_instrument_id: preferred_instrument_id ? Number(preferred_instrument_id) : null,
+        preferred_instrument_id: Number(preferred_instrument_id),
       },
     });
 

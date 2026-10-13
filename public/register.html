@@ -12,6 +12,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
+  <script>
+    // Usuário já autenticado: vai direto ao dashboard, sem deslogar.
+    if (localStorage.getItem('token')) window.location.replace('/dashboard.html');
+  </script>
 </head>
 <body class="font-sans text-zinc-300 antialiased bg-zinc-950 flex min-h-screen flex-col justify-center py-12 sm:px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
@@ -55,9 +59,9 @@
         </div>
 
         <div>
-          <label for="instrument" class="block text-sm font-medium leading-6 text-zinc-100">Instrumento de preferência (opcional)</label>
+          <label for="instrument" class="block text-sm font-medium leading-6 text-zinc-100">Instrumento de preferência</label>
           <div class="mt-2">
-            <select id="instrument" name="instrument" class="block w-full rounded-md border-0 bg-zinc-800/50 py-1.5 pl-3 pr-10 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6">
+            <select id="instrument" name="instrument" required class="block w-full rounded-md border-0 bg-zinc-800/50 py-1.5 pl-3 pr-10 text-white shadow-sm ring-1 ring-inset ring-zinc-700 focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6">
               <option value="">Selecione um instrumento...</option>
               <!-- Preenchido via JS -->
             </select>

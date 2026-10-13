@@ -80,6 +80,11 @@ if (registerForm) {
     const password = document.getElementById('password').value;
     const instrumentId = document.getElementById('instrument').value;
 
+    if (!instrumentId) {
+      showError('A escolha de um instrumento é obrigatória');
+      return;
+    }
+
     try {
       const res = await fetch('/api/auth/register', {
         method: 'POST',
@@ -88,7 +93,7 @@ if (registerForm) {
           name, 
           email, 
           password, 
-          preferred_instrument_id: instrumentId ? Number(instrumentId) : null 
+          preferred_instrument_id: Number(instrumentId)
         })
       });
 

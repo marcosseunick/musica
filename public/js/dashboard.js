@@ -1,50 +1,16 @@
-// Dashboard: lista instrumentos e as músicas vinculadas ao instrumento selecionado.
+// Dashboard: exibe apenas a trilha (instrumento) escolhida pelo aluno no cadastro.
 
 const token = localStorage.getItem('token');
-if (!token) {
-  window.location.href = 'login.html';
+const payload = token ? getTokenPayload() : null;
+if (!token || !payload) {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  window.location.replace('login.html');
 }
 
-const userStr = localStorage.getItem('user');
-let currentUser = null;
-if (userStr) {
-  try { currentUser = JSON.parse(userStr); } catch (e) {}
-}
-const instrumentList = document.querySelector('#instrument-list');
 const songGrid = document.querySelector('#song-grid');
 const songsCount = document.querySelector('#songs-count');
 const songsFeedback = document.querySelector('#songs-feedback');
-
-let instruments = [];
-let activeInstrumentId = null;
-
-const BTN_BASE =
-  'instrument-btn group inline-flex items-center gap-2.5 rounded-xl px-5 py-3 text-sm font-semibold ring-1 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400';
-const BTN_ACTIVE = 'bg-zinc-100 text-zinc-900 ring-zinc-300';
-const BTN_INACTIVE = 'bg-zinc-900 text-zinc-300 ring-zinc-800 hover:bg-zinc-800 hover:text-white';
-
-// ---------- Renderização ----------
-
-function renderInstruments() {
-  instrumentList.innerHTML = instruments
-    .map(
-      (inst) => `
-        <button type="button" role="tab" id="instrument-btn-${inst.id}" data-id="${inst.id}"
-                aria-selected="false" class="${BTN_BASE} ${BTN_INACTIVE}">
-          ${instrumentIcon(inst.name)}
-          <span>${escapeHtml(inst.name)}</span>
-        </button>`
-    )
-    .join('');
-}
-
-function updateActiveButton() {
-  instrumentList.querySelectorAll('.instrument-btn').forEach((btn) => {
-    const isActive = Number(btn.dataset.id) === activeInstrumentId;
-    btn.className = `${BTN_BASE} ${isActive ? BTN_ACTIVE : BTN_INACTIVE}`;
-    btn.setAttribute('aria-selected', String(isActive));
-  });
-}
 
 function renderSongSkeletons() {
   hideFeedback();
@@ -121,72 +87,41 @@ function hideFeedback() {
 
 // ---------- Lógica ----------
 
-async function selectInstrument(id) {
-  const instrument = instruments.find((inst) => inst.id === id);
-  if (!instrument) return;
+async function loadTrack() {
+  const instrumentId = payload && Number(payload.preferred_instrument_id);
+  if (!instrumentId) {
+    showFeedback('Sua conta não possui um instrumento definido, portanto não há trilha disponível.');
+    return;
+  }
 
-  activeInstrumentId = id;
-  updateActiveButton();
   renderSongSkeletons();
-
-  // Mantém o instrumento na URL para o botão "Voltar" do player retornar ao mesmo estado
-  history.replaceState(null, '', `?instrumentId=${id}`);
-
   try {
-    const songs = await fetchJSON(`/api/instruments/${id}/songs`);
-    // Ignora respostas antigas caso o usuário troque de instrumento rapidamente
-    if (activeInstrumentId !== id) return;
+    const [instruments, songs] = await Promise.all([
+      fetchJSON('/api/instruments'),
+      fetchJSON(`/api/instruments/${instrumentId}/songs`),
+    ]);
+    const instrument = instruments.find((inst) => inst.id === instrumentId) || { id: instrumentId, name: 'seu instrumento' };
     renderSongs(songs, instrument);
   } catch (err) {
-    if (activeInstrumentId !== id) return;
     songGrid.innerHTML = '';
     showFeedback(`Não foi possível carregar as músicas. <span class="text-rose-300">${escapeHtml(err.message)}</span>`);
   }
 }
 
-instrumentList.addEventListener('click', (event) => {
-  const btn = event.target.closest('.instrument-btn');
-  if (btn) selectInstrument(Number(btn.dataset.id));
-});
-
-async function init() {
-  try {
-    instruments = await fetchJSON('/api/instruments');
-  } catch (err) {
-    instrumentList.innerHTML = '';
-    showFeedback(`Não foi possível carregar os instrumentos. <span class="text-rose-300">${escapeHtml(err.message)}</span>`);
-    return;
-  }
-
-  if (instruments.length === 0) {
-    instrumentList.innerHTML = '';
-    showFeedback('Nenhum instrumento cadastrado. Rode <code class="text-ember-300">npx prisma db seed</code>.');
-    return;
-  }
-
-  renderInstruments();
-
-  // Seleciona o instrumento da URL (vindo do player) ou o preferido do usuário ou o primeiro
-  const fromUrl = Number(new URLSearchParams(window.location.search).get('instrumentId'));
-  
-  let initial = instruments[0].id;
-  if (instruments.some((inst) => inst.id === fromUrl)) {
-    initial = fromUrl;
-  } else if (currentUser && currentUser.preferred_instrument_id && instruments.some(inst => inst.id === currentUser.preferred_instrument_id)) {
-    initial = currentUser.preferred_instrument_id;
-  }
-
-  selectInstrument(initial);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  if (currentUser) {
+  if (payload) {
     const greeting = document.getElementById('user-greeting');
-    if (greeting && currentUser.name) greeting.textContent = `Olá, ${currentUser.name.split(' ')[0]}`;
-    
-    if (currentUser.role === 'ADMIN') {
-      const adminLink = document.getElementById('admin-link');
-      if (adminLink) adminLink.classList.remove('hidden');
+    if (greeting && payload.name) greeting.textContent = `Olá, ${payload.name.split(' ')[0]}`;
+
+    // Injeta o link do painel admin ao lado do botão "Sair" (apenas ADMIN)
+    if (payload.role === 'ADMIN') {
+      const logoutBtn = document.getElementById('logout-btn');
+      const adminLink = document.createElement('a');
+      adminLink.href = '/admin.html';
+      adminLink.id = 'admin-link';
+      adminLink.textContent = 'Painel Admin';
+      adminLink.className = 'rounded-md bg-amber-500/10 px-3 py-1.5 text-sm font-medium text-amber-500 ring-1 ring-inset ring-amber-500/20 hover:bg-amber-500/20 transition-colors';
+      logoutBtn.parentNode.insertBefore(adminLink, logoutBtn);
     }
   }
 
@@ -200,4 +135,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-init();
+if (payload) loadTrack();
