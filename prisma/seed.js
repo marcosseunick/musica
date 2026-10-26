@@ -12,12 +12,7 @@ const PLACEHOLDER_VIDEO_ID = 'dQw4w9WgXcQ';
 const videoUrl = (startSeconds) =>
   `https://www.youtube.com/embed/${PLACEHOLDER_VIDEO_ID}?start=${startSeconds}`;
 
-const LEVELS = [
-  { level: 1, slug: 'facil', label: 'Fácil' },
-  { level: 2, slug: 'medio', label: 'Médio' },
-  { level: 3, slug: 'dificil', label: 'Difícil' },
-  { level: 4, slug: 'avancado', label: 'Avançado' },
-];
+const { LEVELS } = require('../src/lib/levels');
 
 // Descrição do nível (Module) por instrumento
 const DESCRIPTIONS = {

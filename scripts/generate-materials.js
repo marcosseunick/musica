@@ -5,9 +5,10 @@ const fs = require('fs');
 const path = require('path');
 const { PrismaClient } = require('@prisma/client');
 
+const { levelLabel } = require('../src/lib/levels');
+
 const prisma = new PrismaClient();
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
-const LEVEL_LABELS = ['Fácil', 'Médio', 'Difícil', 'Avançado'];
 
 // Escapa caracteres especiais de strings PDF
 const pdfText = (s) => s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
@@ -75,7 +76,7 @@ async function main() {
       { text: material.title, size: 22 },
       { text: `${song.title} - ${song.artist}`, size: 14 },
       { text: `Instrumento: ${instrument.name}`, size: 12 },
-      { text: `Nível ${module.difficulty_level}: ${LEVEL_LABELS[module.difficulty_level - 1]}`, size: 12 },
+      { text: `Nível ${module.difficulty_level}: ${levelLabel(module.difficulty_level)}`, size: 12 },
       { text: lesson.title, size: 12 },
       { text: '', size: 12 },
       ...wrap(module.description).map((text) => ({ text, size: 11 })),
@@ -90,6 +91,8 @@ async function main() {
       return line;
     });
 
+    // Apenas arquivos locais (/materials/...); links externos não geram PDF
+    if (!material.file_url.startsWith('/')) continue;
     const target = path.join(PUBLIC_DIR, material.file_url);
     fs.mkdirSync(path.dirname(target), { recursive: true });
     fs.writeFileSync(target, buildPdf(lines));

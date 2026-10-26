@@ -14,50 +14,51 @@
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
 </head>
-<body class="font-sans text-zinc-200 antialiased">
+<body class="font-sans text-zinc-300 antialiased bg-ink-950 min-h-screen flex flex-col">
 
   <!-- Header compacto -->
-  <header class="sticky top-0 z-40 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
+  <header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-ink-950/85 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-      <a href="dashboard.html" id="back-btn"
-         class="group inline-flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 ring-1 ring-zinc-800 transition hover:bg-zinc-800 hover:text-white">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 transition-transform group-hover:-translate-x-0.5"><path d="M15 18l-6-6 6-6"/></svg>
-        <span class="hidden sm:inline">Voltar ao Dashboard</span>
+      <a href="dashboard.html" id="back-btn" class="btn btn-secondary btn-sm" aria-label="Voltar para o Dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M15 18l-6-6 6-6"/></svg>
+        <span class="hidden sm:inline">Voltar</span>
       </a>
 
       <div class="min-w-0 flex-1">
-        <h1 id="lesson-title" class="truncate font-display text-base font-semibold text-white sm:text-lg">
-          <span class="skeleton inline-block h-5 w-56 rounded align-middle"></span>
+        <h1 id="lesson-title" class="truncate font-display text-base font-bold text-white sm:text-lg">
+          <span class="skeleton inline-block h-5 w-48 rounded align-middle"></span>
         </h1>
-        <p id="lesson-subtitle" class="truncate text-xs text-zinc-500"></p>
+        <p id="lesson-subtitle" class="truncate text-xs text-zinc-400"></p>
       </div>
 
-      <a href="dashboard.html" id="logo-link" class="hidden shrink-0 items-center gap-2 md:flex" aria-label="Harmonia - início">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-white"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display font-bold text-white">Harmonia</span>
+      <a href="dashboard.html" id="logo-link" class="hidden shrink-0 items-center gap-2 md:flex">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span class="font-display font-bold text-white text-sm">Harmonia</span>
       </a>
     </div>
   </header>
 
   <!-- Estado de erro -->
-  <section id="error-state" class="hidden mx-auto max-w-xl px-4 py-24 text-center">
+  <section id="error-state" class="hidden mx-auto max-w-md px-4 py-24 text-center">
     <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-rose-500/10 text-rose-300 ring-1 ring-rose-400/30">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
     </div>
     <h2 class="mt-5 font-display text-2xl font-bold text-white">Aula indisponível</h2>
-    <p id="error-message" class="mt-2 text-zinc-400"></p>
-    <a href="index.html" id="error-back-btn" class="mt-6 inline-flex rounded-xl bg-ember-400 px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-ember-300">
-      Escolher outra aula
+    <p id="error-message" class="mt-2 text-zinc-400 text-sm"></p>
+    <a href="dashboard.html" id="error-back-btn" class="btn btn-primary btn-sm mt-6">
+      Voltar para as músicas
     </a>
   </section>
 
-  <!-- Conteúdo da aula -->
-  <main id="lesson-content" class="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-3 lg:gap-8 lg:px-8 lg:py-8">
+  <!-- Conteúdo principal -->
+  <main id="lesson-content" class="flex-1 mx-auto grid max-w-7xl gap-8 px-4 py-6 sm:px-6 lg:grid-cols-3 lg:gap-8 lg:px-8 lg:py-8 w-full">
 
-    <!-- Coluna principal: vídeo + níveis -->
-    <section class="lg:col-span-2" aria-label="Vídeo da aula">
-      <div class="relative aspect-video overflow-hidden rounded-xl bg-black ring-1 ring-zinc-800 shadow-xl shadow-black/50">
-        <div id="video-skeleton" class="skeleton absolute inset-0"></div>
+    <!-- Coluna principal: Player + Níveis + Descrição -->
+    <section class="lg:col-span-2 space-y-6" aria-label="Player e Conteúdo da Aula">
+
+      <!-- Container do Vídeo -->
+      <div class="relative aspect-video overflow-hidden rounded-2xl bg-black ring-1 ring-zinc-800 shadow-2xl">
+        <div id="video-skeleton" class="skeleton absolute inset-0 z-10"></div>
         <iframe
           id="video-player"
           class="absolute inset-0 h-full w-full"
@@ -67,65 +68,97 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen></iframe>
-      </div>
 
-      <!-- Abas de dificuldade -->
-      <div class="mt-6">
-        <div class="flex items-center justify-between">
-          <h2 class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Nível de dificuldade</h2>
-          <span class="hidden text-xs text-zinc-600 sm:block">Atalho: teclas <kbd class="rounded bg-white/5 px-1.5 py-0.5 font-sans text-zinc-400">1</kbd>–<kbd class="rounded bg-white/5 px-1.5 py-0.5 font-sans text-zinc-400">4</kbd></span>
-        </div>
-        <div id="level-tabs" class="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4" role="tablist" aria-label="Níveis de dificuldade">
-          <div class="skeleton h-[68px] rounded-xl"></div>
-          <div class="skeleton h-[68px] rounded-xl"></div>
-          <div class="skeleton h-[68px] rounded-xl"></div>
-          <div class="skeleton h-[68px] rounded-xl"></div>
+        <!-- Estado vazio caso o nível não tenha nenhuma aula -->
+        <div id="video-empty-state" class="hidden absolute inset-0 bg-ink-900/95 flex flex-col items-center justify-center p-6 text-center z-20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-zinc-500 mb-3"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+          <h3 class="text-base font-semibold text-white">Nenhuma aula gravada neste nível</h3>
+          <p class="mt-1 text-xs text-zinc-400 max-w-sm">Este arranjo ainda não possui vídeos cadastrados. Selecione outro nível acima para continuar estudando.</p>
         </div>
       </div>
 
-      <!-- Descrição do módulo ativo -->
-      <article id="level-panel" role="tabpanel" class="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/50 p-5 sm:p-6">
+      <!-- Barra de Controle de Aulas (Anterior / Próxima) -->
+      <div class="flex items-center justify-between card p-3 px-4">
+        <button type="button" id="prev-lesson-btn" class="btn btn-ghost btn-sm text-xs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Aula anterior</span>
+        </button>
+
+        <span id="current-lesson-indicator" class="text-xs font-semibold uppercase tracking-wider text-amber-400">
+          Aula 1 de 1
+        </span>
+
+        <button type="button" id="next-lesson-btn" class="btn btn-ghost btn-sm text-xs">
+          <span>Próxima aula</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Seletor de Dificuldade (4 Níveis) -->
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-display text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Nível de Dificuldade</h2>
+          <span class="hidden text-xs text-zinc-500 sm:inline">
+            Atalho: teclas <kbd class="kbd">1</kbd> a <kbd class="kbd">4</kbd>
+          </span>
+        </div>
+        <div id="level-tabs" class="grid grid-cols-2 gap-3 sm:grid-cols-4" role="tablist" aria-label="Níveis de dificuldade">
+          <!-- Injetado via JS -->
+        </div>
+      </div>
+
+      <!-- Descrição do Módulo Ativo -->
+      <article id="level-panel" role="tabpanel" class="card p-6">
         <div class="flex items-center gap-3">
-          <span id="level-badge" class="inline-flex items-center gap-2 rounded-full bg-zinc-800 px-3 py-1 text-xs font-semibold"></span>
+          <span id="level-badge" class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"></span>
           <div id="level-progress" class="flex flex-1 items-center gap-1.5" aria-hidden="true"></div>
         </div>
-        <h3 class="mt-4 font-display text-lg font-semibold text-white">O que você vai aprender</h3>
-        <p id="level-description" class="mt-2 leading-relaxed text-zinc-400">
-          <span class="skeleton block h-4 w-full rounded"></span>
-          <span class="skeleton mt-2 block h-4 w-3/4 rounded"></span>
+
+        <h3 class="mt-4 font-display text-lg font-semibold text-white">Objetivo Pedagógico deste Nível</h3>
+        <p id="level-description" class="mt-2 text-sm leading-relaxed text-zinc-300">
+          Carregando informações pedagógicas...
         </p>
       </article>
     </section>
 
-    <!-- Coluna secundária: playlist e materiais -->
-    <aside class="lg:col-span-1" aria-labelledby="playlist-heading">
-      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5 sm:p-6 lg:sticky lg:top-24 space-y-6">
-        
+    <!-- Coluna secundária: Playlist de Aulas + Materiais de Apoio -->
+    <aside class="lg:col-span-1 space-y-6" aria-labelledby="playlist-heading">
+      <div class="card p-6 lg:sticky lg:top-24 space-y-6">
+
+        <!-- Lista de Aulas do Nível -->
         <div>
-          <h2 id="playlist-heading" class="font-display text-lg font-semibold text-white">Aulas do Módulo</h2>
-          <ul id="playlist-list" class="mt-4 space-y-2">
-            <li class="skeleton h-12 rounded-lg"></li>
-            <li class="skeleton h-12 rounded-lg"></li>
+          <div class="flex items-center justify-between mb-3">
+            <h2 id="playlist-heading" class="font-display text-base font-bold text-white">Aulas do Nível</h2>
+            <span id="playlist-count" class="text-xs text-zinc-500 font-medium"></span>
+          </div>
+          <ul id="playlist-list" class="space-y-2">
+            <!-- Injetado via JS -->
           </ul>
         </div>
 
-        <hr class="border-zinc-800" />
+        <hr class="border-zinc-800/80" />
 
+        <!-- Materiais em PDF / Cifras -->
         <div>
-          <div class="flex items-center justify-between">
-            <h2 id="materials-heading" class="font-display text-lg font-semibold text-white">Materiais de Apoio</h2>
-            <span id="materials-count" class="rounded-full bg-zinc-800 px-2.5 py-0.5 text-xs text-zinc-400"></span>
+          <div class="flex items-center justify-between mb-2">
+            <h2 id="materials-heading" class="font-display text-base font-bold text-white">Materiais de Apoio</h2>
+            <span id="materials-count" class="rounded-full bg-zinc-800 px-2 py-0.5 text-xs text-zinc-400 font-semibold"></span>
           </div>
-          <p id="materials-level" class="mt-1 text-sm text-zinc-500"></p>
+          <p id="materials-level" class="text-xs text-zinc-500 mb-4">Arquivos anexados a esta aula</p>
 
-          <ul id="materials-list" class="mt-5 space-y-3">
-            <li class="skeleton h-[68px] rounded-lg"></li>
+          <ul id="materials-list" class="space-y-2.5">
+            <!-- Injetado via JS -->
           </ul>
         </div>
 
       </div>
     </aside>
+
   </main>
+
+  <footer class="border-t border-zinc-800/80 py-6 bg-ink-950 text-center text-xs text-zinc-500">
+    Harmonia &middot; Plataforma de cursos de música com progressão didática
+  </footer>
 
   <script src="js/common.js"></script>
   <script src="js/player.js"></script>

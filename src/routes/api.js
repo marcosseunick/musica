@@ -1,18 +1,20 @@
 const { Router } = require('express');
 const prisma = require('../lib/prisma');
 const authMiddleware = require('../middlewares/authMiddleware');
+const { requireId, notFound, forbidden } = require('../lib/http');
 
 const router = Router();
 
-// Converte parâmetro de rota em inteiro positivo; retorna null se inválido
-function parseId(value) {
-  const id = Number(value);
-  return Number.isInteger(id) && id > 0 ? id : null;
+// Trava de trilha: o aluno só acessa o instrumento escolhido no cadastro; ADMIN acessa todos.
+function assertTrackAccess(user, instrumentId) {
+  if (user.role !== 'ADMIN' && user.preferred_instrument_id !== instrumentId) {
+    throw forbidden('Você só tem acesso às aulas do instrumento escolhido no cadastro.');
+  }
 }
 
 /**
  * GET /api/instruments
- * Lista os instrumentos para o Dashboard.
+ * Lista pública dos instrumentos (usada no cadastro, no Dashboard e no Estúdio).
  */
 router.get('/instruments', async (req, res) => {
   const instruments = await prisma.instrument.findMany({ orderBy: { name: 'asc' } });
@@ -21,43 +23,45 @@ router.get('/instruments', async (req, res) => {
 
 /**
  * GET /api/instruments/:instrumentId/songs
- * Lista as músicas vinculadas a um instrumento (Dashboard).
+ * Instrumento + músicas da trilha, com os níveis disponíveis de cada uma (Dashboard).
  */
 router.get('/instruments/:instrumentId/songs', authMiddleware, async (req, res) => {
-  const instrumentId = parseId(req.params.instrumentId);
-  if (!instrumentId) {
-    return res.status(400).json({ error: 'instrumentId deve ser um inteiro positivo.' });
-  }
+  const instrumentId = requireId(req.params.instrumentId, 'instrumentId');
+  assertTrackAccess(req.user, instrumentId);
 
   const instrument = await prisma.instrument.findUnique({
     where: { id: instrumentId },
     include: {
       songs: {
-        include: { song: true },
+        include: {
+          song: true,
+          modules: { select: { difficulty_level: true }, orderBy: { difficulty_level: 'asc' } },
+        },
         orderBy: { song: { title: 'asc' } },
       },
     },
   });
 
-  if (!instrument) {
-    return res.status(404).json({ error: 'Instrumento não encontrado.' });
-  }
+  if (!instrument) throw notFound('Instrumento não encontrado.');
 
-  res.json(instrument.songs.map((si) => si.song));
+  res.json({
+    instrument: { id: instrument.id, name: instrument.name },
+    songs: instrument.songs.map((si) => ({
+      ...si.song,
+      levels: si.modules.map((m) => m.difficulty_level),
+    })),
+  });
 });
 
 /**
  * GET /api/lessons/:songId/:instrumentId
  * Rota principal do Player: retorna a aula completa em um único request
- * (música, instrumento, 4 módulos ordenados por dificuldade e seus materiais).
+ * (música, instrumento, módulos ordenados por dificuldade, aulas e materiais).
  */
 router.get('/lessons/:songId/:instrumentId', authMiddleware, async (req, res) => {
-  const songId = parseId(req.params.songId);
-  const instrumentId = parseId(req.params.instrumentId);
-
-  if (!songId || !instrumentId) {
-    return res.status(400).json({ error: 'songId e instrumentId devem ser inteiros positivos.' });
-  }
+  const songId = requireId(req.params.songId, 'songId');
+  const instrumentId = requireId(req.params.instrumentId, 'instrumentId');
+  assertTrackAccess(req.user, instrumentId);
 
   // findUnique possível graças ao @@unique([song_id, instrument_id]) no schema
   const lesson = await prisma.songInstrument.findUnique({
@@ -69,7 +73,7 @@ router.get('/lessons/:songId/:instrumentId', authMiddleware, async (req, res) =>
         orderBy: { difficulty_level: 'asc' },
         include: {
           lessons: {
-            orderBy: { order_index: 'asc' },
+            orderBy: [{ order_index: 'asc' }, { id: 'asc' }],
             include: { materials: { orderBy: { id: 'asc' } } },
           },
         },
@@ -77,11 +81,7 @@ router.get('/lessons/:songId/:instrumentId', authMiddleware, async (req, res) =>
     },
   });
 
-  if (!lesson) {
-    return res.status(404).json({
-      error: 'Aula não encontrada para esta combinação de música e instrumento.',
-    });
-  }
+  if (!lesson) throw notFound('Aula não encontrada para esta combinação de música e instrumento.');
 
   res.json(lesson);
 });

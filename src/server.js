@@ -1,22 +1,31 @@
-
 const path = require('path');
 const express = require('express');
-const cors = require('cors');
 const apiRoutes = require('./routes/api');
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
 const authMiddleware = require('./middlewares/authMiddleware');
 const adminMiddleware = require('./middlewares/adminMiddleware');
+const { errorHandler } = require('./lib/http');
+
+// Falha cedo: sem segredo não há como assinar/validar tokens
+if (!process.env.JWT_SECRET) {
+  console.error('ERRO: a variável JWT_SECRET não está definida. Copie .env.example para .env e configure-a.');
+  process.exit(1);
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middlewares essenciais
-app.use(cors());
-app.use(express.json());
+// Frontend e API são servidos na mesma origem, por isso CORS não é necessário.
+app.disable('x-powered-by');
+app.use(express.json({ limit: '100kb' }));
+// No Express 5, req.body fica undefined quando não há corpo JSON; padroniza como objeto vazio
+app.use((req, res, next) => {
+  req.body ??= {};
+  next();
+});
 
-// Frontend SPA (Passo 4) servido estaticamente a partir de /public.
-// path absoluto garante funcionamento independente do diretório de execução.
+// Frontend estático a partir de /public (path absoluto independe do diretório de execução)
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rotas da API
@@ -30,11 +39,7 @@ app.use('/api', (req, res) => {
   res.status(404).json({ error: `Rota ${req.method} ${req.originalUrl} não encontrada.` });
 });
 
-// Handler global de erros (Express 5 encaminha erros de handlers async automaticamente)
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).json({ error: 'Erro interno do servidor.' });
-});
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);

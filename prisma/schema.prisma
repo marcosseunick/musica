@@ -24,11 +24,12 @@ model User {
   role                    String      @default("USER") // "USER" | "ADMIN"
   preferred_instrument_id Int?
   preferred_instrument    Instrument? @relation(fields: [preferred_instrument_id], references: [id], onDelete: SetNull)
+  created_at              DateTime    @default(now())
 }
 
 model Instrument {
   id    Int              @id @default(autoincrement())
-  name  String
+  name  String           @unique
   songs SongInstrument[]
   users User[]
 }
@@ -37,6 +38,7 @@ model Song {
   id          Int              @id @default(autoincrement())
   title       String
   artist      String
+  created_at  DateTime         @default(now())
   instruments SongInstrument[]
 }
 
