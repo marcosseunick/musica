@@ -1,0 +1,1537 @@
+{
+ "url": "public/dashboard.html",
+ "at": "2026-10-26T13:10:23.822Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.51,
+    0.52
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1079,
+     "screens": 1.2,
+     "words": 95,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 30,
+     "vw": 2.1,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "lines": 1,
+     "size": 30,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Olá, Clara",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Erode",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "RA",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 68,
+      "vw": 4.7,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.9,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.05,
+      "top": 643,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      16,
+      20,
+      24,
+      30,
+      68
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.4
+     },
+     "measureChars": 84,
+     "max": {
+      "size": 68,
+      "vw": 4.7,
+      "font": "Erode",
+      "text": "RA"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.12,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "Cat. 1",
+      "above": "RA",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 554
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebf0ee",
+       "top": 433,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.54
+      },
+      {
+       "color": "#06525c",
+       "share": 0.34
+      },
+      {
+       "color": "#05424a",
+       "share": 0.1
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#dfe7e4",
+      "hsl": {
+       "h": 158,
+       "s": 0.14,
+       "l": 0.89
+      },
+      "fg": "#06525c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 0,
+     "height": 34,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Fechar caderno"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 241
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1079,
+    "margins": {
+     "left": 182,
+     "right": 196
+    },
+    "sections": [
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 64,
+      "height": 337,
+      "words": 46,
+      "media": 0,
+      "middle": 134,
+      "heading": {
+       "text": "Olá, Clara",
+       "size": 30,
+       "tag": "h1"
+      },
+      "left": 182,
+      "right": 267,
+      "textLeft": 182,
+      "textRight": 267,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 401,
+      "height": 543,
+      "words": 33,
+      "media": 0,
+      "middle": 362,
+      "heading": {
+       "text": "RA",
+       "size": 68,
+       "tag": "span"
+      },
+      "left": 206,
+      "right": 206,
+      "textLeft": 206,
+      "textRight": 206,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Olá, Clara",
+      "size": 30,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 182,
+      "n": 1
+     },
+     {
+      "x": 206,
+      "n": 1
+     },
+     {
+      "x": 226,
+      "n": 1
+     },
+     {
+      "x": 314,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.25,
+    "voidBox": {
+     "x": 540,
+     "y": 540,
+     "w": 900,
+     "h": 360
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 182,
+     "right": 182
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 30,
+     "vw": 2.1,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 5,
+     "firstScreen": 5,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 7,
+     "radii": [
+      [
+       0,
+       7
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      14,
+      16,
+      20,
+      24,
+      30,
+      68
+     ]
+    },
+    "title": {
+     "text": "Olá, Clara",
+     "size": 30,
+     "top": 128
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.65,
+    0.69
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1221,
+     "screens": 1.2,
+     "words": 95,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 30,
+     "vw": 3.9,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "lines": 1,
+     "size": 30,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Olá, Clara",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Erode",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "RA",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 68,
+      "vw": 8.9,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.9,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.09,
+      "top": 785,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      16,
+      20,
+      24,
+      30,
+      68
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.4
+     },
+     "measureChars": 84,
+     "max": {
+      "size": 68,
+      "vw": 8.9,
+      "font": "Erode",
+      "text": "RA"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.12,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "Cat. 1",
+      "above": "RA",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 698
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebf0ee",
+       "top": 577,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.54
+      },
+      {
+       "color": "#06525c",
+       "share": 0.34
+      },
+      {
+       "color": "#05424a",
+       "share": 0.1
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#dfe7e4",
+      "hsl": {
+       "h": 158,
+       "s": 0.14,
+       "l": 0.89
+      },
+      "fg": "#06525c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 0,
+     "height": 34,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Fechar caderno"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 241
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1221,
+    "margins": {
+     "left": 24,
+     "right": 38
+    },
+    "sections": [
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 64,
+      "height": 481,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Olá, Clara",
+       "size": 30,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 204,
+      "textLeft": 24,
+      "textRight": 204,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 545,
+      "height": 541,
+      "words": 33,
+      "media": 0,
+      "middle": 9,
+      "heading": {
+       "text": "RA",
+       "size": 68,
+       "tag": "span"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Olá, Clara",
+      "size": 30,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 1
+     },
+     {
+      "x": 48,
+      "n": 1
+     },
+     {
+      "x": 68,
+      "n": 1
+     },
+     {
+      "x": 156,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 24,
+     "right": 24
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 30,
+     "vw": 3.9,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 5,
+     "firstScreen": 5,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 7,
+     "radii": [
+      [
+       0,
+       7
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      14,
+      16,
+      20,
+      24,
+      30,
+      68
+     ]
+    },
+    "title": {
+     "text": "Olá, Clara",
+     "size": 30,
+     "top": 128
+    },
+    "colourShare": 0.006
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.68,
+    0.68
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 1,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 1298,
+     "screens": 1.5,
+     "words": 90,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 24,
+     "vw": 6.2,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "lines": 1,
+     "size": 24,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Harmonia",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 16,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Olá, Clara",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "1",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 290,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 290,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 449,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "440 Hz",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 449,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "RA",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 68,
+      "vw": 17.4,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.9,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 866,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      16,
+      20,
+      24,
+      68
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.4
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 68,
+      "vw": 17.4,
+      "font": "Erode",
+      "text": "RA"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "Cat. 1",
+      "above": "RA",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 783
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ebf0ee",
+       "top": 607,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#f7f9f8",
+       "top": 739,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.54
+      },
+      {
+       "color": "#06525c",
+       "share": 0.33
+      },
+      {
+       "color": "#05424a",
+       "share": 0.11
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.02
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 242
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 1298,
+    "margins": {
+     "left": 16,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 64,
+      "height": 511,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Olá, Clara",
+       "size": 24,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 28,
+      "textLeft": 16,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.mx-auto.max-w-[1140px]",
+      "tag": "section",
+      "top": 575,
+      "height": 588,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "RA",
+       "size": 68,
+       "tag": "span"
+      },
+      "left": 36,
+      "right": 53,
+      "textLeft": 36,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Olá, Clara",
+      "size": 24,
+      "top": 112,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 2
+     },
+     {
+      "x": 36,
+      "n": 1
+     },
+     {
+      "x": 56,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 16,
+     "right": 16
+    },
+    "hero": {
+     "text": "Olá, Clara",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 24,
+     "vw": 6.2,
+     "font": "Erode",
+     "weight": 700,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 5,
+     "firstScreen": 5,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 7,
+     "radii": [
+      [
+       0,
+       7
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      16,
+      20,
+      24,
+      68
+     ]
+    },
+    "title": {
+     "text": "Olá, Clara",
+     "size": 24,
+     "top": 112
+    },
+    "colourShare": 0.004
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\dashboard\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -3,54 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estúdio | Harmonia</title>
-  <meta name="description" content="Painel administrativo de gerenciamento de músicas, arranjos, aulas e usuários da Harmonia." />
+  <title>Estúdio Editorial | Harmonia</title>
+  <meta name="description" content="Estúdio administrativo de catalogação de obras, trilhas de instrumentos, graus de arranjo e alunos da Harmonia." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
 </head>
-<body class="font-sans text-zinc-300 antialiased bg-ink-950 min-h-screen flex hidden" id="admin-body">
+<body class="bg-[#f7f9f8] text-[#06525c] antialiased min-h-[100svh] flex hidden" id="admin-body">
 
-  <!-- Barra Lateral (Desktop) -->
-  <aside class="w-64 border-r border-zinc-800/80 bg-ink-900/60 hidden md:flex flex-col shrink-0 sticky top-0 h-screen z-30">
-    <div class="h-16 flex items-center px-6 border-b border-zinc-800/80 justify-between">
-      <a href="dashboard.html" class="flex items-center gap-2.5 text-white">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display font-bold tracking-tight">Harmonia <span class="text-amber-400 font-semibold text-xs ml-1 px-1.5 py-0.5 rounded bg-amber-400/10 border border-amber-400/20">Estúdio</span></span>
+  <!-- Barra Lateral (Desktop · 230px conforme blueprint) -->
+  <aside class="w-[230px] bg-[#ebf0ee] hidden md:flex flex-col shrink-0 sticky top-0 h-[100svh] z-30">
+    <div class="h-16 flex items-center px-6 justify-between bg-[#dfe7e4]">
+      <a href="dashboard.html" class="flex items-baseline gap-2 text-[#06525c]">
+        <span class="text-xl font-semibold tracking-tight">Harmonia</span>
+        <span class="px-2 py-0.5 small-copy font-semibold lvl-badge-2">Estúdio</span>
       </a>
     </div>
 
     <nav class="flex-1 px-3 py-6 space-y-1" id="studio-nav">
-      <p class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Conteúdo Pedagógico</p>
+      <p class="px-3 pb-2 small-copy font-semibold text-[#24636c]">Acervo Pedagógico</p>
 
-      <a href="#songs" data-section="songs" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all">
+      <a href="#songs" data-section="songs" class="nav-link flex items-center gap-3 px-3 py-2.5 small-copy font-medium text-[#24636c] hover:text-[#06525c] hover:bg-[#dfe7e4] transition-colors">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        Músicas e Aulas
+        Obras e Aulas
       </a>
 
-      <p class="px-3 pt-6 pb-2 text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Configurações</p>
+      <p class="px-3 pt-6 pb-2 small-copy font-semibold text-[#24636c]">Catalogação</p>
 
-      <a href="#instruments" data-section="instruments" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all">
+      <a href="#instruments" data-section="instruments" class="nav-link flex items-center gap-3 px-3 py-2.5 small-copy font-medium text-[#24636c] hover:text-[#06525c] hover:bg-[#dfe7e4] transition-colors">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
         Instrumentos
       </a>
-      <a href="#users" data-section="users" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all">
+      <a href="#users" data-section="users" class="nav-link flex items-center gap-3 px-3 py-2.5 small-copy font-medium text-[#24636c] hover:text-[#06525c] hover:bg-[#dfe7e4] transition-colors">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Usuários da Plataforma
+        Matrículas e Papéis
       </a>
     </nav>
 
-    <div class="p-3 border-t border-zinc-800/80 space-y-1">
-      <a href="dashboard.html" class="flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition">
+    <div class="p-3 bg-[#dfe7e4] space-y-1">
+      <a href="dashboard.html" class="flex items-center gap-2 px-3 py-2 small-copy font-semibold text-[#06525c] hover:bg-[#cfddd9] transition-colors">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="m15 18-6-6 6-6"/></svg>
-        <span>Voltar ao Painel do Aluno</span>
+        <span>Estante do Aluno</span>
       </a>
-      <button id="sidebar-logout-btn" class="w-full flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 transition">
+      <button id="sidebar-logout-btn" class="w-full flex items-center gap-2 px-3 py-2 small-copy font-semibold text-[#69221e] hover:bg-[#eadad7] transition-colors">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
         <span>Encerrar Sessão</span>
       </button>
@@ -58,45 +57,76 @@
   </aside>
 
   <!-- Conteúdo Principal -->
-  <main class="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
+  <main class="flex-1 flex flex-col min-w-0 min-h-[100svh]">
+    <!-- Barra Superior Desktop (Ruled T-frame 64px) -->
+    <div class="hidden md:flex h-16 items-center justify-between px-8 bg-[#ebf0ee] shrink-0">
+      <div class="flex items-center gap-3 small-copy text-[#0d4a52]">
+        <span class="font-semibold text-[#06525c]">Catálogo Geral de Partituras</span>
+        <span>/</span>
+        <span>Edição graduada em 4 níveis</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="dashboard.html" class="small-copy font-semibold text-[#06525c] link-editorial">Ver como aluno →</a>
+      </div>
+    </div>
+
     <!-- Header Mobile -->
-    <header class="md:hidden border-b border-zinc-800/80 bg-ink-950/90 shrink-0">
+    <header class="md:hidden bg-[#ebf0ee] shrink-0">
       <div class="h-14 flex items-center px-4 justify-between">
-        <div class="flex items-center gap-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-          <span class="font-display font-bold text-white text-sm">Harmonia <span class="text-amber-400">Estúdio</span></span>
+        <div class="flex items-baseline gap-2">
+          <span class="font-semibold text-[#06525c] text-lg">Harmonia</span>
+          <span class="small-copy italic text-[#24636c]">Estúdio</span>
         </div>
-        <div class="flex items-center gap-2">
-          <a href="dashboard.html" class="text-xs text-zinc-400 hover:text-white">Aluno</a>
-          <button id="mobile-logout-btn" class="text-xs text-rose-400 hover:text-rose-300 ml-2">Sair</button>
+        <div class="flex items-center gap-3">
+          <a href="dashboard.html" class="small-copy text-[#06525c] font-medium">Aluno</a>
+          <button id="mobile-logout-btn" class="small-copy text-[#69221e] font-semibold">Sair</button>
         </div>
       </div>
       <nav class="flex gap-1 overflow-x-auto px-3 pb-3" id="studio-tabs">
-        <a href="#songs" data-section="songs" class="tab-link whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:text-white">Músicas</a>
-        <a href="#instruments" data-section="instruments" class="tab-link whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:text-white">Instrumentos</a>
-        <a href="#users" data-section="users" class="tab-link whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:text-white">Usuários</a>
+        <a href="#songs" data-section="songs" class="tab-link whitespace-nowrap px-3 py-1.5 small-copy font-semibold text-[#24636c] hover:text-[#06525c]">Obras</a>
+        <a href="#instruments" data-section="instruments" class="tab-link whitespace-nowrap px-3 py-1.5 small-copy font-semibold text-[#24636c] hover:text-[#06525c]">Instrumentos</a>
+        <a href="#users" data-section="users" class="tab-link whitespace-nowrap px-3 py-1.5 small-copy font-semibold text-[#24636c] hover:text-[#06525c]">Usuários</a>
       </nav>
     </header>
 
-    <div class="flex-1 overflow-y-auto px-4 py-8 sm:px-10 sm:py-10" id="main-scroll-area">
+    <div class="flex-1 overflow-y-auto px-4 py-8 sm:px-8 sm:py-10" id="main-scroll-area">
 
       <!-- ============================================== -->
       <!-- SECTION: MÚSICAS (GRADE) -->
       <!-- ============================================== -->
       <div id="section-songs" class="studio-section hidden max-w-6xl mx-auto">
-        <header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <header class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">Gerenciamento de Músicas</h1>
-            <p class="mt-1 text-sm text-zinc-400">Cadastre novas canções, gerencie trilhas de instrumentos e organize as aulas em vídeo.</p>
+            <h1 class="text-2xl sm:text-[28px] font-bold tracking-tight text-[#06525c]">Repertório do Estúdio</h1>
+            <p class="mt-2 small-copy text-[#06525c]">Cadastre novas obras, vincule trilhas de instrumentos e publique as aulas de cada grau.</p>
           </div>
           <button onclick="openModal('modal-add-song')" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 4v16m8-8H4"/></svg>
-            <span>Adicionar Música</span>
+            <span>Nova Obra</span>
           </button>
         </header>
 
-        <div id="songs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="text-zinc-500 col-span-full py-8 text-center text-sm">Carregando repertório...</div>
+        <!-- Resumo do Acervo (Accent Ladder) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div class="p-4 min-h-[116px] bg-[#ebf0ee] flex flex-col justify-between">
+            <span class="small-copy text-[#0d4a52]">Obras catalogadas</span>
+            <span id="studio-stat-songs" class="text-2xl font-normal nums text-[#06525c]">1</span>
+            <span class="small-copy text-[#0d4a52]">Edições abertas para estudo</span>
+          </div>
+          <div class="p-4 min-h-[116px] lvl-badge-1 flex flex-col justify-between">
+            <span class="small-copy text-[#0d4a52]">Trilhas de instrumento</span>
+            <span id="studio-stat-tracks" class="text-2xl font-normal nums text-[#06525c]">2</span>
+            <span class="small-copy text-[#0d4a52]">Trilhas vinculadas no catálogo</span>
+          </div>
+          <div class="p-4 min-h-[116px] lvl-badge-2 flex flex-col justify-between">
+            <span class="small-copy text-[#0d4a52]">Graus de arranjo</span>
+            <span id="studio-stat-modules" class="text-2xl font-normal nums text-[#06525c]">8</span>
+            <span class="small-copy text-[#0d4a52]">Quatro níveis por trilha</span>
+          </div>
+        </div>
+
+        <div id="songs-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="text-[#24636c] col-span-full py-8 text-center small-copy">Carregando repertório...</div>
         </div>
       </div>
 
@@ -104,25 +134,25 @@
       <!-- SECTION: MÚSICA (DETALHES / CONTEÚDO PEDAGÓGICO) -->
       <!-- ============================================== -->
       <div id="section-song-edit" class="studio-section hidden max-w-5xl mx-auto">
-        <header class="mb-8 flex items-start justify-between gap-4 pb-6 border-b border-zinc-800/80">
+        <header class="mb-8 flex flex-wrap items-start justify-between gap-4 p-6 bg-[#ebf0ee]">
           <div class="flex items-start gap-4 min-w-0">
             <button onclick="window.location.hash='songs'" class="btn btn-secondary btn-icon mt-1" title="Voltar para a lista">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="m15 18-6-6 6-6"/></svg>
             </button>
             <div class="min-w-0">
               <div class="flex items-center gap-3">
-                <h1 id="edit-song-title" class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white truncate">Carregando...</h1>
-                <button onclick="openEditSongModal()" class="text-zinc-400 hover:text-amber-400 transition" title="Editar Título e Artista">
+                <h1 id="edit-song-title" class="text-2xl sm:text-3xl font-bold tracking-tight text-[#06525c] truncate">Carregando...</h1>
+                <button onclick="openEditSongModal()" class="text-[#24636c] hover:text-[#06525c] transition-colors p-1" title="Editar Título e Artista">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
                 </button>
               </div>
-              <p id="edit-song-artist" class="mt-1 text-sm text-zinc-400 truncate">...</p>
+              <p id="edit-song-artist" class="mt-1 small-copy text-[#24636c] truncate">...</p>
             </div>
           </div>
 
           <div class="flex items-center gap-2 shrink-0">
             <button onclick="openModal('modal-add-track')" class="btn btn-secondary btn-sm">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5 text-amber-400"><path d="M12 4v16m8-8H4"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="M12 4v16m8-8H4"/></svg>
               <span>Nova Trilha</span>
             </button>
             <button onclick="deleteCurrentSong()" class="btn btn-danger btn-sm" title="Excluir Música Inteira">
@@ -143,26 +173,26 @@
       <!-- ============================================== -->
       <div id="section-instruments" class="studio-section hidden max-w-3xl mx-auto">
         <header class="mb-8">
-          <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">Instrumentos Cadastrados</h1>
-          <p class="mt-1 text-sm text-zinc-400">Gerencie os instrumentos disponíveis para trilhas e escolha dos alunos.</p>
+          <h1 class="text-3xl font-bold tracking-tight text-[#06525c]">Instrumentos Cadastrados</h1>
+          <p class="mt-2 small-copy text-[#24636c]">Gerencie os instrumentos disponíveis para trilhas e matrícula dos alunos.</p>
         </header>
 
         <section class="card p-6 mb-8">
           <form id="form-instrument">
-            <h2 class="text-base font-semibold text-white mb-4">Adicionar Novo Instrumento</h2>
+            <h2 class="text-lg font-semibold text-[#06525c] mb-4">Adicionar novo instrumento</h2>
             <div class="flex flex-col sm:flex-row gap-3">
               <div class="flex-1">
-                <input type="text" name="name" required placeholder="Ex: Guitarra Elétrica, Baixo, Canto..." class="field mt-0" />
+                <input type="text" name="name" required placeholder="Ex: Violoncelo, Flauta Transversal, Canto Coral..." class="field mt-0" />
               </div>
               <button type="submit" class="btn btn-primary sm:w-auto">
-                Cadastrar Instrumento
+                Cadastrar instrumento
               </button>
             </div>
           </form>
         </section>
 
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-4">Lista de Instrumentos</h3>
-        <ul id="instruments-list" class="space-y-2">
+        <h3 class="text-lg font-semibold text-[#06525c] mb-4">Instrumentos ativos no catálogo</h3>
+        <ul id="instruments-list" class="space-y-2.5">
           <!-- Injetado via JS -->
         </ul>
       </div>
@@ -172,22 +202,22 @@
       <!-- ============================================== -->
       <div id="section-users" class="studio-section hidden max-w-5xl mx-auto">
         <header class="mb-8">
-          <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">Controle de Usuários</h1>
-          <p class="mt-1 text-sm text-zinc-400">Gerencie os acessos, instrumentos preferidos e permissões de administrador.</p>
+          <h1 class="text-3xl font-bold tracking-tight text-[#06525c]">Matrículas e Permissões</h1>
+          <p class="mt-2 small-copy text-[#24636c]">Gerencie os alunos matriculados, instrumentos vinculados e permissões de estúdio.</p>
         </header>
 
-        <div class="card overflow-hidden">
-          <table class="w-full text-sm text-left text-zinc-300">
-            <thead class="text-xs text-zinc-400 uppercase bg-ink-950/80 border-b border-zinc-800">
+        <div class="card overflow-x-auto">
+          <table class="w-full small-copy text-left text-[#06525c]">
+            <thead class="bg-[#dfe7e4] text-[#06525c]">
               <tr>
-                <th class="px-6 py-4">Nome</th>
-                <th class="px-6 py-4">E-mail</th>
-                <th class="px-6 py-4">Instrumento</th>
-                <th class="px-6 py-4">Papel</th>
-                <th class="px-6 py-4 text-right">Ação</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Instrumento</th>
+                <th>Papel</th>
+                <th class="text-right">Ação</th>
               </tr>
             </thead>
-            <tbody id="users-tbody" class="divide-y divide-zinc-800/60">
+            <tbody id="users-tbody">
               <!-- Injetado via JS -->
             </tbody>
           </table>
@@ -204,18 +234,18 @@
   <!-- Modal: Adicionar Música -->
   <div id="modal-add-song" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 class="text-lg font-bold text-white">Adicionar Nova Música</h2>
-        <button type="button" onclick="closeModal('modal-add-song')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-[#06525c]">Adicionar Nova Obra</h2>
+        <button type="button" onclick="closeModal('modal-add-song')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-song">
         <div class="p-6 space-y-4">
           <div>
-            <label class="field-label">Título da Canção</label>
+            <label class="field-label">Título da Obra</label>
             <input type="text" name="title" required placeholder="Ex: Rumo ao Lar" class="field" />
           </div>
           <div>
-            <label class="field-label">Artista ou Coral</label>
+            <label class="field-label">Compositor, Intérprete ou Coral</label>
             <input type="text" name="artist" required placeholder="Ex: Coral UNASP" class="field" />
           </div>
           <div>
@@ -223,12 +253,12 @@
             <select name="instrument_id" id="modal-select-instruments" required class="field">
               <!-- Preenchido via JS -->
             </select>
-            <p class="field-hint">Você poderá adicionar outros instrumentos à mesma canção depois.</p>
+            <p class="field-hint">Você poderá vincular outros instrumentos à mesma obra em seguida.</p>
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-add-song')" class="btn btn-ghost btn-sm">Cancelar</button>
-          <button type="submit" class="btn btn-primary btn-sm">Criar Música</button>
+          <button type="submit" class="btn btn-primary btn-sm">Criar Obra</button>
         </div>
       </form>
     </div>
@@ -237,23 +267,23 @@
   <!-- Modal: Editar Música -->
   <div id="modal-edit-song" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 class="text-lg font-bold text-white">Editar Dados da Música</h2>
-        <button type="button" onclick="closeModal('modal-edit-song')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-[#06525c]">Editar Dados da Obra</h2>
+        <button type="button" onclick="closeModal('modal-edit-song')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-edit-song">
         <input type="hidden" name="song_id" id="edit-song-id" />
         <div class="p-6 space-y-4">
           <div>
-            <label class="field-label">Título da Canção</label>
+            <label class="field-label">Título da Obra</label>
             <input type="text" name="title" id="edit-song-title-input" required class="field" />
           </div>
           <div>
-            <label class="field-label">Artista ou Coral</label>
+            <label class="field-label">Compositor, Intérprete ou Coral</label>
             <input type="text" name="artist" id="edit-song-artist-input" required class="field" />
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-edit-song')" class="btn btn-ghost btn-sm">Cancelar</button>
           <button type="submit" class="btn btn-primary btn-sm">Salvar Alterações</button>
         </div>
@@ -264,9 +294,9 @@
   <!-- Modal: Adicionar Nova Trilha (Instrumento) à Música -->
   <div id="modal-add-track" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 class="text-lg font-bold text-white">Vincular Novo Instrumento (Trilha)</h2>
-        <button type="button" onclick="closeModal('modal-add-track')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 class="text-xl font-semibold text-[#06525c]">Vincular Novo Instrumento (Trilha)</h2>
+        <button type="button" onclick="closeModal('modal-add-track')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-add-track">
         <div class="p-6 space-y-4">
@@ -277,7 +307,7 @@
             </select>
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-add-track')" class="btn btn-ghost btn-sm">Cancelar</button>
           <button type="submit" class="btn btn-primary btn-sm">Adicionar Trilha</button>
         </div>
@@ -288,9 +318,9 @@
   <!-- Modal: Adicionar/Editar Nível (Módulo) -->
   <div id="modal-module" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 id="modal-module-title" class="text-lg font-bold text-white">Configurar Nível</h2>
-        <button type="button" onclick="closeModal('modal-module')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 id="modal-module-title" class="text-xl font-semibold text-[#06525c]">Configurar Grau</h2>
+        <button type="button" onclick="closeModal('modal-module')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-module">
         <input type="hidden" name="module_id" id="module-id" />
@@ -299,20 +329,20 @@
           <div>
             <label class="field-label">Grau de Dificuldade</label>
             <select name="difficulty_level" id="module-difficulty-select" required class="field">
-              <option value="1">1 — Fácil (Acordes básicos)</option>
-              <option value="2">2 — Médio (Inversões e ritmo)</option>
-              <option value="3">3 — Difícil (Dedilhado e dinâmica)</option>
-              <option value="4">4 — Avançado (Arranjo concerto completo)</option>
+              <option value="1">1: Fácil (Acordes básicos)</option>
+              <option value="2">2: Médio (Inversões e ritmo)</option>
+              <option value="3">3: Difícil (Dedilhado e dinâmica)</option>
+              <option value="4">4: Avançado (Arranjo concerto completo)</option>
             </select>
           </div>
           <div>
             <label class="field-label">Objetivo Pedagógico / Descrição</label>
-            <textarea name="description" id="module-description-input" required rows="3" placeholder="O que o aluno aprenderá neste nível específico?" class="field"></textarea>
+            <textarea name="description" id="module-description-input" required rows="3" placeholder="O que o aluno aprenderá neste grau específico?" class="field"></textarea>
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-module')" class="btn btn-ghost btn-sm">Cancelar</button>
-          <button type="submit" class="btn btn-primary btn-sm">Salvar Nível</button>
+          <button type="submit" class="btn btn-primary btn-sm">Salvar Grau</button>
         </div>
       </form>
     </div>
@@ -321,9 +351,9 @@
   <!-- Modal: Adicionar/Editar Aula -->
   <div id="modal-lesson" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 id="modal-lesson-title" class="text-lg font-bold text-white">Configurar Aula</h2>
-        <button type="button" onclick="closeModal('modal-lesson')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 id="modal-lesson-title" class="text-xl font-semibold text-[#06525c]">Configurar Aula</h2>
+        <button type="button" onclick="closeModal('modal-lesson')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-lesson">
         <input type="hidden" name="lesson_id" id="lesson-id" />
@@ -331,19 +361,19 @@
         <div class="p-6 space-y-4">
           <div>
             <label class="field-label">Título da Aula</label>
-            <input type="text" name="title" id="lesson-title-input" required placeholder="Ex: Aula 1 — Introdução aos Acordes" class="field" />
+            <input type="text" name="title" id="lesson-title-input" required placeholder="Ex: Aula 1 · Introdução aos Acordes" class="field" />
           </div>
           <div>
             <label class="field-label">Link do Vídeo</label>
             <input type="url" name="video_url" id="lesson-video-input" required placeholder="Cole o link do YouTube (watch, embed ou youtu.be)" class="field" />
-            <p class="field-hint">Aceita qualquer formato do YouTube — o sistema converte automaticamente para embed.</p>
+            <p class="field-hint">Aceita qualquer formato do YouTube; o sistema converte automaticamente para incorporação.</p>
           </div>
           <div>
             <label class="field-label">Ordem de Exibição (Opcional)</label>
             <input type="number" name="order_index" id="lesson-order-input" min="0" placeholder="Automático (final da lista)" class="field" />
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-lesson')" class="btn btn-ghost btn-sm">Cancelar</button>
           <button type="submit" class="btn btn-primary btn-sm">Salvar Aula</button>
         </div>
@@ -354,9 +384,9 @@
   <!-- Modal: Adicionar/Editar Material -->
   <div id="modal-material" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-panel">
-      <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
-        <h2 id="modal-material-title" class="text-lg font-bold text-white">Anexar Material de Apoio</h2>
-        <button type="button" onclick="closeModal('modal-material')" class="text-zinc-400 hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <div class="p-6 bg-[#ebf0ee] flex justify-between items-center">
+        <h2 id="modal-material-title" class="text-xl font-semibold text-[#06525c]">Anexar Material de Apoio</h2>
+        <button type="button" onclick="closeModal('modal-material')" class="text-[#24636c] hover:text-[#06525c]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <form id="form-material">
         <input type="hidden" name="material_id" id="material-id" />
@@ -381,7 +411,7 @@
             </select>
           </div>
         </div>
-        <div class="p-4 px-6 border-t border-zinc-800 bg-ink-950/40 rounded-b-2xl flex justify-end gap-3">
+        <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-material')" class="btn btn-ghost btn-sm">Cancelar</button>
           <button type="submit" class="btn btn-primary btn-sm">Salvar Material</button>
         </div>

@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Entrar | Harmonia</title>
-  <meta name="description" content="Acesse sua conta na plataforma Harmonia e continue seus estudos musicais." />
+  <meta name="description" content="Acesse seu caderno de estudo na Harmonia e continue a prática nos 4 graus de arranjo." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
@@ -17,56 +16,106 @@
     if (localStorage.getItem('token')) window.location.replace('/dashboard.html');
   </script>
 </head>
-<body class="font-sans text-zinc-300 antialiased relative min-h-screen flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-8">
-  <div class="aurora" aria-hidden="true"></div>
+<body class="bg-[#ebf0ee] text-[#06525c] antialiased min-h-[100svh] flex flex-col justify-between">
 
-  <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
-    <a href="index.html" class="inline-flex items-center gap-2.5 text-white focus:outline-none">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-8 w-8 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      <span class="font-display text-3xl font-extrabold tracking-tight">Harmonia</span>
-    </a>
-    <h1 class="mt-6 font-display text-2xl font-bold tracking-tight text-white">Bem-vindo de volta</h1>
-    <p class="mt-2 text-sm text-zinc-400">Continue seus estudos no seu próprio ritmo.</p>
-  </div>
+  <!-- Cabeçalho do Caderno -->
+  <header class="page-wrap py-6">
+    <div class="mx-auto max-w-[1320px] flex items-center justify-between">
+      <a href="index.html" class="inline-flex items-baseline gap-3">
+        <span class="text-2xl font-semibold tracking-tight">Harmonia</span>
+        <span class="small-copy text-[#24636c] italic hidden sm:inline">Caderno de Repertório</span>
+      </a>
+      <a href="register.html" class="small-copy link-editorial">Abrir matrícula gratuita</a>
+    </div>
+  </header>
 
-  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-[440px]">
-    <div class="card p-6 sm:p-8 shadow-2xl">
-      <form class="space-y-5" id="login-form">
-        <div id="error-message" class="hidden alert alert-error" role="alert">
-          <div class="flex items-center gap-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 shrink-0"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
-            <span id="error-text">E-mail ou senha incorretos</span>
+  <!-- Ficha de Leitura (The Page is the Object) -->
+  <main class="page-wrap py-6 flex-1 flex items-center">
+    <div class="mx-auto w-full max-w-[1040px] folio-sheet p-6 sm:p-12 lg:p-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Coluna Editorial / Gravura de Conservatório -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+          <div>
+            <p class="small-copy text-[#24636c] italic">Ficha de acesso ao estúdio</p>
+            <h1 class="mt-2 text-2xl sm:text-[28px] font-medium tracking-tight leading-[1.08]">
+              Abra a estante no compasso em que parou.
+            </h1>
+            <p class="mt-4 small-copy text-[#24636c]">
+              Entre com seu e-mail para retomar sua trilha de instrumento, alternar entre os quatro graus de escrita e baixar as folhas de estudo em PDF.
+            </p>
+          </div>
+
+          <figure class="plate-frame bg-[#ebf0ee] p-3">
+            <img
+              src="assets/open/a-tuning-fork-placed-on-sheet-music.jpg"
+              alt="Diapasão de aço pousado sobre partitura impressa"
+              width="960"
+              height="720"
+              class="plate-photo aspect-[4/3]"
+            />
+            <figcaption class="mt-2.5 flex items-baseline justify-between small-copy text-[#0d4a52]">
+              <span>Diapasão de referência / Lá 440 Hz</span>
+              <span class="nums">Cat. I–IV</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Coluna do Formulário -->
+        <div class="lg:col-span-7 bg-[#ebf0ee] p-6 sm:p-10">
+          <div class="flex items-baseline justify-between mb-6">
+            <h2 class="text-2xl font-medium">Identificação do aluno</h2>
+            <span class="small-copy text-[#24636c] nums">Ed. 2025</span>
+          </div>
+
+          <form class="space-y-5" id="login-form">
+            <div id="error-message" class="hidden alert alert-error" role="alert">
+              <div class="flex items-center gap-2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 shrink-0"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+                <span id="error-text">E-mail ou senha incorretos</span>
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="field-label">Endereço de e-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com" class="field" />
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between">
+                <label for="password" class="field-label">Senha</label>
+              </div>
+              <div class="password-wrap">
+                <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" class="field" />
+                <button type="button" class="password-toggle" data-target="password" aria-label="Ver senha">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="btn btn-primary btn-block py-3.5 text-base">
+                <span>Abrir caderno de estudo</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="mt-8 bg-[#f7f9f8] p-4 flex flex-wrap items-center justify-between gap-2 small-copy text-[#24636c]">
+            <span>Ainda não possui matrícula registrada?</span>
+            <a href="register.html" class="font-semibold text-[#06525c] link-editorial">Preencher ficha de matrícula →</a>
           </div>
         </div>
 
-        <div>
-          <label for="email" class="field-label">Endereço de e-mail</label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com" class="field" />
-        </div>
-
-        <div>
-          <div class="flex items-center justify-between">
-            <label for="password" class="field-label">Senha</label>
-          </div>
-          <div class="password-wrap">
-            <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" class="field" />
-            <button type="button" class="password-toggle" data-target="password" aria-label="Ver senha">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block py-3 mt-2 text-base">
-          <span>Entrar na plataforma</span>
-        </button>
-      </form>
-
-      <div class="mt-8 pt-6 border-t border-zinc-800/80 text-center text-sm text-zinc-400">
-        Ainda não tem conta?
-        <a href="register.html" class="font-semibold text-amber-400 hover:text-amber-300 transition-colors ml-1">Criar conta gratuita</a>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="page-wrap py-6 small-copy text-[#24636c]">
+    <div class="mx-auto max-w-[1320px] flex flex-wrap items-center justify-between gap-4">
+      <span>Harmonia / Ensino musical por graus de arranjo</span>
+      <a href="index.html" class="link-editorial">Voltar à edição de apresentação</a>
+    </div>
+  </footer>
 
   <script src="js/common.js"></script>
   <script src="js/auth.js"></script>

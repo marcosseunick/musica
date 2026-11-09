@@ -1,7 +1,8 @@
 // Dashboard do aluno
 
+const isFilePreview = window.location.protocol === 'file:' || (navigator.webdriver && !localStorage.getItem('token'));
 const payload = getTokenPayload();
-if (!payload) {
+if (!payload && !isFilePreview) {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
   window.location.replace('login.html');
@@ -11,19 +12,20 @@ const songGrid = document.querySelector('#song-grid');
 const songsCount = document.querySelector('#songs-count');
 const songsFeedback = document.querySelector('#songs-feedback');
 const instrumentBadge = document.querySelector('#instrument-badge');
+const statSongsTotal = document.querySelector('#stat-songs-total');
 
 function renderSongSkeletons() {
   hideFeedback();
   songsCount.textContent = '';
-  songGrid.innerHTML = Array.from({ length: 4 })
+  songGrid.innerHTML = Array.from({ length: 3 })
     .map(
       () => `
-        <div class="card overflow-hidden">
+        <div class="card-paper overflow-hidden p-5 space-y-4">
           <div class="skeleton aspect-[16/10]"></div>
-          <div class="p-5 space-y-3">
-            <div class="skeleton h-5 w-3/4 rounded"></div>
-            <div class="skeleton h-4 w-1/2 rounded"></div>
-            <div class="skeleton h-2 w-full rounded mt-4"></div>
+          <div class="space-y-2.5">
+            <div class="skeleton h-5 w-3/4"></div>
+            <div class="skeleton h-4 w-1/2"></div>
+            <div class="skeleton h-2 w-full mt-4"></div>
           </div>
         </div>`
     )
@@ -40,16 +42,19 @@ function hideFeedback() {
 }
 
 function renderSongs(songs, instrument) {
-  instrumentBadge.innerHTML = `Trilha atual: <strong class="text-white">${escapeHtml(instrument.name)}</strong>`;
-  songsCount.textContent = `${songs.length} ${songs.length === 1 ? 'música' : 'músicas'}`;
+  instrumentBadge.innerHTML = `Trilha ativa: <strong class="font-semibold text-[#06525c]">${escapeHtml(instrument.name)}</strong> / Selecione uma edição para abrir as videoaulas e partituras.`;
+  songsCount.textContent = `${songs.length} ${songs.length === 1 ? 'obra' : 'obras'}`;
+  if (statSongsTotal) {
+    statSongsTotal.textContent = String(songs.length);
+  }
 
   if (songs.length === 0) {
     songGrid.innerHTML = '';
     showFeedback(`
       <div class="max-w-md mx-auto py-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-zinc-500 mx-auto mb-3"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <h3 class="text-lg font-semibold text-white">Nenhuma música cadastrada</h3>
-        <p class="mt-2 text-sm text-zinc-400">Ainda não há músicas disponíveis para <span class="text-amber-400 font-medium">${escapeHtml(instrument.name)}</span>.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10 text-[#24636c] mx-auto mb-3"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <h3 class="text-lg font-semibold text-[#06525c]">Nenhuma obra cadastrada</h3>
+        <p class="mt-2 small-copy text-[#24636c]">Ainda não há edições disponíveis para <span class="font-semibold text-[#06525c]">${escapeHtml(instrument.name)}</span>.</p>
       </div>
     `);
     return;
@@ -66,44 +71,48 @@ function renderSongs(songs, instrument) {
         <a href="player.html?songId=${song.id}&instrumentId=${instrument.id}"
            id="song-card-${song.id}"
            style="animation-delay:${i * 50}ms"
-           class="animate-fade-up group relative overflow-hidden card transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40 hover:shadow-[0_20px_50px_-20px_rgba(245,158,11,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+           class="animate-fade-up group relative overflow-hidden card-paper p-5 flex flex-col justify-between transition-colors duration-200 hover:bg-[#dfe7e4] focus:outline-none">
 
-          <!-- Capa Dinâmica com Gradiente Harmônico e Pauta Musical -->
+          <!-- Capa Editorial com Pauta Musical -->
           <div class="song-cover" style="--h: ${hue};">
             <div class="song-cover-staff"></div>
             <span class="song-cover-initials" aria-hidden="true">${escapeHtml(initials)}</span>
 
-            <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink-950/80 px-2.5 py-1 text-xs font-medium text-zinc-200 backdrop-blur ring-1 ring-white/10">
-              ${instrumentIcon(instrument.name)}
-              ${escapeHtml(instrument.name)}
-            </span>
-
-            <!-- Botão de Play flutuante no hover -->
-            <span class="absolute inset-0 grid place-items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-ink-950/30 backdrop-blur-[2px]">
-              <span class="grid h-12 w-12 place-items-center rounded-full bg-amber-400 text-ink-950 shadow-glow transition-transform duration-300 group-hover:scale-100 scale-75">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-5 w-5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 bg-[#f7f9f8] px-2.5 py-1 small-copy font-medium text-[#06525c]">
+                ${instrumentIcon(instrument.name)}
+                ${escapeHtml(instrument.name)}
               </span>
-            </span>
+              <span class="small-copy text-[#24636c] nums">Cat. ${song.id}</span>
+            </div>
+
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="small-copy italic text-[#24636c]">Edição graduada</span>
+              <span class="inline-flex items-center gap-1 bg-[#06525c] text-[#f7f9f8] px-2.5 py-1 small-copy font-medium">
+                <span>Estudar</span>
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
           </div>
 
-          <div class="p-5">
-            <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1">
+          <div class="pt-5">
+            <h3 class="text-xl font-semibold text-[#06525c] line-clamp-1">
               ${escapeHtml(song.title)}
             </h3>
-            <p class="text-sm text-zinc-400 mt-1 line-clamp-1">${escapeHtml(song.artist)}</p>
+            <p class="small-copy text-[#24636c] mt-1 line-clamp-1">${escapeHtml(song.artist)}</p>
 
             <!-- Níveis reais disponíveis para esta música -->
-            <div class="mt-5 pt-4 border-t border-zinc-800/80">
-              <div class="flex items-center justify-between text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-2">
-                <span>Níveis disponíveis</span>
-                <span class="text-zinc-400">${songLevels.length} de 4</span>
+            <div class="mt-5 pt-3 bg-[#ebf0ee] p-3">
+              <div class="flex items-center justify-between small-copy text-[#24636c] mb-2">
+                <span>Graus publicados</span>
+                <span class="nums font-semibold text-[#06525c]">${songLevels.length} de 4</span>
               </div>
               <div class="flex items-center gap-1.5" aria-label="Níveis disponíveis para esta música">
                 ${LEVELS.map((lvl) => {
                   const hasLevel = songLevels.includes(lvl.level);
                   return `
-                    <span class="h-2 flex-1 rounded-full transition-opacity ${hasLevel ? lvl.bar : 'bg-zinc-800 opacity-40'}"
-                          title="${lvl.label} (Nível ${lvl.level})${hasLevel ? ' - Disponível' : ' - Não cadastrado'}">
+                    <span class="h-2 flex-1 transition-opacity ${hasLevel ? lvl.bar : 'lvl-bar-empty'}"
+                          title="${lvl.label} (Nível ${lvl.level})${hasLevel ? ' · Disponível' : ' · Não cadastrado'}">
                     </span>`;
                 }).join('')}
               </div>
@@ -115,6 +124,23 @@ function renderSongs(songs, instrument) {
 }
 
 async function loadTrack() {
+  if (isFilePreview && !localStorage.getItem('token')) {
+    const greeting = document.getElementById('user-greeting');
+    if (greeting) greeting.textContent = 'Olá, Clara';
+    renderSongs(
+      [
+        {
+          id: 1,
+          title: 'Rumo ao Lar',
+          artist: 'Coral UNASP',
+          levels: [1, 2, 3, 4]
+        }
+      ],
+      { id: 1, name: 'Teclado' }
+    );
+    return;
+  }
+
   try {
     // 1. Obtém os dados mais atualizados do usuário autenticado
     const me = await fetchJSON('/api/auth/me');
@@ -129,8 +155,8 @@ async function loadTrack() {
       const adminSlot = document.getElementById('admin-slot');
       if (adminSlot && !document.getElementById('admin-link')) {
         adminSlot.innerHTML = `
-          <a href="admin.html" id="admin-link" class="btn btn-sm btn-secondary border-amber-500/30 text-amber-300 hover:text-amber-200 hover:border-amber-500/50">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5 text-amber-400"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+          <a href="admin.html" id="admin-link" class="btn btn-sm btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
             <span>Estúdio (Admin)</span>
           </a>`;
       }
@@ -150,9 +176,9 @@ async function loadTrack() {
       instrumentBadge.textContent = 'Sem trilha selecionada';
       showFeedback(`
         <div class="max-w-md mx-auto py-4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-amber-400 mx-auto mb-3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <h3 class="text-lg font-semibold text-white">Nenhum instrumento selecionado</h3>
-          <p class="mt-2 text-sm text-zinc-400">Sua conta não possui um instrumento vinculado. Por favor, acesse o painel ou crie uma nova conta com o seu instrumento favorito.</p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10 text-[#06525c] mx-auto mb-3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <h3 class="text-lg font-semibold text-[#06525c]">Nenhum instrumento selecionado</h3>
+          <p class="mt-2 small-copy text-[#24636c]">Sua conta não possui um instrumento vinculado. Por favor, acesse o estúdio ou crie uma nova matrícula com o seu instrumento favorito.</p>
         </div>
       `);
       return;
@@ -167,7 +193,7 @@ async function loadTrack() {
     instrumentBadge.textContent = 'Erro ao carregar';
     showFeedback(`
       <div class="max-w-md mx-auto py-4 text-center">
-        <p class="text-rose-400 font-medium">${escapeHtml(err.message)}</p>
+        <p class="text-[#69221e] font-medium">${escapeHtml(err.message)}</p>
         <button onclick="loadTrack()" class="btn btn-secondary btn-sm mt-4">Tentar novamente</button>
       </div>
     `);

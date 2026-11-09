@@ -6,58 +6,57 @@
   <title>Aula | Harmonia</title>
   <meta name="description" content="Assista à aula em vídeo e alterne entre os níveis Fácil, Médio, Difícil e Avançado, com partituras e cifras de apoio." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
 </head>
-<body class="font-sans text-zinc-300 antialiased bg-ink-950 min-h-screen flex flex-col">
+<body class="bg-[#f7f9f8] text-[#06525c] antialiased min-h-[100svh] flex flex-col">
 
-  <!-- Header compacto -->
-  <header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-ink-950/85 backdrop-blur-md">
-    <div class="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-      <a href="dashboard.html" id="back-btn" class="btn btn-secondary btn-sm" aria-label="Voltar para o Dashboard">
+  <!-- Barra Superior Compacta -->
+  <header class="bg-[#ebf0ee]">
+    <div class="mx-auto flex h-16 max-w-[1240px] items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <a href="dashboard.html" id="back-btn" class="btn btn-secondary btn-sm" aria-label="Voltar para o Painel">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M15 18l-6-6 6-6"/></svg>
-        <span class="hidden sm:inline">Voltar</span>
+        <span class="hidden sm:inline">Estante</span>
       </a>
 
       <div class="min-w-0 flex-1">
-        <h1 id="lesson-title" class="truncate font-display text-base font-bold text-white sm:text-lg">
-          <span class="skeleton inline-block h-5 w-48 rounded align-middle"></span>
+        <h1 id="lesson-title" class="truncate text-lg sm:text-xl font-semibold text-[#06525c]">
+          <span class="skeleton inline-block h-5 w-48 align-middle"></span>
         </h1>
-        <p id="lesson-subtitle" class="truncate text-xs text-zinc-400"></p>
+        <p id="lesson-subtitle" class="truncate small-copy text-[#24636c]"></p>
       </div>
 
-      <a href="dashboard.html" id="logo-link" class="hidden shrink-0 items-center gap-2 md:flex">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display font-bold text-white text-sm">Harmonia</span>
+      <a href="dashboard.html" id="logo-link" class="hidden shrink-0 items-baseline gap-2 md:flex">
+        <span class="text-xl font-semibold text-[#06525c]">Harmonia</span>
+        <span class="small-copy italic text-[#24636c]">Sala de Ensaio</span>
       </a>
     </div>
   </header>
 
   <!-- Estado de erro -->
   <section id="error-state" class="hidden mx-auto max-w-md px-4 py-24 text-center">
-    <div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-rose-500/10 text-rose-300 ring-1 ring-rose-400/30">
+    <div class="mx-auto grid h-14 w-14 place-items-center bg-[#eadad7] text-[#69221e]">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
     </div>
-    <h2 class="mt-5 font-display text-2xl font-bold text-white">Aula indisponível</h2>
-    <p id="error-message" class="mt-2 text-zinc-400 text-sm"></p>
+    <h2 class="mt-5 text-2xl font-semibold text-[#06525c]">Aula indisponível</h2>
+    <p id="error-message" class="mt-2 text-[#24636c] small-copy"></p>
     <a href="dashboard.html" id="error-back-btn" class="btn btn-primary btn-sm mt-6">
-      Voltar para as músicas
+      Voltar para o repertório
     </a>
   </section>
 
   <!-- Conteúdo principal -->
-  <main id="lesson-content" class="flex-1 mx-auto grid max-w-7xl gap-8 px-4 py-6 sm:px-6 lg:grid-cols-3 lg:gap-8 lg:px-8 lg:py-8 w-full">
+  <main id="lesson-content" class="flex-1 mx-auto grid max-w-[1240px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 w-full">
 
     <!-- Coluna principal: Player + Níveis + Descrição -->
-    <section class="lg:col-span-2 space-y-6" aria-label="Player e Conteúdo da Aula">
+    <section class="lg:col-span-8 space-y-6" aria-label="Player e Conteúdo da Aula">
 
       <!-- Container do Vídeo -->
-      <div class="relative aspect-video overflow-hidden rounded-2xl bg-black ring-1 ring-zinc-800 shadow-2xl">
+      <div class="relative aspect-video overflow-hidden bg-[#dfe7e4]">
         <div id="video-skeleton" class="skeleton absolute inset-0 z-10"></div>
         <iframe
           id="video-player"
@@ -70,36 +69,36 @@
           allowfullscreen></iframe>
 
         <!-- Estado vazio caso o nível não tenha nenhuma aula -->
-        <div id="video-empty-state" class="hidden absolute inset-0 bg-ink-900/95 flex flex-col items-center justify-center p-6 text-center z-20">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-zinc-500 mb-3"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
-          <h3 class="text-base font-semibold text-white">Nenhuma aula gravada neste nível</h3>
-          <p class="mt-1 text-xs text-zinc-400 max-w-sm">Este arranjo ainda não possui vídeos cadastrados. Selecione outro nível acima para continuar estudando.</p>
+        <div id="video-empty-state" class="hidden absolute inset-0 bg-[#ebf0ee] flex flex-col items-center justify-center p-6 text-center z-20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-[#24636c] mb-3"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+          <h3 class="text-lg font-semibold text-[#06525c]">Nenhuma aula gravada neste grau</h3>
+          <p class="mt-1 small-copy text-[#24636c] max-w-sm">Este arranjo ainda não possui vídeos cadastrados. Selecione outro grau abaixo para continuar estudando.</p>
         </div>
       </div>
 
       <!-- Barra de Controle de Aulas (Anterior / Próxima) -->
       <div class="flex items-center justify-between card p-3 px-4">
-        <button type="button" id="prev-lesson-btn" class="btn btn-ghost btn-sm text-xs">
+        <button type="button" id="prev-lesson-btn" class="btn btn-ghost btn-sm">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="m15 18-6-6 6-6"/></svg>
           <span>Aula anterior</span>
         </button>
 
-        <span id="current-lesson-indicator" class="text-xs font-semibold uppercase tracking-wider text-amber-400">
+        <span id="current-lesson-indicator" class="small-copy font-semibold text-[#06525c] nums">
           Aula 1 de 1
         </span>
 
-        <button type="button" id="next-lesson-btn" class="btn btn-ghost btn-sm text-xs">
+        <button type="button" id="next-lesson-btn" class="btn btn-ghost btn-sm">
           <span>Próxima aula</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="m9 18 6-6-6-6"/></svg>
         </button>
       </div>
 
-      <!-- Seletor de Dificuldade (4 Níveis) -->
+      <!-- Seletor de Dificuldade (4 Graus) -->
       <div>
-        <div class="flex items-center justify-between mb-3">
-          <h2 class="font-display text-xs font-bold uppercase tracking-[0.2em] text-zinc-400">Nível de Dificuldade</h2>
-          <span class="hidden text-xs text-zinc-500 sm:inline">
-            Atalho: teclas <kbd class="kbd">1</kbd> a <kbd class="kbd">4</kbd>
+        <div class="flex items-baseline justify-between mb-3">
+          <h2 class="text-lg font-semibold text-[#06525c]">Grau de escrita do arranjo</h2>
+          <span class="hidden small-copy text-[#24636c] sm:inline">
+            Atalho no teclado: teclas <kbd class="kbd">1</kbd> a <kbd class="kbd">4</kbd>
           </span>
         </div>
         <div id="level-tabs" class="grid grid-cols-2 gap-3 sm:grid-cols-4" role="tablist" aria-label="Níveis de dificuldade">
@@ -108,43 +107,41 @@
       </div>
 
       <!-- Descrição do Módulo Ativo -->
-      <article id="level-panel" role="tabpanel" class="card p-6">
-        <div class="flex items-center gap-3">
-          <span id="level-badge" class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"></span>
+      <article id="level-panel" role="tabpanel" class="card p-6 sm:p-8">
+        <div class="flex items-center gap-4">
+          <span id="level-badge" class="inline-flex items-center gap-2 px-3 py-1 small-copy font-semibold"></span>
           <div id="level-progress" class="flex flex-1 items-center gap-1.5" aria-hidden="true"></div>
         </div>
 
-        <h3 class="mt-4 font-display text-lg font-semibold text-white">Objetivo Pedagógico deste Nível</h3>
-        <p id="level-description" class="mt-2 text-sm leading-relaxed text-zinc-300">
+        <h3 class="mt-5 text-xl font-semibold text-[#06525c]">Objetivo pedagógico deste grau</h3>
+        <p id="level-description" class="mt-2 body-copy text-[#24636c]">
           Carregando informações pedagógicas...
         </p>
       </article>
     </section>
 
     <!-- Coluna secundária: Playlist de Aulas + Materiais de Apoio -->
-    <aside class="lg:col-span-1 space-y-6" aria-labelledby="playlist-heading">
-      <div class="card p-6 lg:sticky lg:top-24 space-y-6">
+    <aside class="lg:col-span-4 space-y-6" aria-labelledby="playlist-heading">
+      <div class="lg:sticky lg:top-8 space-y-6">
 
-        <!-- Lista de Aulas do Nível -->
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <h2 id="playlist-heading" class="font-display text-base font-bold text-white">Aulas do Nível</h2>
-            <span id="playlist-count" class="text-xs text-zinc-500 font-medium"></span>
+        <!-- Lista de Aulas do Grau -->
+        <div class="card p-6">
+          <div class="flex items-baseline justify-between mb-4">
+            <h2 id="playlist-heading" class="text-lg font-semibold text-[#06525c]">Aulas do grau</h2>
+            <span id="playlist-count" class="small-copy text-[#24636c] font-medium nums"></span>
           </div>
           <ul id="playlist-list" class="space-y-2">
             <!-- Injetado via JS -->
           </ul>
         </div>
 
-        <hr class="border-zinc-800/80" />
-
         <!-- Materiais em PDF / Cifras -->
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <h2 id="materials-heading" class="font-display text-base font-bold text-white">Materiais de Apoio</h2>
-            <span id="materials-count" class="rounded-full bg-zinc-800 px-2 py-0.5 text-xs text-zinc-400 font-semibold"></span>
+        <div class="card p-6">
+          <div class="flex items-baseline justify-between mb-1">
+            <h2 id="materials-heading" class="text-lg font-semibold text-[#06525c]">Partituras e cifras</h2>
+            <span id="materials-count" class="bg-[#dfe7e4] px-2.5 py-0.5 small-copy text-[#06525c] font-semibold nums"></span>
           </div>
-          <p id="materials-level" class="text-xs text-zinc-500 mb-4">Arquivos anexados a esta aula</p>
+          <p id="materials-level" class="small-copy text-[#24636c] mb-4">Arquivos anexados a esta aula</p>
 
           <ul id="materials-list" class="space-y-2.5">
             <!-- Injetado via JS -->
@@ -156,8 +153,8 @@
 
   </main>
 
-  <footer class="border-t border-zinc-800/80 py-6 bg-ink-950 text-center text-xs text-zinc-500">
-    Harmonia &middot; Plataforma de cursos de música com progressão didática
+  <footer class="mt-12 py-6 bg-[#ebf0ee] text-center small-copy text-[#0d4a52]">
+    Harmonia / Ensino musical por graus de arranjo
   </footer>
 
   <script src="js/common.js"></script>

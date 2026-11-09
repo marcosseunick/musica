@@ -1,50 +1,51 @@
 // Utilitários compartilhados entre todas as páginas do Harmonia
 
 // Metadados visuais de cada nível de dificuldade (índice = difficulty_level - 1)
+// Escada Tonal (Accent Ladder) de uma única família cromática (Teal on Paper)
 const LEVELS = [
   {
     level: 1,
     label: 'Fácil',
     slug: 'facil',
-    dot: 'bg-emerald-400',
-    text: 'text-emerald-400',
-    border: 'border-emerald-500/30',
-    bar: 'bg-emerald-400',
-    badge: 'bg-emerald-500/15 text-emerald-300 ring-1 ring-emerald-500/30',
-    activeTab: 'bg-emerald-500/15 text-emerald-200 border-emerald-500/50 shadow-[0_0_24px_-6px_rgba(52,211,153,0.4)]',
+    dot: 'lvl-dot-1',
+    text: 'text-[#06525c]',
+    border: '',
+    bar: 'lvl-bar-1',
+    badge: 'lvl-badge-1',
+    activeTab: 'lvl-tab-active-1',
   },
   {
     level: 2,
     label: 'Médio',
     slug: 'medio',
-    dot: 'bg-sky-400',
-    text: 'text-sky-400',
-    border: 'border-sky-500/30',
-    bar: 'bg-sky-400',
-    badge: 'bg-sky-500/15 text-sky-300 ring-1 ring-sky-500/30',
-    activeTab: 'bg-sky-500/15 text-sky-200 border-sky-500/50 shadow-[0_0_24px_-6px_rgba(56,189,248,0.4)]',
+    dot: 'lvl-dot-2',
+    text: 'text-[#06525c]',
+    border: '',
+    bar: 'lvl-bar-2',
+    badge: 'lvl-badge-2',
+    activeTab: 'lvl-tab-active-2',
   },
   {
     level: 3,
     label: 'Difícil',
     slug: 'dificil',
-    dot: 'bg-amber-400',
-    text: 'text-amber-400',
-    border: 'border-amber-500/30',
-    bar: 'bg-amber-400',
-    badge: 'bg-amber-500/15 text-amber-300 ring-1 ring-amber-500/30',
-    activeTab: 'bg-amber-500/15 text-amber-200 border-amber-500/50 shadow-[0_0_24px_-6px_rgba(245,158,11,0.4)]',
+    dot: 'lvl-dot-3',
+    text: 'text-[#05424a]',
+    border: '',
+    bar: 'lvl-bar-3',
+    badge: 'lvl-badge-3',
+    activeTab: 'lvl-tab-active-3',
   },
   {
     level: 4,
     label: 'Avançado',
     slug: 'avancado',
-    dot: 'bg-rose-400',
-    text: 'text-rose-400',
-    border: 'border-rose-500/30',
-    bar: 'bg-rose-400',
-    badge: 'bg-rose-500/15 text-rose-300 ring-1 ring-rose-500/30',
-    activeTab: 'bg-rose-500/15 text-rose-200 border-rose-500/50 shadow-[0_0_24px_-6px_rgba(244,63,94,0.4)]',
+    dot: 'lvl-dot-4',
+    text: 'text-[#06525c]',
+    border: '',
+    bar: 'lvl-bar-4',
+    badge: 'lvl-badge-4',
+    activeTab: 'lvl-tab-active-4',
   },
 ];
 
@@ -53,10 +54,13 @@ function getLevelMeta(level) {
   return LEVELS.find(l => l.level === n) || LEVELS[0];
 }
 
-// Ícones SVG dos instrumentos
+// Ícones SVG dos instrumentos (suporta qualquer instrumento cadastrado pelo admin)
 const INSTRUMENT_ICONS = {
-  teclado: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M7 5v9M12 5v9M17 5v9"/><path d="M7 14v5M12 14v5M17 14v5" stroke-opacity=".5"/></svg>',
-  violao: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><path d="M20.5 3.5l-6.2 6.2"/><path d="M18.5 2.5l3 3"/><path d="M14.3 9.7a4 4 0 0 0-5.6-.2 3 3 0 0 1-2.3.9 3.5 3.5 0 0 0-2.6 6 3.5 3.5 0 0 0 6 2.6c.1-.9.4-1.7.9-2.3a4 4 0 0 0-.2-5.6"/><circle cx="9" cy="15" r="1.4"/></svg>',
+  teclas: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M7 5v9M12 5v9M17 5v9"/><path d="M7 14v5M12 14v5M17 14v5" stroke-opacity=".5"/></svg>',
+  cordas: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><path d="M20.5 3.5l-6.2 6.2"/><path d="M18.5 2.5l3 3"/><path d="M14.3 9.7a4 4 0 0 0-5.6-.2 3 3 0 0 1-2.3.9 3.5 3.5 0 0 0-2.6 6 3.5 3.5 0 0 0 6 2.6c.1-.9.4-1.7.9-2.3a4 4 0 0 0-.2-5.6"/><circle cx="9" cy="15" r="1.4"/></svg>',
+  sopro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><path d="M4 16l12-10"/><path d="M14 4l6 6-4 2-4-4 2-4z"/><circle cx="8" cy="12.5" r="1"/><circle cx="11" cy="10" r="1"/></svg>',
+  percussao: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><ellipse cx="12" cy="10" rx="8" ry="3.5"/><path d="M4 10v6c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5v-6"/><path d="M6 4l5 5M18 4l-5 5"/></svg>',
+  voz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg>',
   default: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>'
 };
 
@@ -70,7 +74,12 @@ function normalizeSlug(str) {
 
 function instrumentIcon(name) {
   const slug = normalizeSlug(name);
-  return INSTRUMENT_ICONS[slug] || INSTRUMENT_ICONS.default;
+  if (/teclad|pian|orgao|acordeon|sanfon|sintetiz/.test(slug)) return INSTRUMENT_ICONS.teclas;
+  if (/viola|violao|guitar|baixo|contrabaixo|ukulel|cavaquinh|violin|celo|harpa|bandol/.test(slug)) return INSTRUMENT_ICONS.cordas;
+  if (/sax|flaut|trompet|rombon|clarin|obo|gaita|sopro/.test(slug)) return INSTRUMENT_ICONS.sopro;
+  if (/bateri|percuss|cajon|pandeir|tambor|conga/.test(slug)) return INSTRUMENT_ICONS.percussao;
+  if (/voz|cant|vocal|coral/.test(slug)) return INSTRUMENT_ICONS.voz;
+  return INSTRUMENT_ICONS.default;
 }
 
 // Gera matiz harmônico e consistente para a capa gerada de cada música (0 a 360)

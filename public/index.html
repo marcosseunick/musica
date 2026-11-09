@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harmonia | Cursos de Música com Progressão Didática</title>
-  <meta name="description" content="Aprenda músicas no seu instrumento com aulas em vídeo divididas em 4 níveis de dificuldade: Fácil, Médio, Difícil e Avançado." />
+  <title>Harmonia | Ensino Musical por Progressão em Quatro Graus</title>
+  <meta name="description" content="Aprenda música no seu instrumento com a didática progressiva da Harmonia: cada obra do catálogo possui 4 níveis de arranjo, videoaulas passo a passo e materiais em PDF." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
 
+  <script>document.documentElement.classList.add('js');</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
@@ -17,166 +18,960 @@
     if (localStorage.getItem('token')) window.location.replace('/dashboard.html');
   </script>
 </head>
-<body class="font-sans text-zinc-300 antialiased bg-ink-950 min-h-screen flex flex-col">
+<body>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-ink-950/85 backdrop-blur-md">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-6 w-6 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display text-xl font-bold tracking-tight text-white">Harmonia</span>
-      </a>
-      <div class="flex items-center gap-3">
-        <a href="login.html" class="btn btn-ghost">Entrar</a>
-        <a href="register.html" class="btn btn-primary btn-sm">Cadastre-se grátis</a>
-      </div>
-    </div>
-  </header>
+  <div class="curtain-main">
+    <!-- Barra de navegação plana sobre o campo de papelaria -->
+    <header style="background-color: var(--surface);">
+      <div class="page-wrap flex items-center justify-between py-6">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7" aria-hidden="true">
+            <path d="M4 8h20M4 14h20M4 20h20" stroke-opacity="0.35" />
+            <path d="M11 22V6l10-2v16" />
+            <circle cx="8.5" cy="22" r="2.5" fill="currentColor" />
+            <circle cx="18.5" cy="20" r="2.5" fill="currentColor" />
+          </svg>
+          <span class="text-xl font-semibold tracking-tight">Harmonia</span>
+        </a>
 
-  <main class="flex-1">
-    <!-- Hero Section -->
-    <section class="relative isolate overflow-hidden px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-36 lg:px-8 text-center">
-      <!-- Background com hero e aurora -->
-      <div class="aurora" aria-hidden="true"></div>
-      <img src="assets/hero.jpg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-25 filter brightness-75" />
-      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink-950/70 via-ink-950/90 to-ink-950"></div>
+        <nav class="hidden md:flex items-center gap-8 text-base" aria-label="Navegação principal">
+          <a href="#didatica" class="link-editorial">Didática em 4 graus</a>
+          <a href="#metodo-vivo" class="link-editorial">Demonstrador do método</a>
+          <a href="#beneficios" class="link-editorial">Benefícios para o aluno</a>
+        </nav>
 
-      <div class="mx-auto max-w-3xl animate-fade-up">
-        <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3.5 py-1 text-xs font-medium text-amber-300 mb-8">
-          <span class="flex h-3 items-end gap-[2px] text-amber-400">
-            <span class="eq-bar h-3"></span><span class="eq-bar h-3"></span><span class="eq-bar h-3"></span>
-          </span>
-          Progressão didática inteligente em 4 níveis
-        </div>
-
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
-          Toque a música que você ama, <br />
-          <span class="text-gradient">no seu nível.</span>
-        </h1>
-
-        <p class="mt-6 text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-2xl mx-auto">
-          Cada música tem 4 versões gravadas em vídeo com materiais de apoio. Você começa tocando hoje e evolui o arranjo sem precisar trocar de repertório.
-        </p>
-
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="register.html" class="btn btn-primary px-8 py-3.5 text-base w-full sm:w-auto shadow-xl">
-            Começar a aprender agora
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 ml-1"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-          </a>
-          <a href="login.html" class="btn btn-secondary px-6 py-3.5 text-base w-full sm:w-auto">
-            Já sou aluno
-          </a>
+        <div class="flex items-center gap-5">
+          <a href="login.html" class="link-editorial text-base font-medium">Entrar</a>
+          <a href="register.html" class="btn btn-primary">Começar a estudar</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- 4 Níveis Didáticos -->
-    <section class="py-20 border-t border-zinc-800/80 bg-ink-900/40">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="font-display text-xs font-bold uppercase tracking-[0.25em] text-amber-400">Metodologia didática</h2>
-          <h3 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">Evolução contínua na mesma música</h3>
-          <p class="mt-4 text-zinc-400">Aprenda a mesma canção em diferentes graus de complexidade técnica e harmônica.</p>
+    <main>
+      <!-- HERO: A Folha de Rosto do Sistema Pedagógico (page-is-the-object) -->
+      <section style="background-color: var(--surface);" class="page-wrap pt-4 pb-16 lg:pt-8 lg:pb-24">
+        <div class="folio-sheet p-6 sm:p-10 lg:p-14">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+            <!-- Coluna Tipográfica da Folha de Rosto -->
+            <div class="lg:col-span-6 flex flex-col justify-between">
+              <div>
+                <h1 class="display-title lines italic">
+                  <span class="line"><span data-line style="--i:0">Uma obra,</span></span>
+                  <span class="line"><span data-line style="--i:1">quatro graus</span></span>
+                </h1>
+
+                <p class="mt-8 statement-copy" data-rise style="--i:2">
+                  Escolha o seu instrumento e aprenda repertório real desde a primeira semana: na Harmonia, cada música possui quatro arranjos progressivos para você evoluir do básico ao avançado sem abandonar a canção.
+                </p>
+
+                <div class="mt-9 flex flex-wrap items-center gap-5" data-rise style="--i:3">
+                  <a href="register.html" class="btn btn-primary px-7 py-4 text-base">
+                    Escolher meu instrumento e começar
+                  </a>
+                  <a href="#metodo-vivo" class="link-editorial text-base font-semibold">
+                    Testar a progressão de níveis
+                  </a>
+                </div>
+              </div>
+
+              <!-- Colofão do Sistema Pedagógico -->
+              <dl class="mt-12 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4" style="background-color: var(--surface); padding: 1.25rem;" data-rise style="--i:4">
+                <div>
+                  <dt class="small-copy" style="color: var(--muted);">Trilha por instrumento</dt>
+                  <dd id="hero-instruments-summary" class="text-base font-semibold mt-0.5">Personalizada para você</dd>
+                </div>
+                <div>
+                  <dt class="small-copy" style="color: var(--muted);">Didática gradual</dt>
+                  <dd class="text-base font-semibold nums mt-0.5">4 níveis na mesma música</dd>
+                </div>
+                <div>
+                  <dt class="small-copy" style="color: var(--muted);">Estudo guiado</dt>
+                  <dd class="text-base font-semibold mt-0.5">Vídeo, partitura e cifra</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Coluna de Pranchas Fotográficas e Filme do Mecanismo -->
+            <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-12 gap-5 items-end">
+              <figure class="sm:col-span-7 plate-frame" data-rise style="--i:2">
+                <img
+                  src="assets/open/a-tuning-fork-placed-on-sheet-music.jpg"
+                  width="1920"
+                  height="1280"
+                  alt="Diapasão metálico repousando sobre um caderno de partituras aberto"
+                  fetchpriority="high"
+                  class="plate-photo aspect-[4/5]" />
+                <figcaption class="small-copy mt-2.5">
+                  O aluno estuda o repertório adaptado exatamente ao estágio técnico em que está hoje.
+                </figcaption>
+              </figure>
+
+              <div class="sm:col-span-5 flex flex-col gap-5">
+                <figure class="plate-frame" data-rise style="--i:3">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="assets/open/grand-piano-action-in-slow-motion-poster.jpg"
+                    width="854"
+                    height="480"
+                    aria-label="Mecanismo de martelo de piano de cauda em movimento lento"
+                    class="plate-photo aspect-[4/3]">
+                    <source src="assets/open/grand-piano-action-in-slow-motion.webm" type="video/webm" />
+                  </video>
+                  <figcaption class="small-copy mt-2">
+                    Aulas focadas em técnica, postura, tempo e expressão musical.
+                  </figcaption>
+                </figure>
+
+                <div class="p-5" style="background-color: var(--surface);" data-rise style="--i:4">
+                  <p class="small-copy font-semibold">Para qualquer instrumento</p>
+                  <p id="hero-instruments-list" class="small-copy mt-1">
+                    O painel filtra automaticamente todas as obras, videoaulas e PDFs para o instrumento selecionado na sua matrícula.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 1 (how-it-works): A Didática em Quatro Graus -->
+      <section id="didatica" class="py-24 lg:py-32" style="background-color: var(--bg);">
+        <div class="page-wrap">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-5">
+            <div data-reveal>
+              <h2 class="section-title">Como funciona a nossa didática</h2>
+              <p class="mt-3 body-copy">
+                Em vez de travar o iniciante em músicas difíceis ou entediar quem já toca, cada obra é escrita em quatro degraus pedagógicos claros.
+              </p>
+            </div>
+            <p class="small-copy font-semibold nums" data-reveal style="--d:1">Progressão contínua na mesma obra</p>
+          </div>
+
+          <!-- Barra de progressão de 6px conforme blueprint -->
+          <div class="h-1.5 w-full mb-12" style="background-color: var(--surface);" aria-hidden="true">
+            <div id="moments-bar" class="h-full" style="background-color: var(--ink); width: 100%;"></div>
+          </div>
+
+          <!-- Grade de momentos com alturas escalonadas como notas na pauta -->
+          <div id="moments-track" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch" role="region" aria-label="Progressão nos quatro graus de estudo">
+            <!-- Coluna 1 -->
+            <article class="flex flex-col justify-between" data-reveal style="--d:0">
+              <div>
+                <p class="text-xl font-semibold">Primeiro grau: Fácil</p>
+                <p class="body-copy mt-2">
+                  Posições fundamentais, ritmo direto e estrutura simplificada para você tocar a música inteira já nos primeiros dias de estudo.
+                </p>
+              </div>
+              <div class="h-8 lg:h-12" aria-hidden="true"></div>
+              <figure class="plate-frame mt-auto">
+                <img
+                  src="assets/open/music-sheet-mozart-s-alla-turca.jpg"
+                  width="1920"
+                  height="1440"
+                  loading="lazy"
+                  alt="Detalhe aproximado de compassos impressos em folha de partitura"
+                  class="plate-photo aspect-[4/5]" />
+              </figure>
+            </article>
+
+            <!-- Coluna 2 -->
+            <article class="flex flex-col justify-between" data-reveal style="--d:1">
+              <div>
+                <p class="text-xl font-semibold">Segundo grau: Médio</p>
+                <p class="body-copy mt-2">
+                  Transições suaves entre regiões do instrumento, inversões, variações rítmicas e condução melódica sem saltos bruscos.
+                </p>
+              </div>
+              <div class="h-8 lg:h-24" aria-hidden="true"></div>
+              <figure class="plate-frame mt-auto">
+                <img
+                  src="assets/open/woman-looking-at-sheet-music-posed-beside.jpg"
+                  width="1920"
+                  height="2671"
+                  loading="lazy"
+                  alt="Estudante lendo uma folha de partitura ao lado do instrumento"
+                  class="plate-photo aspect-[4/5]" />
+              </figure>
+            </article>
+
+            <!-- Coluna 3 -->
+            <article class="flex flex-col justify-between" data-reveal style="--d:2">
+              <div>
+                <p class="text-xl font-semibold">Terceiro grau: Difícil</p>
+                <p class="body-copy mt-2">
+                  Articulação refinada, dedilhados elaborados, independência de vozes e controle consciente de dinâmica entre trechos suaves e intensos.
+                </p>
+              </div>
+              <div class="h-8 lg:h-10" aria-hidden="true"></div>
+              <figure class="plate-frame mt-auto">
+                <img
+                  src="assets/open/man-playing-an-acoustic-brazilian-guitar-violao.jpg"
+                  width="1920"
+                  height="1280"
+                  loading="lazy"
+                  alt="Músico executando dedilhado técnico no instrumento"
+                  class="plate-photo aspect-[4/5]" />
+              </figure>
+            </article>
+
+            <!-- Coluna 4 -->
+            <article class="flex flex-col justify-between" data-reveal style="--d:3">
+              <div>
+                <p class="text-xl font-semibold">Quarto grau: Avançado</p>
+                <p class="body-copy mt-2">
+                  Arranjo completo de concerto: rearmonização, tensões harmônicas, frases de passagem, introduções próprias e domínio de palco.
+                </p>
+              </div>
+              <div class="h-8 lg:h-28" aria-hidden="true"></div>
+              <figure class="plate-frame mt-auto">
+                <img
+                  src="assets/open/grand-piano.jpg"
+                  width="2335"
+                  height="2638"
+                  loading="lazy"
+                  alt="Instrumento histórico de concerto com estante de partitura"
+                  class="plate-photo aspect-[4/5]" />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 2 (showcase + LIVE THING): Demonstrador Interativo da Progressão Didática -->
+      <section id="metodo-vivo" class="py-24 lg:py-32" style="background-color: var(--surface);">
+        <div class="page-wrap">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+
+            <!-- Metade Esquerda: A Folha de Estudo Viva (Live Thing) -->
+            <div class="lg:col-span-6 flex flex-col justify-between folio-sheet p-6 sm:p-10" data-reveal>
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-5" style="background-color: var(--bg);">
+                  <div>
+                    <p class="small-copy font-semibold" style="color: var(--muted);">Simulador da sala de aula</p>
+                    <p id="live-family-title" class="text-2xl font-semibold italic mt-0.5">Como a aula evolui em cada nível</p>
+                  </div>
+
+                  <!-- Seletor de Família de Instrumento -->
+                  <div class="inline-flex flex-wrap p-1" style="background-color: var(--surface);" role="group" aria-label="Escolher foco instrumental">
+                    <button type="button" data-inst="harmonia" class="live-inst-btn px-3 py-1.5 text-sm font-semibold" style="background-color: var(--ink); color: var(--accent-ink);" aria-pressed="true">
+                      Teclas
+                    </button>
+                    <button type="button" data-inst="cordas" class="live-inst-btn px-3 py-1.5 text-sm font-semibold" style="color: var(--ink);" aria-pressed="false">
+                      Cordas
+                    </button>
+                    <button type="button" data-inst="melodia" class="live-inst-btn px-3 py-1.5 text-sm font-semibold" style="color: var(--ink);" aria-pressed="false">
+                      Sopro e Voz
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Pauta Musical Interativa com Estrutura e Densidade do Grau -->
+                <div class="mt-4 p-5 sm:p-6" style="background-color: var(--surface);">
+                  <div class="flex items-center justify-between text-sm font-semibold mb-3">
+                    <span id="live-measure-label">Densidade da escrita no grau selecionado</span>
+                    <span id="live-tempo-label" class="nums" style="color: var(--muted);">Semínima = 72 bpm</span>
+                  </div>
+
+                  <!-- Progressão dos 4 compassos -->
+                  <div id="live-chords-row" class="grid grid-cols-4 gap-2 text-center py-3 font-semibold text-base sm:text-lg" style="background-color: var(--bg);">
+                    <span>C</span>
+                    <span>G</span>
+                    <span>Am</span>
+                    <span>F</span>
+                  </div>
+
+                  <!-- Pauta SVG que redesenha a densidade de vozes conforme o grau -->
+                  <div class="mt-4">
+                    <svg id="live-staff-svg" viewBox="0 0 520 110" class="w-full h-24" aria-label="Representação na pauta da densidade de notas do arranjo selecionado">
+                      <g stroke="#06525c" stroke-opacity="0.28" stroke-width="1">
+                        <line x1="10" y1="22" x2="510" y2="22" />
+                        <line x1="10" y1="36" x2="510" y2="36" />
+                        <line x1="10" y1="50" x2="510" y2="50" />
+                        <line x1="10" y1="64" x2="510" y2="64" />
+                        <line x1="10" y1="78" x2="510" y2="78" />
+                        <line x1="10" y1="22" x2="10" y2="78" stroke-opacity="0.55" stroke-width="2" />
+                        <line x1="135" y1="22" x2="135" y2="78" stroke-opacity="0.4" />
+                        <line x1="260" y1="22" x2="260" y2="78" stroke-opacity="0.4" />
+                        <line x1="385" y1="22" x2="385" y2="78" stroke-opacity="0.4" />
+                        <line x1="510" y1="22" x2="510" y2="78" stroke-opacity="0.65" stroke-width="2" />
+                      </g>
+                      <g id="live-staff-notes" fill="#06525c" stroke="#06525c">
+                        <circle cx="65" cy="78" r="6" /><line x1="71" y1="78" x2="71" y2="42" stroke-width="1.8" />
+                        <circle cx="190" cy="64" r="6" /><line x1="196" y1="64" x2="196" y2="28" stroke-width="1.8" />
+                        <circle cx="315" cy="57" r="6" /><line x1="321" y1="57" x2="321" y2="24" stroke-width="1.8" />
+                        <circle cx="440" cy="71" r="6" /><line x1="446" y1="71" x2="446" y2="35" stroke-width="1.8" />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <p id="live-technique-note" class="small-copy mt-2">
+                    Foco didático: dominar a pulsação e a posição base das mãos para tocar a obra inteira sem interrupções.
+                  </p>
+                </div>
+
+                <!-- Roteiro didático que o aluno recebe em cada módulo -->
+                <div class="mt-6">
+                  <p class="small-copy font-semibold" style="color: var(--muted);">Como as aulas deste nível são organizadas para o aluno:</p>
+                  <ol id="live-lessons-list" class="mt-2.5 space-y-2 text-base">
+                    <li class="p-3" style="background-color: var(--surface);"> Etapa 1: Conhecendo a estrutura, posições e mapa do instrumento</li>
+                    <li class="p-3" style="background-color: var(--surface);">Etapa 2: Construção guiada das seções passo a passo</li>
+                    <li class="p-3" style="background-color: var(--surface);">Etapa 3: Execução completa no andamento da música</li>
+                  </ol>
+                </div>
+              </div>
+
+              <p id="live-audio-status" class="small-copy mt-5" style="color: var(--muted);" aria-live="polite">
+                Clique nos graus ao lado ou ouça a amostra sonora para perceber como o arranjo ganha riqueza a cada nível.
+              </p>
+            </div>
+
+            <!-- Metade Direita: Abas de Grau, Explicação Pedagógica e Duas Células de Ação -->
+            <div class="lg:col-span-6 flex flex-col justify-between p-2 sm:p-4" data-reveal style="--d:1">
+              <!-- Abas de texto planas para os 4 graus -->
+              <div class="flex flex-wrap items-center gap-6" role="tablist" aria-label="Graus de dificuldade">
+                <button type="button" role="tab" data-level="1" aria-selected="true" class="live-level-tab text-lg font-semibold pb-1" style="color: var(--ink); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px;">
+                  1. Fácil
+                </button>
+                <button type="button" role="tab" data-level="2" aria-selected="false" class="live-level-tab text-lg font-normal pb-1" style="color: var(--muted);">
+                  2. Médio
+                </button>
+                <button type="button" role="tab" data-level="3" aria-selected="false" class="live-level-tab text-lg font-normal pb-1" style="color: var(--muted);">
+                  3. Difícil
+                </button>
+                <button type="button" role="tab" data-level="4" aria-selected="false" class="live-level-tab text-lg font-normal pb-1" style="color: var(--muted);">
+                  4. Avançado
+                </button>
+              </div>
+
+              <!-- Centro: Título e explicação do benefício didático -->
+              <div class="my-10 lg:my-0">
+                <h2 id="live-heading" class="section-title">Você evolui dentro da própria música</h2>
+                <p id="live-description" class="mt-6 body-copy" style="color: var(--ink); max-width: 40ch;">
+                  No ensino tradicional, o aluno iniciante passa meses longe do repertório real. Na Harmonia, você começa tocando o Grau Fácil hoje e, quando estiver seguro, sobe para o Médio, Difícil e Avançado na mesma tela.
+                </p>
+              </div>
+
+              <!-- Base: Duas células retangulares preenchidas lado a lado, 72px de altura -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  id="live-play-btn"
+                  class="h-[72px] px-6 flex items-center justify-between font-semibold text-base text-left"
+                  style="background-color: var(--ink); color: var(--accent-ink);">
+                  <span id="live-play-label">Ouvir evolução do grau</span>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+                </button>
+
+                <a
+                  id="live-pdf-link"
+                  href="register.html"
+                  class="h-[72px] px-6 flex items-center justify-between font-semibold text-base"
+                  style="background-color: var(--raised); color: var(--ink);">
+                  <span>Criar conta no meu instrumento</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3 (features): Benefícios e Recursos Oferecidos ao Aluno -->
+      <section id="beneficios" class="py-24 lg:py-32" style="background-color: var(--bg);">
+        <div class="page-wrap">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+            <!-- Folha de Programa / Menu Impresso com Pontilhado de 4px -->
+            <div class="lg:col-span-7 syllabus-sheet p-7 sm:p-12 lg:p-14" style="background-color: var(--surface);" data-reveal>
+              <div class="text-center mb-10">
+                <h2 class="section-title">O que o aluno encontra na plataforma</h2>
+                <p class="small-copy mt-2" style="color: var(--muted);">
+                  Recursos didáticos pensados para transformar a prática diária em evolução consistente
+                </p>
+              </div>
+
+              <!-- Grupo 1: Didática -->
+              <div class="mb-10">
+                <p class="text-xl font-semibold mb-5">Didática e estudo personalizado</p>
+
+                <div class="space-y-5">
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Trilha exclusiva para o seu instrumento</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="font-semibold">Foco total</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Ao escolher seu instrumento no cadastro, seu painel apresenta diretamente o repertório e as aulas gravadas para ele, sem distrações.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Quatro arranjos graduados por obra</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="nums font-semibold">Graus 1 a 4</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Toque no nível adequado à sua técnica atual e use a mesma música como escada para alcançar arranjos mais elaborados.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Aulas divididas em etapas práticas</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="font-semibold">Passo a passo</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Cada nível possui sua própria sequência de videoaulas explicando a mecânica do arranjo, as passagens mais exigentes e a execução final.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grupo 2: Ferramentas de Prática -->
+              <div>
+                <p class="text-xl font-semibold mb-5">Ferramentas de sala de ensaio</p>
+
+                <div class="space-y-5">
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Troca instantânea de nível no player</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="nums font-semibold">Teclas 1 a 4</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Compare como uma passagem soa no nível Fácil ou no Avançado com um único atalho, sem sair da página de estudo.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Partituras, cifras e guias em PDF</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="font-semibold">PDF incluso</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Baixe o material complementar anexado especificamente a cada aula para ler no tablet ou imprimir para a sua estante.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-baseline justify-between text-lg font-medium">
+                      <span>Objetivo pedagógico claro por módulo</span>
+                      <span class="dot-leader" aria-hidden="true"></span>
+                      <span class="font-semibold">Guia de estudo</span>
+                    </div>
+                    <p class="small-copy mt-1" style="max-width: 44ch;">
+                      Saiba exatamente qual habilidade técnica, rítmica ou harmônica você está desenvolvendo em cada grau antes de dar o play.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coluna Direita: Prancha Fotográfica e Catálogo Multi-instrumento -->
+            <div class="lg:col-span-5 flex flex-col gap-6" data-reveal style="--d:1">
+              <figure class="plate-frame shutter" data-reveal>
+                <img
+                  src="assets/open/overture-for-the-woman-from-seville-for.jpg"
+                  width="1728"
+                  height="2250"
+                  loading="lazy"
+                  alt="Edição impressa histórica de partitura sobre papel creme"
+                  class="plate-photo aspect-[4/5]" />
+                <figcaption class="small-copy mt-3">
+                  Cada aula combina a clareza da explicação em vídeo com a precisão da folha escrita para estudo individual ou em conjunto.
+                </figcaption>
+              </figure>
+
+              <div class="p-7" style="background-color: var(--surface);">
+                <p class="text-xl font-semibold">Acervo vivo para múltiplos instrumentos</p>
+                <p class="body-copy mt-2">
+                  A plataforma foi construída para abrigar trilhas de qualquer instrumento musical cadastrado pelos professores no Estúdio: cordas, teclas, sopros, percussão ou voz, mantendo sempre a mesma organização em quatro níveis.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4 (cta): The reply card — Ficha de Matrícula sobre Campo Teal -->
+      <section id="matricula" class="py-24 lg:py-32 overflow-hidden" style="background-color: var(--field-1); color: var(--field-1-ink);">
+        <div class="page-wrap">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+
+            <!-- Colunas 1–5: Parágrafo de declaração alinhado à base -->
+            <div class="lg:col-span-5 pb-2" data-reveal>
+              <p class="statement-copy" style="color: var(--field-1-ink);">
+                Não espere anos para tocar as músicas que você admira. Comece no Grau 1 hoje e descubra o prazer de evoluir compasso por compasso no seu instrumento.
+              </p>
+              <p class="small-copy mt-6" style="color: #dce8ea;">
+                Matrícula gratuita com acesso imediato à trilha do seu instrumento, player em 4 níveis e materiais em PDF.
+              </p>
+            </div>
+
+            <!-- Colunas 6–12: Cartão de Resposta em cor de papel -->
+            <div class="lg:col-span-7" data-reveal style="--d:1">
+              <div class="p-8 sm:p-12 lg:p-14 text-center" style="background-color: var(--bg); color: var(--ink);">
+                <h2 class="section-title">Abra seu caderno de estudo</h2>
+                <p class="mt-4 body-copy mx-auto" style="max-width: 38ch;">
+                  Crie sua conta em poucos segundos, selecione o instrumento que deseja praticar e inicie sua primeira aula.
+                </p>
+
+                <div class="mt-8">
+                  <a
+                    href="register.html"
+                    class="btn btn-primary w-full h-14 text-base">
+                    Criar conta gratuita e escolher instrumento
+                  </a>
+                </div>
+
+                <div class="mt-5">
+                  <a href="login.html" class="link-editorial small-copy font-semibold" style="color: var(--muted);">
+                    Já é aluno da Harmonia? Entrar na plataforma
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- RODAPÉ (footer): The back of the card -->
+  <footer class="curtain-footer pt-12 pb-12" style="background-color: var(--surface);">
+    <div class="page-wrap">
+      <div class="postcard-sheet p-8 sm:p-12 lg:p-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+          <!-- Metade Esquerda: Saudação de encerramento -->
+          <div class="lg:col-span-6">
+            <h2 class="section-title">Harmonia</h2>
+            <p class="mt-4 body-copy" style="max-width: 38ch;">
+              Sistema de ensino musical com progressão didática em quatro graus de dificuldade, trilhas por instrumento, videoaulas e partituras de apoio.
+            </p>
+          </div>
+
+          <!-- Metade Direita: Selo Fotográfico e Linhas de Endereço/Acesso -->
+          <div class="lg:col-span-6 flex flex-col sm:flex-row sm:items-start justify-between gap-8">
+            <ul class="space-y-3 text-lg">
+              <li><a href="register.html" class="link-editorial font-medium">Criar matrícula gratuita</a></li>
+              <li><a href="login.html" class="link-editorial font-medium">Acessar painel do aluno</a></li>
+              <li><a href="#didatica" class="link-editorial font-medium">Conhecer os 4 graus didáticos</a></li>
+              <li><a href="#beneficios" class="link-editorial font-medium">Ver recursos da sala de ensaio</a></li>
+            </ul>
+
+            <!-- Selo 3:4 com margem de papel conforme blueprint -->
+            <figure class="shrink-0 p-2 self-start" style="background-color: var(--surface); width: 92px;">
+              <img
+                src="assets/open/music-sheet-mozart-s-alla-turca.jpg"
+                width="1920"
+                height="1440"
+                loading="lazy"
+                alt="Selo com detalhe de partitura impressa"
+                class="plate-photo aspect-[3/4] w-full" />
+            </figure>
+          </div>
+
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Nível 1 -->
-          <div class="card p-6 border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 mb-4">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Nível 1
-            </div>
-            <h4 class="font-display text-xl font-bold text-white">Fácil</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Acordes básicos em bloco, ritmo simplificado e foco em tocar a estrutura principal da canção sem travar.
-            </p>
-          </div>
-
-          <!-- Nível 2 -->
-          <div class="card p-6 border-sky-500/20 hover:border-sky-500/40 transition-all duration-300">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 mb-4">
-              <span class="h-2 w-2 rounded-full bg-sky-400"></span> Nível 2
-            </div>
-            <h4 class="font-display text-xl font-bold text-white">Médio</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Inversões de acordes, transições mais suaves e acompanhamento rítmico dinâmico junto ao coral.
-            </p>
-          </div>
-
-          <!-- Nível 3 -->
-          <div class="card p-6 border-amber-500/20 hover:border-amber-500/40 transition-all duration-300">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 mb-4">
-              <span class="h-2 w-2 rounded-full bg-amber-400"></span> Nível 3
-            </div>
-            <h4 class="font-display text-xl font-bold text-white">Difícil</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Dedilhado elaborado, arpejos, dinâmicas de interpretação (piano e forte) e condução de vozes.
-            </p>
-          </div>
-
-          <!-- Nível 4 -->
-          <div class="card p-6 border-rose-500/20 hover:border-rose-500/40 transition-all duration-300">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-400 mb-4">
-              <span class="h-2 w-2 rounded-full bg-rose-400"></span> Nível 4
-            </div>
-            <h4 class="font-display text-xl font-bold text-white">Avançado</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Arranjo completo para acompanhamento de concerto: rearmonização, tensões, introdução e interlúdios.
-            </p>
-          </div>
+        <!-- Linha de Impressor e Créditos das Coleções Abertas (obrigatório em SKILL.md) -->
+        <div class="mt-12 pt-6 text-center">
+          <p class="small-copy" style="color: var(--muted);">
+            Harmonia / Plataforma de Ensino Musical com Progressão Didática em Quatro Níveis
+          </p>
+          <p class="credits small-copy mt-3 mx-auto" style="color: var(--muted); max-width: 78ch;">
+            Fotografias e filme de acervo aberto:
+            <a href="https://commons.wikimedia.org/wiki/File:Music_Sheet,_Mozart%27s_Alla_Turca.jpg" target="_blank" rel="noopener noreferrer" class="link-editorial">“Music Sheet, Mozart’s Alla Turca”</a> por Schiller12 (<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer" class="link-editorial">CC BY-SA 4.0</a>);
+            <a href="https://commons.wikimedia.org/wiki/File:A_tuning_fork_placed_on_sheet-music_3.jpg" target="_blank" rel="noopener noreferrer" class="link-editorial">“A tuning fork placed on sheet music 3”</a> por Lukasz Kobus, European Commission (<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer" class="link-editorial">CC BY 4.0</a>);
+            <a href="https://commons.wikimedia.org/wiki/File:Man_playing_an_acoustic_brazilian_guitar_(Viol%C3%A3o)_on_Marco_Zero_Square,_Refice,_Pernambuco,_Brazil.jpg" target="_blank" rel="noopener noreferrer" class="link-editorial">“Man playing an acoustic brazilian guitar (Violão)”</a> por Wilfredor (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener noreferrer" class="link-editorial">CC0</a>);
+            <a href="https://commons.wikimedia.org/wiki/File:Woman_looking_at_sheet_music,_posed_beside_a_piano_(I0013524).tif" target="_blank" rel="noopener noreferrer" class="link-editorial">“Woman looking at sheet music, posed beside a piano”</a> (domínio público);
+            <a href="https://www.metmuseum.org/art/collection/search/503267" target="_blank" rel="noopener noreferrer" class="link-editorial">“Grand Piano”</a> por Steinway &amp; Sons, 1868 (CC0, The Met);
+            <a href="https://www.metmuseum.org/art/collection/search/929276" target="_blank" rel="noopener noreferrer" class="link-editorial">“Monks Singing in an Initial K from a Choir Book”</a>, 1476 (CC0, The Met);
+            <a href="https://www.artic.edu/artworks/51864" target="_blank" rel="noopener noreferrer" class="link-editorial">“Overture for The Woman from Seville”</a> por T.-A. Steinlen, 1889 (CC0, Art Institute of Chicago);
+            <a href="https://commons.wikimedia.org/wiki/File:Grand_piano_action_in_slow_motion.webm" target="_blank" rel="noopener noreferrer" class="link-editorial">“Grand piano action in slow motion”</a> por Викидим (<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer" class="link-editorial">CC BY-SA 4.0</a>).
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Recursos & Materiais -->
-    <section class="py-20">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card p-8">
-            <div class="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/20 grid place-items-center text-amber-400 mb-5">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-            <h4 class="font-display text-xl font-semibold text-white">Player Integrado</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Alterne entre níveis e aulas com um único clique ou use os atalhos do teclado de 1 a 4 sem recarregar a tela.
-            </p>
-          </div>
-
-          <div class="card p-8">
-            <div class="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/20 grid place-items-center text-amber-400 mb-5">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </div>
-            <h4 class="font-display text-xl font-semibold text-white">Partituras & Cifras</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Materiais em PDF específicos para cada aula e nível, prontos para download e impressão para o seu estudo offline.
-            </p>
-          </div>
-
-          <div class="card p-8">
-            <div class="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/20 grid place-items-center text-amber-400 mb-5">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <h4 class="font-display text-xl font-semibold text-white">Foco no seu Instrumento</h4>
-            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">
-              Sua trilha exibe somente o repertório arranjado para o seu instrumento escolhido, sem ruído ou distrações.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-zinc-800/80 py-10 bg-ink-950 text-center text-xs text-zinc-500">
-    <div class="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2 text-zinc-400">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-semibold text-white">Harmonia</span> &middot; Plataforma de cursos de música com progressão didática
-      </div>
-      <div>
-        <a href="login.html" class="hover:text-zinc-300">Entrar</a> &middot;
-        <a href="register.html" class="hover:text-zinc-300 ml-2">Criar conta</a>
       </div>
     </div>
   </footer>
 
+  <!-- Script da Página: Revelações de Scroll, Instrumentos Dinâmicos e Demonstrador Didático (Web Audio) -->
+  <script>
+    (() => {
+      // 1. IntersectionObserver para revelações (nunca oculta conteúdo sem JS)
+      const targets = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+        targets.forEach((el) => io.observe(el));
+        window.addEventListener('load', () => setTimeout(() => {
+          targets.forEach((el) => {
+            const r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('is-in');
+          });
+        }, 1800));
+      } else {
+        targets.forEach((el) => el.classList.add('is-in'));
+      }
+
+      // 2. Carrega dinamicamente os instrumentos cadastrados pelo Admin (se a API estiver ativa)
+      fetch('/api/instruments')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((list) => {
+          if (!Array.isArray(list) || list.length === 0) return;
+          const names = list.map((i) => i.name).join(', ');
+          const summaryEl = document.getElementById('hero-instruments-summary');
+          const listEl = document.getElementById('hero-instruments-list');
+          if (summaryEl) {
+            summaryEl.textContent = `${list.length} ${list.length === 1 ? 'instrumento ativo' : 'instrumentos ativos'}`;
+          }
+          if (listEl) {
+            listEl.textContent = `Trilhas disponíveis agora no catálogo: ${names} — além de novos instrumentos adicionados pelo Estúdio.`;
+          }
+        })
+        .catch(() => {});
+
+      // 3. Demonstrador Interativo da Didática (The Live Thing)
+      const SCORE_DATA = {
+        harmonia: {
+          1: {
+            label: 'Fácil',
+            chords: ['C', 'G', 'Am', 'F'],
+            freqs: [[261.63, 329.63, 392.00], [196.00, 246.94, 293.66], [220.00, 261.63, 329.63], [174.61, 220.00, 261.63]],
+            technique: 'Foco didático: dominar a pulsação e a posição base das mãos para tocar a obra inteira sem interrupções.',
+            lessons: [
+              'Etapa 1: Conhecendo a estrutura, posições e mapa do instrumento',
+              'Etapa 2: Construção guiada das seções passo a passo',
+              'Etapa 3: Execução completa no andamento da música'
+            ],
+            notesSvg: `
+              <circle cx="65" cy="78" r="6" /><line x1="71" y1="78" x2="71" y2="42" stroke-width="1.8" />
+              <circle cx="190" cy="64" r="6" /><line x1="196" y1="64" x2="196" y2="28" stroke-width="1.8" />
+              <circle cx="315" cy="57" r="6" /><line x1="321" y1="57" x2="321" y2="24" stroke-width="1.8" />
+              <circle cx="440" cy="71" r="6" /><line x1="446" y1="71" x2="446" y2="35" stroke-width="1.8" />
+            `
+          },
+          2: {
+            label: 'Médio',
+            chords: ['C', 'G/B', 'Am7', 'F/A'],
+            freqs: [[261.63, 329.63, 392.00, 523.25], [246.94, 293.66, 392.00, 493.88], [220.00, 261.63, 329.63, 392.00], [220.00, 261.63, 349.23, 440.00]],
+            technique: 'Foco didático: inversões e encadeamento próximo para conectar os compassos com fluidez e menor deslocamento.',
+            lessons: [
+              'Etapa 1: Novas posições e economia de movimento',
+              'Etapa 2: Ligação fluida entre estrofe e refrão',
+              'Etapa 3: Prática guiada com acompanhamento completo'
+            ],
+            notesSvg: `
+              <circle cx="50" cy="78" r="5.5" /><circle cx="50" cy="64" r="5.5" /><line x1="56" y1="78" x2="56" y2="36" stroke-width="1.8" />
+              <circle cx="100" cy="50" r="5.5" /><line x1="106" y1="50" x2="106" y2="20" stroke-width="1.8" />
+              <circle cx="175" cy="71" r="5.5" /><circle cx="175" cy="57" r="5.5" /><line x1="181" y1="71" x2="181" y2="30" stroke-width="1.8" />
+              <circle cx="225" cy="50" r="5.5" /><line x1="231" y1="50" x2="231" y2="20" stroke-width="1.8" />
+              <circle cx="300" cy="64" r="5.5" /><circle cx="300" cy="50" r="5.5" /><line x1="306" y1="64" x2="306" y2="24" stroke-width="1.8" />
+              <circle cx="350" cy="43" r="5.5" /><line x1="356" y1="43" x2="356" y2="16" stroke-width="1.8" />
+              <circle cx="425" cy="71" r="5.5" /><circle cx="425" cy="57" r="5.5" /><line x1="431" y1="71" x2="431" y2="28" stroke-width="1.8" />
+              <circle cx="475" cy="50" r="5.5" /><line x1="481" y1="50" x2="481" y2="20" stroke-width="1.8" />
+            `
+          },
+          3: {
+            label: 'Difícil',
+            chords: ['C9', 'G/B', 'Am7(9)', 'F7M'],
+            freqs: [[261.63, 293.66, 329.63, 392.00, 523.25], [246.94, 293.66, 392.00, 587.33], [220.00, 261.63, 329.63, 392.00, 493.88], [174.61, 220.00, 261.63, 329.63, 440.00]],
+            technique: 'Foco didático: independência entre melodia e acompanhamento, arpejos contínuos e controle de nuances dinâmicas.',
+            lessons: [
+              'Etapa 1: Padrões de articulação e arpejos do nível',
+              'Etapa 2: Construção de dinâmica e respiração musical',
+              'Etapa 3: Interpretação expressiva da obra completa'
+            ],
+            notesSvg: `
+              <circle cx="38" cy="78" r="5" /><circle cx="68" cy="64" r="5" /><circle cx="98" cy="50" r="5" /><line x1="43" y1="78" x2="43" y2="32" stroke-width="1.6" /><line x1="73" y1="64" x2="73" y2="32" stroke-width="1.6" /><line x1="103" y1="50" x2="103" y2="32" stroke-width="1.6" /><line x1="43" y1="32" x2="103" y2="32" stroke-width="3" />
+              <circle cx="163" cy="71" r="5" /><circle cx="193" cy="57" r="5" /><circle cx="223" cy="43" r="5" /><line x1="168" y1="71" x2="168" y2="26" stroke-width="1.6" /><line x1="198" y1="57" x2="198" y2="26" stroke-width="1.6" /><line x1="228" y1="43" x2="228" y2="26" stroke-width="1.6" /><line x1="168" y1="26" x2="228" y2="26" stroke-width="3" />
+              <circle cx="288" cy="64" r="5" /><circle cx="318" cy="50" r="5" /><circle cx="348" cy="36" r="5" /><line x1="293" y1="64" x2="293" y2="22" stroke-width="1.6" /><line x1="323" y1="50" x2="323" y2="22" stroke-width="1.6" /><line x1="353" y1="36" x2="353" y2="22" stroke-width="1.6" /><line x1="293" y1="22" x2="353" y2="22" stroke-width="3" />
+              <circle cx="413" cy="71" r="5" /><circle cx="443" cy="57" r="5" /><circle cx="473" cy="43" r="5" /><line x1="418" y1="71" x2="418" y2="26" stroke-width="1.6" /><line x1="448" y1="57" x2="448" y2="26" stroke-width="1.6" /><line x1="478" y1="43" x2="478" y2="26" stroke-width="1.6" /><line x1="418" y1="26" x2="478" y2="26" stroke-width="3" />
+            `
+          },
+          4: {
+            label: 'Avançado',
+            chords: ['C7M(9)', 'E7(#9)', 'Am7(11)', 'F7M(#11)'],
+            freqs: [[261.63, 329.63, 392.00, 493.88, 587.33], [164.81, 207.65, 246.94, 293.66, 392.00], [220.00, 261.63, 329.63, 349.23, 392.00, 493.88], [174.61, 220.00, 261.63, 329.63, 369.99, 523.25]],
+            technique: 'Foco didático: escrita completa de concerto com rearmonização, condução polifônica de vozes e ornamentos.',
+            lessons: [
+              'Etapa 1: Análise harmônica e tensões do arranjo avançado',
+              'Etapa 2: Frases de passagem, introdução e interlúdios',
+              'Etapa 3: Performance integral de concerto'
+            ],
+            notesSvg: `
+              <circle cx="34" cy="78" r="4.5" /><circle cx="58" cy="64" r="4.5" /><circle cx="82" cy="50" r="4.5" /><circle cx="106" cy="29" r="4.5" /><line x1="38.5" y1="78" x2="38.5" y2="18" stroke-width="1.5" /><line x1="62.5" y1="64" x2="62.5" y2="18" stroke-width="1.5" /><line x1="86.5" y1="50" x2="86.5" y2="18" stroke-width="1.5" /><line x1="110.5" y1="29" x2="110.5" y2="18" stroke-width="1.5" /><line x1="38.5" y1="18" x2="110.5" y2="18" stroke-width="3" />
+              <circle cx="159" cy="71" r="4.5" /><circle cx="183" cy="57" r="4.5" /><circle cx="207" cy="43" r="4.5" /><circle cx="231" cy="29" r="4.5" /><line x1="163.5" y1="71" x2="163.5" y2="18" stroke-width="1.5" /><line x1="187.5" y1="57" x2="187.5" y2="18" stroke-width="1.5" /><line x1="211.5" y1="43" x2="211.5" y2="18" stroke-width="1.5" /><line x1="235.5" y1="29" x2="235.5" y2="18" stroke-width="1.5" /><line x1="163.5" y1="18" x2="235.5" y2="18" stroke-width="3" />
+              <circle cx="284" cy="64" r="4.5" /><circle cx="308" cy="50" r="4.5" /><circle cx="332" cy="36" r="4.5" /><circle cx="356" cy="22" r="4.5" /><line x1="288.5" y1="64" x2="288.5" y2="14" stroke-width="1.5" /><line x1="312.5" y1="50" x2="312.5" y2="14" stroke-width="1.5" /><line x1="336.5" y1="36" x2="336.5" y2="14" stroke-width="1.5" /><line x1="360.5" y1="22" x2="360.5" y2="14" stroke-width="1.5" /><line x1="288.5" y1="14" x2="360.5" y2="14" stroke-width="3" />
+              <circle cx="409" cy="71" r="4.5" /><circle cx="433" cy="57" r="4.5" /><circle cx="457" cy="43" r="4.5" /><circle cx="481" cy="29" r="4.5" /><line x1="413.5" y1="71" x2="413.5" y2="18" stroke-width="1.5" /><line x1="437.5" y1="57" x2="437.5" y2="18" stroke-width="1.5" /><line x1="461.5" y1="43" x2="461.5" y2="18" stroke-width="1.5" /><line x1="485.5" y1="29" x2="485.5" y2="18" stroke-width="1.5" /><line x1="413.5" y1="18" x2="485.5" y2="18" stroke-width="3" />
+            `
+          }
+        },
+        cordas: {
+          1: {
+            label: 'Fácil',
+            chords: ['C', 'G', 'Am', 'F7M'],
+            freqs: [[130.81, 196.00, 261.63, 329.63], [98.00, 146.83, 196.00, 246.94], [110.00, 164.81, 220.00, 261.63], [174.61, 220.00, 261.63, 329.63]],
+            technique: 'Foco didático: fôrmas abertas e levada rítmica estável para acompanhar toda a música com limpeza de som.',
+            lessons: [
+              'Etapa 1: Posicionamento das fôrmas e ataque das cordas',
+              'Etapa 2: Mudança sincronizada entre os compassos',
+              'Etapa 3: Tocando a obra inteira do começo ao fim'
+            ],
+            notesSvg: `
+              <circle cx="65" cy="78" r="6" /><line x1="71" y1="78" x2="71" y2="42" stroke-width="1.8" />
+              <circle cx="190" cy="64" r="6" /><line x1="196" y1="64" x2="196" y2="28" stroke-width="1.8" />
+              <circle cx="315" cy="57" r="6" /><line x1="321" y1="57" x2="321" y2="24" stroke-width="1.8" />
+              <circle cx="440" cy="71" r="6" /><line x1="446" y1="71" x2="446" y2="35" stroke-width="1.8" />
+            `
+          },
+          2: {
+            label: 'Médio',
+            chords: ['C', 'G/B', 'Am7', 'F'],
+            freqs: [[130.81, 196.00, 261.63, 329.63], [123.47, 196.00, 246.94, 293.66], [110.00, 164.81, 196.00, 261.63], [87.31, 130.81, 174.61, 220.00]],
+            technique: 'Foco didático: baixos invertidos, introdução de pestanas ou posições médias no braço e subdivisão rítmica.',
+            lessons: [
+              'Etapa 1: Domínio das pestanas e condução do grave',
+              'Etapa 2: Levada com acentuação e subdivisão',
+              'Etapa 3: Execução contínua com dinâmica de grupo'
+            ],
+            notesSvg: `
+              <circle cx="50" cy="78" r="5.5" /><circle cx="100" cy="64" r="5.5" /><line x1="56" y1="78" x2="56" y2="36" stroke-width="1.8" /><line x1="106" y1="64" x2="106" y2="28" stroke-width="1.8" />
+              <circle cx="175" cy="71" r="5.5" /><circle cx="225" cy="50" r="5.5" /><line x1="181" y1="71" x2="181" y2="30" stroke-width="1.8" /><line x1="231" y1="50" x2="231" y2="20" stroke-width="1.8" />
+              <circle cx="300" cy="64" r="5.5" /><circle cx="350" cy="43" r="5.5" /><line x1="306" y1="64" x2="306" y2="24" stroke-width="1.8" /><line x1="356" y1="43" x2="356" y2="16" stroke-width="1.8" />
+              <circle cx="425" cy="71" r="5.5" /><circle cx="475" cy="57" r="5.5" /><line x1="431" y1="71" x2="431" y2="28" stroke-width="1.8" /><line x1="481" y1="57" x2="481" y2="22" stroke-width="1.8" />
+            `
+          },
+          3: {
+            label: 'Difícil',
+            chords: ['C9', 'G/B', 'Am7', 'F6(9)'],
+            freqs: [[130.81, 164.81, 196.00, 293.66], [123.47, 196.00, 246.94, 293.66], [110.00, 164.81, 196.00, 261.63], [87.31, 146.83, 196.00, 293.66]],
+            technique: 'Foco didático: dedilhado elaborado (fingerstyle ou arco articulado) com baixos alternados e notas de extensão.',
+            lessons: [
+              'Etapa 1: Independência de dedos no padrão de dedilhado',
+              'Etapa 2: Condução das vozes internas na estrofe e refrão',
+              'Etapa 3: Nuances de timbre e interpretação'
+            ],
+            notesSvg: `
+              <circle cx="38" cy="78" r="5" /><circle cx="68" cy="57" r="5" /><circle cx="98" cy="43" r="5" /><line x1="43" y1="78" x2="43" y2="28" stroke-width="1.6" /><line x1="73" y1="57" x2="73" y2="28" stroke-width="1.6" /><line x1="103" y1="43" x2="103" y2="28" stroke-width="1.6" /><line x1="43" y1="28" x2="103" y2="28" stroke-width="3" />
+              <circle cx="163" cy="71" r="5" /><circle cx="193" cy="57" r="5" /><circle cx="223" cy="43" r="5" /><line x1="168" y1="71" x2="168" y2="26" stroke-width="1.6" /><line x1="198" y1="57" x2="198" y2="26" stroke-width="1.6" /><line x1="228" y1="43" x2="228" y2="26" stroke-width="1.6" /><line x1="168" y1="26" x2="228" y2="26" stroke-width="3" />
+              <circle cx="288" cy="64" r="5" /><circle cx="318" cy="50" r="5" /><circle cx="348" cy="36" r="5" /><line x1="293" y1="64" x2="293" y2="22" stroke-width="1.6" /><line x1="323" y1="50" x2="323" y2="22" stroke-width="1.6" /><line x1="353" y1="36" x2="353" y2="22" stroke-width="1.6" /><line x1="293" y1="22" x2="353" y2="22" stroke-width="3" />
+              <circle cx="413" cy="71" r="5" /><circle cx="443" cy="50" r="5" /><circle cx="473" cy="36" r="5" /><line x1="418" y1="71" x2="418" y2="24" stroke-width="1.6" /><line x1="448" y1="50" x2="448" y2="24" stroke-width="1.6" /><line x1="478" y1="36" x2="478" y2="24" stroke-width="1.6" /><line x1="418" y1="24" x2="478" y2="24" stroke-width="3" />
+            `
+          },
+          4: {
+            label: 'Avançado',
+            chords: ['C7M(9)', 'G7(13)', 'Am7(9)', 'F7M(#11)'],
+            freqs: [[130.81, 164.81, 246.94, 293.66, 392.00], [98.00, 174.61, 246.94, 329.63, 392.00], [110.00, 164.81, 196.00, 246.94, 329.63], [87.31, 164.81, 220.00, 246.94, 369.99]],
+            technique: 'Foco didático: chord melody e arranjo solista combinando baixo, harmonia e melodia principal simultaneamente.',
+            lessons: [
+              'Etapa 1: Voicings avançados e extensões pelo braço',
+              'Etapa 2: Melodia e acompanhamento integrados',
+              'Etapa 3: Execução solista de concerto'
+            ],
+            notesSvg: `
+              <circle cx="34" cy="78" r="4.5" /><circle cx="58" cy="64" r="4.5" /><circle cx="82" cy="50" r="4.5" /><circle cx="106" cy="29" r="4.5" /><line x1="38.5" y1="78" x2="38.5" y2="18" stroke-width="1.5" /><line x1="62.5" y1="64" x2="62.5" y2="18" stroke-width="1.5" /><line x1="86.5" y1="50" x2="86.5" y2="18" stroke-width="1.5" /><line x1="110.5" y1="29" x2="110.5" y2="18" stroke-width="1.5" /><line x1="38.5" y1="18" x2="110.5" y2="18" stroke-width="3" />
+              <circle cx="159" cy="71" r="4.5" /><circle cx="183" cy="57" r="4.5" /><circle cx="207" cy="43" r="4.5" /><circle cx="231" cy="29" r="4.5" /><line x1="163.5" y1="71" x2="163.5" y2="18" stroke-width="1.5" /><line x1="187.5" y1="57" x2="187.5" y2="18" stroke-width="1.5" /><line x1="211.5" y1="43" x2="211.5" y2="18" stroke-width="1.5" /><line x1="235.5" y1="29" x2="235.5" y2="18" stroke-width="1.5" /><line x1="163.5" y1="18" x2="235.5" y2="18" stroke-width="3" />
+              <circle cx="284" cy="64" r="4.5" /><circle cx="308" cy="50" r="4.5" /><circle cx="332" cy="36" r="4.5" /><circle cx="356" cy="22" r="4.5" /><line x1="288.5" y1="64" x2="288.5" y2="14" stroke-width="1.5" /><line x1="312.5" y1="50" x2="312.5" y2="14" stroke-width="1.5" /><line x1="336.5" y1="36" x2="336.5" y2="14" stroke-width="1.5" /><line x1="360.5" y1="22" x2="360.5" y2="14" stroke-width="1.5" /><line x1="288.5" y1="14" x2="360.5" y2="14" stroke-width="3" />
+              <circle cx="409" cy="71" r="4.5" /><circle cx="433" cy="57" r="4.5" /><circle cx="457" cy="43" r="4.5" /><circle cx="481" cy="29" r="4.5" /><line x1="413.5" y1="71" x2="413.5" y2="18" stroke-width="1.5" /><line x1="437.5" y1="57" x2="437.5" y2="18" stroke-width="1.5" /><line x1="461.5" y1="43" x2="461.5" y2="18" stroke-width="1.5" /><line x1="485.5" y1="29" x2="485.5" y2="18" stroke-width="1.5" /><line x1="413.5" y1="18" x2="485.5" y2="18" stroke-width="3" />
+            `
+          }
+        },
+        melodia: {
+          1: {
+            label: 'Fácil',
+            chords: ['Tema I', 'Resp. V', 'Tema VI', 'Cad. IV'],
+            freqs: [[261.63, 523.25], [293.66, 493.88], [220.00, 440.00], [174.61, 349.23]],
+            technique: 'Foco didático: afinação, apoio respiratório e leitura limpa da melodia principal na região confortável do instrumento.',
+            lessons: [
+              'Etapa 1: Embocadura, respiração e notas-guia da melodia',
+              'Etapa 2: Fraseado e pontos de respiração por compasso',
+              'Etapa 3: Execução melódica completa com playback'
+            ],
+            notesSvg: `
+              <circle cx="65" cy="64" r="6" /><line x1="71" y1="64" x2="71" y2="28" stroke-width="1.8" />
+              <circle cx="190" cy="57" r="6" /><line x1="196" y1="57" x2="196" y2="24" stroke-width="1.8" />
+              <circle cx="315" cy="50" r="6" /><line x1="321" y1="50" x2="321" y2="20" stroke-width="1.8" />
+              <circle cx="440" cy="64" r="6" /><line x1="446" y1="64" x2="446" y2="28" stroke-width="1.8" />
+            `
+          },
+          2: {
+            label: 'Médio',
+            chords: ['3ª Voz', '6ª Voz', 'Contracanto', 'Uníssono'],
+            freqs: [[329.63, 523.25], [293.66, 493.88], [261.63, 440.00], [220.00, 349.23]],
+            technique: 'Foco didático: segunda voz em terças e sextas, ligaduras de expressão e equilíbrio de volume em naipe.',
+            lessons: [
+              'Etapa 1: Leitura da linha de harmonia e intervalos',
+              'Etapa 2: Articulação legato e staccato nas frases',
+              'Etapa 3: Prática em conjunto com a melodia principal'
+            ],
+            notesSvg: `
+              <circle cx="50" cy="64" r="5.5" /><circle cx="100" cy="50" r="5.5" /><line x1="56" y1="64" x2="56" y2="28" stroke-width="1.8" /><line x1="106" y1="50" x2="106" y2="20" stroke-width="1.8" />
+              <circle cx="175" cy="57" r="5.5" /><circle cx="225" cy="43" r="5.5" /><line x1="181" y1="57" x2="181" y2="24" stroke-width="1.8" /><line x1="231" y1="43" x2="231" y2="18" stroke-width="1.8" />
+              <circle cx="300" cy="50" r="5.5" /><circle cx="350" cy="36" r="5.5" /><line x1="306" y1="50" x2="306" y2="20" stroke-width="1.8" /><line x1="356" y1="36" x2="356" y2="16" stroke-width="1.8" />
+              <circle cx="425" cy="64" r="5.5" /><circle cx="475" cy="50" r="5.5" /><line x1="431" y1="64" x2="431" y2="28" stroke-width="1.8" /><line x1="481" y1="50" x2="481" y2="20" stroke-width="1.8" />
+            `
+          },
+          3: {
+            label: 'Difícil',
+            chords: ['Canto + Adorno', 'Contraponto', 'Mudança Reg.', 'Crescendo'],
+            freqs: [[329.63, 392.00, 587.33], [293.66, 392.00, 587.33], [261.63, 329.63, 493.88], [220.00, 349.23, 440.00]],
+            technique: 'Foco didático: contraponto ativo, mudança de registro com timbre homogêneo e controle de vibrato.',
+            lessons: [
+              'Etapa 1: Saltos de oitava e homogeneidade de registro',
+              'Etapa 2: Linhas de contraponto e respostas ao tema',
+              'Etapa 3: Dinâmica expressiva e acabamento de frase'
+            ],
+            notesSvg: `
+              <circle cx="38" cy="71" r="5" /><circle cx="68" cy="57" r="5" /><circle cx="98" cy="36" r="5" /><line x1="43" y1="71" x2="43" y2="24" stroke-width="1.6" /><line x1="73" y1="57" x2="73" y2="24" stroke-width="1.6" /><line x1="103" y1="36" x2="103" y2="24" stroke-width="1.6" /><line x1="43" y1="24" x2="103" y2="24" stroke-width="3" />
+              <circle cx="163" cy="64" r="5" /><circle cx="193" cy="50" r="5" /><circle cx="223" cy="36" r="5" /><line x1="168" y1="64" x2="168" y2="22" stroke-width="1.6" /><line x1="198" y1="50" x2="198" y2="22" stroke-width="1.6" /><line x1="228" y1="36" x2="228" y2="22" stroke-width="1.6" /><line x1="168" y1="22" x2="228" y2="22" stroke-width="3" />
+              <circle cx="288" cy="57" r="5" /><circle cx="318" cy="43" r="5" /><circle cx="348" cy="29" r="5" /><line x1="293" y1="57" x2="293" y2="18" stroke-width="1.6" /><line x1="323" y1="43" x2="323" y2="18" stroke-width="1.6" /><line x1="353" y1="29" x2="353" y2="18" stroke-width="1.6" /><line x1="293" y1="18" x2="353" y2="18" stroke-width="3" />
+              <circle cx="413" cy="64" r="5" /><circle cx="443" cy="50" r="5" /><circle cx="473" cy="36" r="5" /><line x1="418" y1="64" x2="418" y2="22" stroke-width="1.6" /><line x1="448" y1="50" x2="448" y2="22" stroke-width="1.6" /><line x1="478" y1="36" x2="478" y2="22" stroke-width="1.6" /><line x1="418" y1="22" x2="478" y2="22" stroke-width="3" />
+            `
+          },
+          4: {
+            label: 'Avançado',
+            chords: ['Solo Virtuose', 'Arpejo Tensões', 'Cadência Livre', 'Final Concerto'],
+            freqs: [[329.63, 392.00, 493.88, 587.33], [293.66, 369.99, 440.00, 587.33], [261.63, 329.63, 392.00, 523.25], [220.00, 293.66, 369.99, 523.25]],
+            technique: 'Foco didático: ornamentação solista, arpejos sobre tensões harmônicas e interpretação de concerto.',
+            lessons: [
+              'Etapa 1: Ornamentação avançada e agilidade',
+              'Etapa 2: Construção de cadência e improvisação guiada',
+              'Etapa 3: Execução solista completa'
+            ],
+            notesSvg: `
+              <circle cx="34" cy="78" r="4.5" /><circle cx="58" cy="64" r="4.5" /><circle cx="82" cy="43" r="4.5" /><circle cx="106" cy="29" r="4.5" /><line x1="38.5" y1="78" x2="38.5" y2="18" stroke-width="1.5" /><line x1="62.5" y1="64" x2="62.5" y2="18" stroke-width="1.5" /><line x1="86.5" y1="43" x2="86.5" y2="18" stroke-width="1.5" /><line x1="110.5" y1="29" x2="110.5" y2="18" stroke-width="1.5" /><line x1="38.5" y1="18" x2="110.5" y2="18" stroke-width="3" />
+              <circle cx="159" cy="71" r="4.5" /><circle cx="183" cy="57" r="4.5" /><circle cx="207" cy="43" r="4.5" /><circle cx="231" cy="29" r="4.5" /><line x1="163.5" y1="71" x2="163.5" y2="18" stroke-width="1.5" /><line x1="187.5" y1="57" x2="187.5" y2="18" stroke-width="1.5" /><line x1="211.5" y1="43" x2="211.5" y2="18" stroke-width="1.5" /><line x1="235.5" y1="29" x2="235.5" y2="18" stroke-width="1.5" /><line x1="163.5" y1="18" x2="235.5" y2="18" stroke-width="3" />
+              <circle cx="284" cy="64" r="4.5" /><circle cx="308" cy="50" r="4.5" /><circle cx="332" cy="36" r="4.5" /><circle cx="356" cy="22" r="4.5" /><line x1="288.5" y1="64" x2="288.5" y2="14" stroke-width="1.5" /><line x1="312.5" y1="50" x2="312.5" y2="14" stroke-width="1.5" /><line x1="336.5" y1="36" x2="336.5" y2="14" stroke-width="1.5" /><line x1="360.5" y1="22" x2="360.5" y2="14" stroke-width="1.5" /><line x1="288.5" y1="14" x2="360.5" y2="14" stroke-width="3" />
+              <circle cx="409" cy="71" r="4.5" /><circle cx="433" cy="57" r="4.5" /><circle cx="457" cy="43" r="4.5" /><circle cx="481" cy="29" r="4.5" /><line x1="413.5" y1="71" x2="413.5" y2="18" stroke-width="1.5" /><line x1="437.5" y1="57" x2="437.5" y2="18" stroke-width="1.5" /><line x1="461.5" y1="43" x2="461.5" y2="18" stroke-width="1.5" /><line x1="485.5" y1="29" x2="485.5" y2="18" stroke-width="1.5" /><line x1="413.5" y1="18" x2="485.5" y2="18" stroke-width="3" />
+            `
+          }
+        }
+      };
+
+      let activeInst = 'harmonia';
+      let activeLevel = 1;
+      let audioCtx = null;
+
+      const instBtns = document.querySelectorAll('.live-inst-btn');
+      const levelTabs = document.querySelectorAll('.live-level-tab');
+      const chordsRow = document.getElementById('live-chords-row');
+      const staffNotes = document.getElementById('live-staff-notes');
+      const techniqueNote = document.getElementById('live-technique-note');
+      const lessonsList = document.getElementById('live-lessons-list');
+      const playBtn = document.getElementById('live-play-btn');
+      const playLabel = document.getElementById('live-play-label');
+      const audioStatus = document.getElementById('live-audio-status');
+
+      function renderLiveScore() {
+        const entry = SCORE_DATA[activeInst][activeLevel];
+        if (!entry) return;
+
+        chordsRow.innerHTML = entry.chords.map((c) => `<span>${c}</span>`).join('');
+        staffNotes.innerHTML = entry.notesSvg;
+        techniqueNote.textContent = entry.technique;
+        lessonsList.innerHTML = entry.lessons
+          .map((l) => `<li class="p-3" style="background-color: var(--surface);">${l}</li>`)
+          .join('');
+
+        instBtns.forEach((btn) => {
+          const isCurrent = btn.dataset.inst === activeInst;
+          btn.setAttribute('aria-pressed', String(isCurrent));
+          btn.style.backgroundColor = isCurrent ? 'var(--ink)' : 'transparent';
+          btn.style.color = isCurrent ? 'var(--accent-ink)' : 'var(--ink)';
+        });
+
+        levelTabs.forEach((tab) => {
+          const isCurrent = Number(tab.dataset.level) === activeLevel;
+          tab.setAttribute('aria-selected', String(isCurrent));
+          tab.style.color = isCurrent ? 'var(--ink)' : 'var(--muted)';
+          tab.style.fontWeight = isCurrent ? '600' : '400';
+          tab.style.textDecoration = isCurrent ? 'underline' : 'none';
+          tab.style.textUnderlineOffset = '6px';
+          tab.style.textDecorationThickness = '2px';
+        });
+      }
+
+      function playArrangementSample() {
+        const entry = SCORE_DATA[activeInst][activeLevel];
+        if (!entry) return;
+
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContextClass) {
+          audioStatus.textContent = `Grau ${entry.label}: ${entry.chords.join(' / ')}`;
+          return;
+        }
+
+        if (!audioCtx) audioCtx = new AudioContextClass();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const now = audioCtx.currentTime;
+        playLabel.textContent = `Ouvindo grau ${entry.label}...`;
+        audioStatus.textContent = `Demonstrando escrita do grau ${entry.label}: ${entry.chords.join(' – ')}.`;
+
+        entry.freqs.forEach((chord, idx) => {
+          const chordStart = now + idx * 0.65;
+          chord.forEach((freq, noteIdx) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = activeInst === 'harmonia' ? 'triangle' : activeInst === 'cordas' ? 'sine' : 'sawtooth';
+            osc.frequency.setValueAtTime(freq, chordStart);
+
+            const stagger = activeLevel >= 3 ? noteIdx * 0.045 : 0;
+            const start = chordStart + stagger;
+            const peak = activeInst === 'melodia' ? 0.035 : 0.065;
+            gain.gain.setValueAtTime(0.0001, start);
+            gain.gain.linearRampToValueAtTime(peak, start + 0.03);
+            gain.gain.exponentialRampToValueAtTime(0.0008, start + 0.6);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(start);
+            osc.stop(start + 0.62);
+          });
+        });
+
+        setTimeout(() => {
+          playLabel.textContent = 'Ouvir evolução do grau';
+        }, 2700);
+      }
+
+      instBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeInst = btn.dataset.inst;
+          renderLiveScore();
+        });
+      });
+
+      levelTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          activeLevel = Number(tab.dataset.level);
+          renderLiveScore();
+        });
+      });
+
+      if (playBtn) {
+        playBtn.addEventListener('click', playArrangementSample);
+      }
+    })();
+  </script>
 </body>
 </html>

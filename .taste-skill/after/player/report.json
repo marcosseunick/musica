@@ -1,0 +1,1208 @@
+{
+ "url": "public/player.html",
+ "at": "2026-10-26T13:10:35.159Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.64,
+    0.58
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1146,
+     "screens": 1.3,
+     "words": 133,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 20,
+     "vw": 1.4,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.4,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "lines": 1,
+     "size": 20,
+     "font": "Erode"
+    },
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      19,
+      20
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 19,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 20,
+      "vw": 1.4,
+      "font": "Erode",
+      "text": "Rumo ao Lar · Teclado"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.44
+      },
+      {
+       "color": "#06525c",
+       "share": 0.41
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.09
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#f7f9f8",
+      "hsl": {
+       "h": 150,
+       "s": 0.14,
+       "l": 0.97
+      },
+      "fg": "#06525c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 10,
+     "radius": 0,
+     "height": 83,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Estante",
+      "Fácil Grau 1",
+      "Médio Grau 2",
+      "Difícil Grau 3",
+      "Avançado Grau 4"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "iframe",
+      "ratio": 0.26
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1146,
+    "margins": {
+     "left": 132,
+     "right": 156
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rumo ao Lar · Teclado",
+      "size": 20,
+      "top": 6,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 164,
+      "n": 2
+     },
+     {
+      "x": 961,
+      "n": 2
+     },
+     {
+      "x": 132,
+      "n": 1
+     },
+     {
+      "x": 244,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 420,
+     "y": 780,
+     "w": 1020,
+     "h": 120
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 132,
+     "right": 156
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 20,
+     "vw": 1.4,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.4,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 7,
+     "firstScreen": 7,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 9,
+     "radii": [
+      [
+       0,
+       9
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 3,
+     "tabularShare": 1,
+     "kpiMax": 16
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      14,
+      16,
+      18,
+      19,
+      20,
+      24
+     ]
+    },
+    "title": {
+     "text": "Rumo ao Lar · Teclado",
+     "size": 20,
+     "top": 6
+    },
+    "colourShare": 0.009
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.8,
+    0.55
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1696,
+     "screens": 1.7,
+     "words": 133,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 20,
+     "vw": 2.6,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.4,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "lines": 1,
+     "size": 20,
+     "font": "Erode"
+    },
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      20
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 17.9,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 20,
+      "vw": 2.6,
+      "font": "Erode",
+      "text": "Rumo ao Lar · Teclado"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#dfe7e4",
+       "top": 96,
+       "hsl": {
+        "h": 158,
+        "s": 0.14,
+        "l": 0.89
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.44
+      },
+      {
+       "color": "#06525c",
+       "share": 0.41
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.09
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#f7f9f8",
+      "hsl": {
+       "h": 150,
+       "s": 0.14,
+       "l": 0.97
+      },
+      "fg": "#06525c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 5,
+     "radius": 0,
+     "height": 83,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Estante",
+      "Fácil Grau 1",
+      "Médio Grau 2",
+      "Difícil Grau 3",
+      "Avançado Grau 4"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "iframe",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1696,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "section.lg:col-span-8.space-y-6",
+      "tag": "section",
+      "top": 96,
+      "height": 865,
+      "words": 56,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Grau de escrita do arranjo",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 78,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "aside.lg:col-span-4.space-y-6",
+      "tag": "aside",
+      "top": 993,
+      "height": 552,
+      "words": 55,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Aulas do grau",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rumo ao Lar · Teclado",
+      "size": 20,
+      "top": 6,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 48,
+      "n": 4
+     },
+     {
+      "x": 24,
+      "n": 1
+     },
+     {
+      "x": 136,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 24,
+     "right": 24
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 20,
+     "vw": 2.6,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.4,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 7,
+     "firstScreen": 5,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 9,
+     "radii": [
+      [
+       0,
+       9
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 3,
+     "tabularShare": 1,
+     "kpiMax": 16
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      14,
+      16,
+      18,
+      20,
+      24
+     ]
+    },
+    "title": {
+     "text": "Rumo ao Lar · Teclado",
+     "size": 20,
+     "top": 6
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.63,
+    0.78
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 433,
+     "h": 938
+    },
+    "page": {
+     "height": 1629,
+     "screens": 1.7,
+     "words": 121,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 18,
+     "vw": 4.2,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "lines": 1,
+     "size": 18,
+     "font": "Erode"
+    },
+    "headings": [],
+    "headingSummary": {
+     "count": 0,
+     "maxLines": 0,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      16,
+      17,
+      18,
+      20
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 17.1,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 20,
+      "vw": 4.6,
+      "font": "Erode",
+      "text": "Objetivo pedagógico deste grau"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.12,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#06525c",
+       "share": 0.42
+      },
+      {
+       "color": "#24636c",
+       "share": 0.41
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.1
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.08
+      }
+     ],
+     "button": {
+      "bg": "#f7f9f8",
+      "hsl": {
+       "h": 150,
+       "s": 0.14,
+       "l": 0.97
+      },
+      "fg": "#06525c"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 4,
+     "radius": 0,
+     "height": 83,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Fácil Grau 1",
+      "Médio Grau 2",
+      "Difícil Grau 3",
+      "Avançado Grau 4"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "iframe",
+      "ratio": 0.24
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 433,
+     "h": 938
+    },
+    "pageH": 1629,
+    "margins": {
+     "left": 16,
+     "right": 0
+    },
+    "sections": [
+     {
+      "sel": "section.lg:col-span-8.space-y-6",
+      "tag": "section",
+      "top": 96,
+      "height": 798,
+      "words": 52,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Grau de escrita do arranjo",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "aside.lg:col-span-4.space-y-6",
+      "tag": "aside",
+      "top": 926,
+      "height": 552,
+      "words": 55,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Aulas do grau",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 40,
+      "right": 24,
+      "textLeft": 40,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Rumo ao Lar · Teclado",
+      "size": 18,
+      "top": 6,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 4
+     },
+     {
+      "x": 16,
+      "n": 1
+     },
+     {
+      "x": 75,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 6,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 433,
+     "h": 938
+    },
+    "dark": false,
+    "ground": "#f7f9f8",
+    "sidebar": null,
+    "topbar": {
+     "h": 64
+    },
+    "canvas": {
+     "left": 16,
+     "right": 0
+    },
+    "hero": {
+     "text": "Rumo ao Lar · Teclado",
+     "words": 5,
+     "chars": 21,
+     "lines": 1,
+     "size": 18,
+     "vw": 4.2,
+     "font": "Erode",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.56,
+     "top": 6,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 7,
+     "firstScreen": 5,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 9,
+     "radii": [
+      [
+       0,
+       9
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 3,
+     "tabularShare": 1,
+     "kpiMax": 16
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      14,
+      16,
+      17,
+      18,
+      20,
+      24
+     ]
+    },
+    "title": {
+     "text": "Rumo ao Lar · Teclado",
+     "size": 18,
+     "top": 6
+    },
+    "colourShare": 0.004
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\player\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\player\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\player\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\player\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\player\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\player\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

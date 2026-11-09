@@ -1,0 +1,1309 @@
+{
+ "url": "public/login.html",
+ "at": "2026-10-26T13:11:25.757Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.45
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 90,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-tuning-fork-placed-on-sheet-music.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 2,
+     "size": 28,
+     "vw": 1.9,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 231,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "lines": 2,
+     "size": 28,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "words": 8,
+      "chars": 40,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 231,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      24,
+      28
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.5
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 28,
+      "vw": 1.9,
+      "font": "Erode",
+      "text": "Abra a estante no compasso em que parou."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebf0ee",
+     "bodyBgHsl": {
+      "h": 156,
+      "s": 0.14,
+      "l": 0.93
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f9f8",
+       "top": 143,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.67
+      },
+      {
+       "color": "#06525c",
+       "share": 0.28
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#06525c",
+      "hsl": {
+       "h": 187,
+       "s": 0.88,
+       "l": 0.19
+      },
+      "fg": "#f7f9f8"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Abrir caderno de estudo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 900,
+    "margins": {
+     "left": 60,
+     "right": 60
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "size": 28,
+      "top": 231,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 256,
+      "n": 2
+     },
+     {
+      "x": 703,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 240,
+     "h": 720
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#ebf0ee",
+    "sidebar": null,
+    "topbar": {
+     "h": 80
+    },
+    "canvas": {
+     "left": 60,
+     "right": 60
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 2,
+     "size": 28,
+     "vw": 1.9,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 231,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 4,
+     "radii": [
+      [
+       0,
+       4
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      15,
+      16,
+      24,
+      28
+     ]
+    },
+    "title": {
+     "text": "Abra a estante no compasso em que parou.",
+     "size": 28,
+     "top": 231
+    },
+    "colourShare": 0.017
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.64,
+    0.63
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1475,
+     "screens": 1.4,
+     "words": 90,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-tuning-fork-placed-on-sheet-music.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 183,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "lines": 1,
+     "size": 28,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "words": 8,
+      "chars": 40,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 183,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      24,
+      28
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.5
+     },
+     "measureChars": 79,
+     "max": {
+      "size": 28,
+      "vw": 3.6,
+      "font": "Erode",
+      "text": "Abra a estante no compasso em que parou."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebf0ee",
+     "bodyBgHsl": {
+      "h": 156,
+      "s": 0.14,
+      "l": 0.93
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f9f8",
+       "top": 104,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ebf0ee",
+       "top": 300,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#dfe7e4",
+       "top": 312,
+       "hsl": {
+        "h": 158,
+        "s": 0.14,
+        "l": 0.89
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.67
+      },
+      {
+       "color": "#06525c",
+       "share": 0.28
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#06525c",
+      "hsl": {
+       "h": 187,
+       "s": 0.88,
+       "l": 0.19
+      },
+      "fg": "#f7f9f8"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.31
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1475,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.lg:col-span-5.flex",
+      "tag": "div",
+      "top": 152,
+      "height": 661,
+      "words": 47,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Abra a estante no compasso em que parou.",
+       "size": 28,
+       "tag": "h1"
+      },
+      "left": 68,
+      "right": 80,
+      "textLeft": 68,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.lg:col-span-7.bg-[#ebf0ee]",
+      "tag": "div",
+      "top": 853,
+      "height": 479,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Identificação do aluno",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 108,
+      "right": 108,
+      "textLeft": 108,
+      "textRight": 108,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "size": 28,
+      "top": 183,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 68,
+      "n": 2
+     },
+     {
+      "x": 108,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#ebf0ee",
+    "sidebar": null,
+    "topbar": {
+     "h": 80
+    },
+    "canvas": {
+     "left": 20,
+     "right": 20
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 183,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 3,
+     "radii": [
+      [
+       0,
+       3
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      15,
+      16,
+      24,
+      28
+     ]
+    },
+    "title": {
+     "text": "Abra a estante no compasso em que parou.",
+     "size": 28,
+     "top": 183
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.73,
+    0.68
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 1318,
+     "screens": 1.6,
+     "words": 87,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-tuning-fork-placed-on-sheet-music.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 2,
+     "size": 24,
+     "vw": 6.2,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 159,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "lines": 2,
+     "size": 24,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Harmonia",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "words": 8,
+      "chars": 40,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 159,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Identificação do aluno",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.52,
+      "top": 650,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      24
+     ],
+     "sizeCount": 3,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.5
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "text": "Harmonia"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ebf0ee",
+     "bodyBgHsl": {
+      "h": 156,
+      "s": 0.14,
+      "l": 0.93
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f9f8",
+       "top": 104,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ebf0ee",
+       "top": 626,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#24636c",
+       "share": 0.66
+      },
+      {
+       "color": "#06525c",
+       "share": 0.29
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#06525c",
+      "hsl": {
+       "h": 187,
+       "s": 0.88,
+       "l": 0.19
+      },
+      "fg": "#f7f9f8"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 1318,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.lg:col-span-5.flex",
+      "tag": "div",
+      "top": 128,
+      "height": 458,
+      "words": 47,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Abra a estante no compasso em que parou.",
+       "size": 24,
+       "tag": "h1"
+      },
+      "left": 44,
+      "right": 47,
+      "textLeft": 44,
+      "textRight": 47,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.lg:col-span-7.bg-[#ebf0ee]",
+      "tag": "div",
+      "top": 626,
+      "height": 534,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Identificação do aluno",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 68,
+      "right": 68,
+      "textLeft": 68,
+      "textRight": 88,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Abra a estante no compasso em que parou.",
+      "size": 24,
+      "top": 159,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 44,
+      "n": 2
+     },
+     {
+      "x": 68,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": false,
+    "ground": "#ebf0ee",
+    "sidebar": null,
+    "topbar": {
+     "h": 80
+    },
+    "canvas": {
+     "left": 20,
+     "right": 20
+    },
+    "hero": {
+     "text": "Abra a estante no compasso em que parou.",
+     "words": 8,
+     "chars": 40,
+     "lines": 2,
+     "size": 24,
+     "vw": 6.2,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.08,
+     "top": 159,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 4,
+     "radii": [
+      [
+       0,
+       4
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      15,
+      16,
+      24
+     ]
+    },
+    "title": {
+     "text": "Abra a estante no compasso em que parou.",
+     "size": 24,
+     "top": 159
+    },
+    "colourShare": 0.003
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\login\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\login\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\login\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\login\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Github\\musica\\.taste-skill\\after\\login\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\after\\login\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

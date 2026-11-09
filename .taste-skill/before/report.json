@@ -1,0 +1,1603 @@
+{
+ "url": "public/index.html",
+ "at": "2026-10-26T12:41:39.640Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.86,
+    0.67,
+    0.67
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 5,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1844,
+     "screens": 2,
+     "words": 217,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "chars": 42,
+     "lines": 3,
+     "size": 72,
+     "vw": 5,
+     "font": "Outfit",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.53,
+     "top": 235,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "lines": 3,
+     "size": 72,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "words": 9,
+      "chars": 42,
+      "lines": 3,
+      "size": 72,
+      "vw": 5,
+      "font": "Outfit",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": 235,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Evolução contínua na mesma música",
+      "words": 5,
+      "chars": 33,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.47,
+      "top": 906,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      16,
+      20,
+      36,
+      72
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Outfit",
+      "text": "Toque a música que você ama,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.015,
+     "microSamples": [
+      "Metodologia didática"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.36,
+     "smallText": 4
+    },
+    "eyebrows": [
+     {
+      "text": "Progressão didática inteligente em 4 níveis",
+      "above": "Toque a música que você ama, no seu níve",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 12,
+      "top": 177
+     },
+     {
+      "text": "Metodologia didática",
+      "above": "Evolução contínua na mesma música",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 878
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07070a",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#a1a1aa",
+       "share": 0.64
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#d4d4d8",
+       "share": 0.11
+      },
+      {
+       "color": "#fcd34d",
+       "share": 0.03
+      },
+      {
+       "color": "#1a1205",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#fcd38d",
+      "hsl": {
+       "h": 38,
+       "s": 0.95,
+       "l": 0.77
+      },
+      "fg": "#1a1205"
+     },
+     "lowContrast": [
+      {
+       "text": "Entrar",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      },
+      {
+       "text": "Criar conta",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 10,
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Entrar",
+      "Cadastre-se grátis",
+      "Começar a aprender agora",
+      "Já sou aluno"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 0,
+     "scrims": 8,
+     "gradientSamples": [],
+     "gradientText": 1,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "header.sticky.top-0 1440px",
+      "section.py-20.border-t 1440px",
+      "footer.border-t.border-zinc-800/80 1440px"
+     ],
+     "outlinedBoxes": 7,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1050
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1429
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.81
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1844,
+    "margins": {
+     "left": 137,
+     "right": 124
+    },
+    "sections": [
+     {
+      "sel": "section.relative.isolate",
+      "tag": "section",
+      "top": 65,
+      "height": 732,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Toque a música que você ama,",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 411,
+      "right": 411,
+      "textLeft": 411,
+      "textRight": 411,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20.border-t",
+      "tag": "section",
+      "top": 797,
+      "height": 552,
+      "words": 93,
+      "media": 0,
+      "middle": 33,
+      "heading": {
+       "text": "Evolução contínua na mesma música",
+       "size": 36,
+       "tag": "h3"
+      },
+      "left": 137,
+      "right": 166,
+      "textLeft": 137,
+      "textRight": 166,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20",
+      "tag": "section",
+      "top": 1349,
+      "height": 398,
+      "words": 66,
+      "media": 0,
+      "middle": 128,
+      "heading": {
+       "text": "Player Integrado",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 145,
+      "right": 148,
+      "textLeft": 145,
+      "textRight": 148,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "size": 72,
+      "top": 235,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 137,
+      "n": 2
+     },
+     {
+      "x": 447,
+      "n": 1
+     },
+     {
+      "x": 561,
+      "n": 1
+     },
+     {
+      "x": 757,
+      "n": 1
+     },
+     {
+      "x": 977,
+      "n": 1
+     },
+     {
+      "x": 1067,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.03,
+    "voidBox": {
+     "x": 0,
+     "y": 840,
+     "w": 600,
+     "h": 60
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.84,
+    0.74,
+    0.67
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 5,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2102,
+     "screens": 2.1,
+     "words": 217,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "chars": 42,
+     "lines": 3,
+     "size": 60,
+     "vw": 7.8,
+     "font": "Outfit",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 235,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "lines": 3,
+     "size": 60,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "words": 9,
+      "chars": 42,
+      "lines": 3,
+      "size": 60,
+      "vw": 7.8,
+      "font": "Outfit",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 235,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Evolução contínua na mesma música",
+      "words": 5,
+      "chars": 33,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 870,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      16,
+      20,
+      36,
+      60
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 60,
+      "vw": 7.8,
+      "font": "Outfit",
+      "text": "Toque a música que você ama,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.015,
+     "microSamples": [
+      "Metodologia didática"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.36,
+     "smallText": 4
+    },
+    "eyebrows": [
+     {
+      "text": "Progressão didática inteligente em 4 níveis",
+      "above": "Toque a música que você ama, no seu níve",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 12,
+      "top": 177
+     },
+     {
+      "text": "Metodologia didática",
+      "above": "Evolução contínua na mesma música",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 842
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07070a",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#a1a1aa",
+       "share": 0.64
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#d4d4d8",
+       "share": 0.11
+      },
+      {
+       "color": "#fcd34d",
+       "share": 0.03
+      },
+      {
+       "color": "#1a1205",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#fcd38d",
+      "hsl": {
+       "h": 38,
+       "s": 0.95,
+       "l": 0.77
+      },
+      "fg": "#1a1205"
+     },
+     "lowContrast": [
+      {
+       "text": "Entrar",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      },
+      {
+       "text": "Criar conta",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 10,
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Entrar",
+      "Cadastre-se grátis",
+      "Começar a aprender agora",
+      "Já sou aluno"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 1,
+     "scrims": 8,
+     "gradientSamples": [
+      "a.btn.btn-primary → linear-gradient(rgb(252, 211, 141), rgb(251, 191, 90))"
+     ],
+     "gradientText": 1,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "header.sticky.top-0 768px",
+      "section.py-20.border-t 768px",
+      "footer.border-t.border-zinc-800/80 768px"
+     ],
+     "outlinedBoxes": 7,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1014
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1591
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.68
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2102,
+    "margins": {
+     "left": 49,
+     "right": 36
+    },
+    "sections": [
+     {
+      "sel": "section.relative.isolate",
+      "tag": "section",
+      "top": 65,
+      "height": 696,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Toque a música que você ama,",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 62,
+      "right": 62,
+      "textLeft": 62,
+      "textRight": 62,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20.border-t",
+      "tag": "section",
+      "top": 761,
+      "height": 750,
+      "words": 93,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Evolução contínua na mesma música",
+       "size": 36,
+       "tag": "h3"
+      },
+      "left": 49,
+      "right": 52,
+      "textLeft": 49,
+      "textRight": 52,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20",
+      "tag": "section",
+      "top": 1511,
+      "height": 495,
+      "words": 66,
+      "media": 0,
+      "middle": 105,
+      "heading": {
+       "text": "Player Integrado",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 57,
+      "right": 59,
+      "textLeft": 57,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "size": 60,
+      "top": 235,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 49,
+      "n": 3
+     },
+     {
+      "x": 421,
+      "n": 2
+     },
+     {
+      "x": 308,
+      "n": 1
+     },
+     {
+      "x": 558,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.87,
+    1,
+    0.82,
+    0.59
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 5,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3066,
+     "screens": 3.6,
+     "words": 217,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "chars": 42,
+     "lines": 3,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 203,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Toque a música que você ama, no seu nível.",
+     "words": 9,
+     "lines": 3,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "words": 9,
+      "chars": 42,
+      "lines": 3,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 203,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Evolução contínua na mesma música",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 846,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      16,
+      18,
+      20,
+      30,
+      36
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 14,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "Toque a música que você ama,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.015,
+     "microSamples": [
+      "Metodologia didática"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.36,
+     "smallText": 4
+    },
+    "eyebrows": [
+     {
+      "text": "Progressão didática inteligente em 4 níveis",
+      "above": "Toque a música que você ama, no seu níve",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 12,
+      "top": 145
+     },
+     {
+      "text": "Metodologia didática",
+      "above": "Evolução contínua na mesma música",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 818
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#07070a",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#a1a1aa",
+       "share": 0.64
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#d4d4d8",
+       "share": 0.11
+      },
+      {
+       "color": "#fcd34d",
+       "share": 0.03
+      },
+      {
+       "color": "#1a1205",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#fcd38d",
+      "hsl": {
+       "h": 38,
+       "s": 0.95,
+       "l": 0.77
+      },
+      "fg": "#1a1205"
+     },
+     "lowContrast": [
+      {
+       "text": "Entrar",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      },
+      {
+       "text": "Criar conta",
+       "ratio": 4.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#71717a",
+       "bg": "#07070a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 10,
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Entrar",
+      "Cadastre-se grátis",
+      "Começar a aprender agora",
+      "Já sou aluno"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 1,
+     "scrims": 8,
+     "gradientSamples": [
+      "a.btn.btn-primary → linear-gradient(rgb(252, 211, 141), rgb(251, 191, 90))"
+     ],
+     "gradientText": 1,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "header.sticky.top-0 390px",
+      "section.py-20.border-t 390px",
+      "footer.border-t.border-zinc-800/80 390px"
+     ],
+     "outlinedBoxes": 7,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.8
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3066,
+    "margins": {
+     "left": 19,
+     "right": 19
+    },
+    "sections": [
+     {
+      "sel": "section.relative.isolate",
+      "tag": "section",
+      "top": 65,
+      "height": 672,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Toque a música que você ama,",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 19,
+      "right": 19,
+      "textLeft": 19,
+      "textRight": 19,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20.border-t",
+      "tag": "section",
+      "top": 737,
+      "height": 1246,
+      "words": 93,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Evolução contínua na mesma música",
+       "size": 30,
+       "tag": "h3"
+      },
+      "left": 19,
+      "right": 19,
+      "textLeft": 19,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.py-20",
+      "tag": "section",
+      "top": 1983,
+      "height": 939,
+      "words": 66,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Player Integrado",
+       "size": 20,
+       "tag": "h4"
+      },
+      "left": 49,
+      "right": 50,
+      "textLeft": 49,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.border-t.border-zinc-800/80",
+      "tag": "footer",
+      "top": 2921,
+      "height": 145,
+      "words": 14,
+      "media": 0,
+      "middle": 36,
+      "heading": null,
+      "left": 37,
+      "right": 44,
+      "textLeft": 37,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Toque a música que você ama, no seu nível.",
+      "size": 36,
+      "top": 203,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 41,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Toque a música que você ama, no seu nível.\" → 3 lines (9 words, 72px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"Progressão didática inteligente em 4 níveis\" (pill) above \"Toque a música que você ama, no seu níve\"; \"Metodologia didática\" above \"Evolução contínua na mesma música\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "1 tiny uppercase letter-spaced label(s): \"Metodologia didática\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient-text",
+   "width": 1440,
+   "message": "1 gradient-filled text element(s).",
+   "fix": "Solid colour text.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "1 box-shadow(s) on elements at rest: a.btn.btn-primary → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill and shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): header.sticky.top-0 1440px | section.py-20.border-t 1440px | footer.border-t.border-zinc-800/80 1440px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "7 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "1 row(s) of identical cards each topped with a small icon (3 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Entrar\" 4.2:1 needs 4.5:1; \"Criar conta\" 4.2:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 14px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 1 picture(s) on the page (1 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "4 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 5 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Toque a música que você ama, no seu nível.\" → 3 lines (9 words, 60px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 768,
+   "message": "1 gradient fill(s): a.btn.btn-primary → linear-gradient(rgb(252, 211, 141), rgb(251, 191, 90))",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Toque a música que você ama, no seu nível.\" → 3 lines (9 words, 36px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Github\\musica\\.taste-skill\\before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\before\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Github\\musica\\.taste-skill\\before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\before\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Github\\musica\\.taste-skill\\before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Github\\musica\\.taste-skill\\before\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

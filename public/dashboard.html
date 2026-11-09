@@ -4,83 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel do Aluno | Harmonia</title>
-  <meta name="description" content="Sua trilha de estudos personalizada na Harmonia. Escolha sua música e inicie sua aula." />
+  <meta name="description" content="Sua estante de estudos personalizada na Harmonia. Escolha sua obra e inicie o ensaio nos 4 graus de arranjo." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind.config.js"></script>
   <link rel="stylesheet" href="css/app.css" />
 </head>
-<body class="font-sans text-zinc-300 antialiased bg-ink-950 min-h-screen flex flex-col">
+<body class="bg-[#f7f9f8] text-[#06525c] antialiased min-h-[100svh] flex flex-col">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-zinc-800/80 bg-ink-950/85 backdrop-blur-md">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <a href="dashboard.html" id="logo-link" class="flex items-center gap-2.5">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-6 w-6 text-amber-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span class="font-display text-xl font-bold tracking-tight text-white">Harmonia</span>
+  <!-- Barra Superior Editorial -->
+  <header class="bg-[#ebf0ee]">
+    <div class="mx-auto flex h-16 max-w-[1140px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="dashboard.html" id="logo-link" class="flex items-baseline gap-3">
+        <span class="text-2xl font-semibold tracking-tight text-[#06525c]">Harmonia</span>
+        <span class="small-copy text-[#24636c] italic hidden sm:inline">Estante do Aluno</span>
       </a>
 
       <div class="flex items-center gap-3">
-        <span id="user-greeting" class="text-sm font-medium text-zinc-300 hidden sm:inline">Olá, Aluno</span>
         <div id="admin-slot"></div>
         <button id="logout-btn" class="btn btn-secondary btn-sm" aria-label="Sair da conta">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-          <span class="hidden sm:inline">Sair</span>
+          <span class="hidden sm:inline">Fechar caderno</span>
         </button>
       </div>
     </div>
   </header>
 
   <main class="flex-1">
-    <!-- Hero / Boas-vindas -->
-    <section class="relative isolate overflow-hidden px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-16 lg:px-8 border-b border-zinc-800/80">
-      <div class="aurora" aria-hidden="true"></div>
-      <div class="mx-auto max-w-7xl">
-        <div class="max-w-2xl animate-fade-up">
-          <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300 mb-4">
-            <span class="flex h-3 items-end gap-[2px] text-amber-400">
-              <span class="eq-bar h-3"></span><span class="eq-bar h-3"></span><span class="eq-bar h-3"></span>
-            </span>
-            Sua Trilha Musical
-          </div>
-          <h1 class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Pronto para praticar hoje?
-          </h1>
-          <p class="mt-3 text-base sm:text-lg text-zinc-400">
-            Selecione uma das músicas do seu repertório para abrir o player com as 4 opções de arranjo e materiais de estudo.
-          </p>
+    <!-- Abertura (Blueprint: workspace-home-greeting + accent-ladder) -->
+    <section class="mx-auto max-w-[1140px] px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
+      <div class="max-w-2xl">
+        <h1 id="user-greeting" class="text-2xl sm:text-[30px] font-bold tracking-tight text-[#06525c] leading-[1.1]">
+          Olá, estudante
+        </h1>
+        <p id="instrument-badge" class="mt-2 text-base text-[#06525c]">
+          Carregando trilha de instrumento...
+        </p>
+      </div>
+
+      <!-- 4 Blocos de Contagem na Escada Tonal (12 colunas: 3 colunas cada, 128px altura, 16px padding) -->
+      <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-3 min-h-[128px] p-4 bg-[#ebf0ee] flex flex-col justify-between">
+          <span class="small-copy text-[#24636c]">Obras no caderno</span>
+          <span id="stat-songs-total" class="text-2xl font-normal nums text-[#06525c]">1</span>
+          <span class="small-copy text-[#24636c]">Prontas para leitura</span>
+        </div>
+
+        <div class="lg:col-span-3 min-h-[128px] p-4 lvl-badge-1 flex flex-col justify-between">
+          <span class="small-copy text-[#24636c]">Graus por partitura</span>
+          <span class="text-2xl font-normal nums text-[#06525c]">4</span>
+          <span class="small-copy text-[#24636c]">Fácil ao Avançado</span>
+        </div>
+
+        <div class="lg:col-span-3 min-h-[128px] p-4 lvl-badge-2 flex flex-col justify-between">
+          <span class="small-copy text-[#24636c]">Aulas por grau</span>
+          <span class="text-2xl font-normal nums text-[#06525c]">3</span>
+          <span class="small-copy text-[#24636c]">Vídeo e folha em PDF</span>
+        </div>
+
+        <div class="lg:col-span-3 min-h-[128px] p-4 lvl-badge-3 flex flex-col justify-between">
+          <span class="small-copy text-[#05424a]">Diapasão de referência</span>
+          <span class="text-2xl font-normal nums text-[#05424a]">440 Hz</span>
+          <span class="small-copy text-[#05424a]">Estante aberta para hoje</span>
         </div>
       </div>
     </section>
 
-    <!-- Músicas da Trilha -->
-    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" aria-labelledby="songs-heading">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-        <div>
-          <h2 id="songs-heading" class="font-display text-2xl font-bold text-white">
-            Músicas Disponíveis
-          </h2>
-          <p id="instrument-badge" class="mt-1 text-sm text-zinc-400">Carregando trilha...</p>
+    <!-- Repertório da Trilha -->
+    <section class="mx-auto max-w-[1140px] px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="songs-heading">
+      <div class="bg-[#ebf0ee] p-5 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-6">
+          <div class="flex items-baseline gap-3">
+            <h2 id="songs-heading" class="text-xl font-semibold text-[#06525c]">
+              Repertório disponível
+            </h2>
+            <span id="songs-count" class="px-2.5 py-0.5 bg-[#dfe7e4] small-copy font-medium text-[#06525c] nums"></span>
+          </div>
+          <span class="small-copy text-[#24636c]">Clique na edição para abrir o player e as folhas de apoio</span>
         </div>
-        <span id="songs-count" class="text-xs font-semibold uppercase tracking-wider text-zinc-500"></span>
-      </div>
 
-      <div id="song-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <!-- Injetado via JS -->
-      </div>
+        <div id="song-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Injetado via JS -->
+        </div>
 
-      <div id="songs-feedback" class="hidden mt-6 card p-10 text-center text-zinc-400">
-        <!-- Mensagem dinâmica de feedback -->
+        <div id="songs-feedback" class="hidden mt-4 bg-[#f7f9f8] p-10 text-center text-[#24636c]">
+          <!-- Mensagem dinâmica de feedback -->
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-zinc-800/80 py-8 bg-ink-950 text-center text-xs text-zinc-500">
-    Harmonia &middot; Plataforma de cursos de música com progressão didática
+  <footer class="mt-12 py-8 bg-[#ebf0ee] text-center small-copy text-[#0d4a52]">
+    Harmonia / Ensino musical por graus de arranjo
   </footer>
 
   <script src="js/common.js"></script>

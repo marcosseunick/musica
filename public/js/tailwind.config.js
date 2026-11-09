@@ -1,28 +1,35 @@
-// Configuração do Tailwind CDN compartilhada entre as páginas.
-// Deve ser carregado logo após <script src="https://cdn.tailwindcss.com">.
+// Configuração do Tailwind CDN compartilhada entre as páginas da Harmonia.
+// Paleta "Teal on paper" e tipografia "Erode" (tasteskill direction: page-is-the-object).
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', 'Inter', 'sans-serif'],
+        sans: ['Erode', 'Georgia', 'serif'],
+        display: ['Erode', 'Georgia', 'serif'],
+        serif: ['Erode', 'Georgia', 'serif'],
       },
       colors: {
+        paper: '#f7f9f8',
+        folio: {
+          50: '#f7f9f8',
+          100: '#ebf0ee',
+          200: '#dfe7e4',
+          300: '#cdd9d5',
+        },
         ink: {
-          950: '#07070a',
-          900: '#0d0d12',
-          800: '#15151c',
-          700: '#1f1f29',
+          DEFAULT: '#06525c',
+          950: '#06525c',
+          900: '#08454d',
+          800: '#175a63',
+          700: '#2f737d',
+          600: '#498992',
         },
         ember: {
-          300: '#fcd38d',
-          400: '#fbbf5a',
-          500: '#f59e0b',
-          600: '#d97706',
+          300: '#dcebe7',
+          400: '#06525c',
+          500: '#06525c',
+          600: '#043d45',
         },
-      },
-      boxShadow: {
-        glow: '0 0 40px -10px rgba(245, 158, 11, 0.45)',
       },
     },
   },
