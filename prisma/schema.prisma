@@ -3,7 +3,7 @@
 //
 // Hierarquia didática:
 //   Song + Instrument -> SongInstrument (a "trilha")
-//     -> Module (nível de dificuldade 1..4)
+//     -> Module (nível de dificuldade 1..3)
 //       -> Lesson (aulas em vídeo, ordenadas por order_index)
 //         -> Material (PDFs de apoio da aula)
 
@@ -54,7 +54,7 @@ model SongInstrument {
   @@unique([song_id, instrument_id])
 }
 
-// Nível de dificuldade: 1 = Fácil, 2 = Médio, 3 = Difícil, 4 = Avançado
+// Nível de dificuldade: 1 = Fácil, 2 = Médio, 3 = Difícil
 model Module {
   id                 Int            @id @default(autoincrement())
   song_instrument_id Int

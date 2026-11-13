@@ -16,22 +16,18 @@
   --field-1: #06525c;
   --field-1-ink: #f7f9f8;
 
-  /* Escada Tonal (Accent Ladder) para os 4 graus de arranjo — uma única família cromática */
+  /* Escada Tonal (Accent Ladder) para os 3 graus de arranjo — uma única família cromática */
   --lvl-1-bg: #e3eeec;
   --lvl-1-ink: #06525c;
   --lvl-1-dot: #5b8f96;
 
-  --lvl-2-bg: #cfe1de;
+  --lvl-2-bg: #c6deda;
   --lvl-2-ink: #06525c;
-  --lvl-2-dot: #34737b;
+  --lvl-2-dot: #296b73;
 
-  --lvl-3-bg: #b8d2ce;
-  --lvl-3-ink: #05424a;
-  --lvl-3-dot: #155d66;
-
-  --lvl-4-bg: #06525c;
-  --lvl-4-ink: #f7f9f8;
-  --lvl-4-dot: #06525c;
+  --lvl-3-bg: #06525c;
+  --lvl-3-ink: #f7f9f8;
+  --lvl-3-dot: #06525c;
 
   --danger-bg: #eadad7;
   --danger-ink: #69221e;
@@ -430,23 +426,20 @@ textarea.field {
   }
 }
 
-/* ---------- Escada Tonal dos 4 Níveis (Accent Ladder) ---------- */
+/* ---------- Escada Tonal dos 3 Níveis (Accent Ladder) ---------- */
 
 .lvl-dot-1 { background-color: var(--lvl-1-dot); }
 .lvl-dot-2 { background-color: var(--lvl-2-dot); }
 .lvl-dot-3 { background-color: var(--lvl-3-dot); }
-.lvl-dot-4 { background-color: var(--lvl-4-dot); }
 
 .lvl-bar-1 { background-color: var(--lvl-1-dot); }
 .lvl-bar-2 { background-color: var(--lvl-2-dot); }
 .lvl-bar-3 { background-color: var(--lvl-3-dot); }
-.lvl-bar-4 { background-color: var(--lvl-4-dot); }
 .lvl-bar-empty { background-color: var(--raised); opacity: 0.55; }
 
 .lvl-badge-1 { background-color: var(--lvl-1-bg); color: var(--lvl-1-ink); }
 .lvl-badge-2 { background-color: var(--lvl-2-bg); color: var(--lvl-2-ink); }
 .lvl-badge-3 { background-color: var(--lvl-3-bg); color: var(--lvl-3-ink); }
-.lvl-badge-4 { background-color: var(--lvl-4-bg); color: var(--lvl-4-ink); }
 
 .lvl-tab-inactive {
   background-color: var(--surface);
@@ -462,8 +455,8 @@ textarea.field {
 .lvl-tab-active-1 { background-color: var(--lvl-1-bg); color: var(--lvl-1-ink); }
 .lvl-tab-active-2 { background-color: var(--lvl-2-bg); color: var(--lvl-2-ink); }
 .lvl-tab-active-3 { background-color: var(--lvl-3-bg); color: var(--lvl-3-ink); }
-.lvl-tab-active-4 { background-color: var(--lvl-4-bg); color: var(--lvl-4-ink); }
-.lvl-tab-active-4 .lvl-dot-4 { background-color: var(--lvl-4-ink); }
+.lvl-tab-active-3 .lvl-dot-3 { background-color: var(--lvl-3-ink); }
+.lvl-badge-3 .lvl-dot-3 { background-color: var(--lvl-3-ink); }
 
 .btn-sm {
   padding: 0.45rem 0.85rem;

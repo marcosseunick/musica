@@ -6,14 +6,13 @@ MVP de plataforma web (VOD) para o ensino de repertório musical por níveis de 
 
 ## 🎵 Proposta Pedagógica
 
-Ao contrário de plataformas convencionais que dividem o aprendizado por músicas isoladas, a **Harmonia** estrutura cada canção em uma progressão contínua de **4 níveis de arranjo**:
+Ao contrário de plataformas convencionais que dividem o aprendizado por músicas isoladas, a **Harmonia** estrutura cada canção em uma progressão contínua de **3 níveis de arranjo**:
 
 1. **Fácil (Nível 1):** Acordes básicos em bloco e estrutura tonal fundamental.
 2. **Médio (Nível 2):** Inversões de acordes e transições suaves.
-3. **Difícil (Nível 3):** Dedilhado, arpejos e dinâmicas de interpretação.
-4. **Avançado (Nível 4):** Arranjo solo e coral completo com rearmonização e tensões.
+3. **Difícil (Nível 3):** Dedilhado, arpejos, dinâmicas de interpretação e arranjo completo.
 
-O aluno pode alternar instantaneamente entre os níveis de dificuldade através da interface do player ou usando os atalhos de teclado `1` a `4`.
+O aluno pode alternar instantaneamente entre os níveis de dificuldade através da interface do player ou usando os atalhos de teclado `1` a `3`.
 
 ---
 
@@ -83,7 +82,7 @@ musica/
 │   │   ├── common.js       # Utilidades compartilhadas (fetch, toasts, modals)
 │   │   ├── auth.js         # Validações e fluxos de login/cadastro
 │   │   ├── dashboard.js    # Grade de músicas e trilhas
-│   │   ├── player.js       # Player didático com 4 níveis
+│   │   ├── player.js       # Player didático com 3 níveis
 │   │   └── admin.js        # Estúdio administrativo (CRUD completo)
 │   ├── index.html          # Landing page institucional
 │   ├── login.html          # Autenticação

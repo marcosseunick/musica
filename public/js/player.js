@@ -254,7 +254,7 @@ function changeModule(index) {
   changeLesson(0);
 }
 
-// Troca por número de nível real (1 a 4) · resolve B9
+// Troca por número de nível real (1 a 3) · resolve B9
 function changeByLevelNumber(levelNum) {
   const targetIndex = modulosDaAula.findIndex(m => m.difficulty_level === levelNum);
   if (targetIndex !== -1) {
@@ -286,14 +286,14 @@ nextLessonBtn.addEventListener('click', () => {
   }
 });
 
-// Atalhos do Teclado: teclas 1 a 4 para níveis
+// Atalhos do Teclado: teclas 1 a 3 para níveis
 document.addEventListener('keydown', (event) => {
   // Ignora se o usuário estiver focado em campos editáveis
   if (event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
   if (event.ctrlKey || event.metaKey || event.altKey) return;
 
   const num = Number(event.key);
-  if (num >= 1 && num <= 4) {
+  if (num >= 1 && num <= 3) {
     changeByLevelNumber(num);
   }
 });
@@ -370,14 +370,6 @@ function getPreviewLessonData() {
         description: 'Arpejos de décima na mão esquerda, extensões de sétima maior e nona adicionada com pedal sincopado.',
         lessons: [
           { id: 5, title: 'Aula 1: Abertura de Décimas no Grave', video_url: 'about:blank', materials: [] }
-        ]
-      },
-      {
-        id: 4,
-        difficulty_level: 4,
-        description: 'Escrita coral completa a quatro vozes, baixos em oitavas, dominantes secundárias e rearmonização.',
-        lessons: [
-          { id: 6, title: 'Aula 1: Polifonia Coral no Teclado', video_url: 'about:blank', materials: [] }
         ]
       }
     ]

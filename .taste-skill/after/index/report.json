@@ -1,6 +1,6 @@
 {
  "url": "public/index.html",
- "at": "2026-10-26T13:21:38.916Z",
+ "at": "2026-11-13T12:09:10.031Z",
  "allow": [],
  "viewports": [
   {
@@ -10,17 +10,17 @@
    "screens": 7,
    "filled": [
     0.63,
-    0.47,
-    0.76,
-    0.8,
-    0.76,
-    0.64,
-    0.56
+    0.52,
+    0.77,
+    0.72,
+    0.73,
+    0.7,
+    0.55
    ],
    "motion": {
-    "elements": 22,
+    "elements": 21,
     "css": 8,
-    "transitions": 14,
+    "transitions": 13,
     "scripted": 0,
     "videos": 1,
     "playingVideos": 1
@@ -31,10 +31,10 @@
      "h": 900
     },
     "page": {
-     "height": 5699,
-     "screens": 6.3,
-     "words": 888,
-     "img": 7,
+     "height": 5799,
+     "screens": 6.4,
+     "words": 867,
+     "img": 6,
      "video": 1,
      "canvas": 0,
      "svg": 4,
@@ -43,7 +43,7 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 7,
+     "realPictures": 6,
      "videoCount": 1,
      "uiPictures": 0,
      "pictureSamples": [
@@ -51,7 +51,6 @@
       "music-sheet-mozart-s-alla-turca.jpg",
       "woman-looking-at-sheet-music-posed-beside.jpg",
       "man-playing-an-acoustic-brazilian-guitar-violao.",
-      "grand-piano.jpg",
       "overture-for-the-woman-from-seville-for.jpg"
      ],
      "blendText": 0,
@@ -61,9 +60,9 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Uma obra, quatro graus",
+     "text": "Uma obra, três graus",
      "words": 4,
-     "chars": 22,
+     "chars": 20,
      "lines": 2,
      "size": 69.6,
      "vw": 4.8,
@@ -82,7 +81,7 @@
      "kind": "heading"
     },
     "h1": {
-     "text": "Uma obra, quatro graus",
+     "text": "Uma obra, três graus",
      "words": 4,
      "lines": 2,
      "size": 69.6,
@@ -90,9 +89,9 @@
     },
     "headings": [
      {
-      "text": "Uma obra, quatro graus",
+      "text": "Uma obra, três graus",
       "words": 4,
-      "chars": 22,
+      "chars": 20,
       "lines": 2,
       "size": 69.6,
       "vw": 4.8,
@@ -148,7 +147,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.44,
-      "top": 2377,
+      "top": 2493,
       "tag": "h2",
       "kind": "heading"
      },
@@ -169,7 +168,7 @@
       "align": "center",
       "position": "left",
       "widthRatio": 0.46,
-      "top": 3224,
+      "top": 3324,
       "tag": "h2",
       "kind": "heading"
      },
@@ -190,7 +189,7 @@
       "align": "center",
       "position": "right",
       "widthRatio": 0.46,
-      "top": 4590,
+      "top": 4691,
       "tag": "h2",
       "kind": "heading"
      },
@@ -211,7 +210,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.42,
-      "top": 5170,
+      "top": 5270,
       "tag": "h2",
       "kind": "heading"
      }
@@ -270,7 +269,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0.01,
-     "centerShare": 0.2,
+     "centerShare": 0.21,
      "smallText": 0
     },
     "eyebrows": [],
@@ -304,1055 +303,7 @@
       },
       {
        "color": "#06525c",
-       "top": 4406,
-       "hsl": {
-        "h": 187,
-        "s": 0.88,
-        "l": 0.19
-       }
-      }
-     ],
-     "textColors": [
-      {
-       "color": "#06525c",
-       "share": 0.73
-      },
-      {
-       "color": "#0d4a52",
-       "share": 0.2
-      },
-      {
-       "color": "#f7f9f8",
-       "share": 0.05
-      },
-      {
-       "color": "#dce8ea",
-       "share": 0.02
-      }
-     ],
-     "button": {
-      "bg": "#06525c",
-      "hsl": {
-       "h": 187,
-       "s": 0.88,
-       "l": 0.19
-      },
-      "fg": "#f7f9f8"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 5,
-     "inHero": 2,
-     "radius": 0,
-     "height": 56,
-     "withShadow": 0,
-     "withGradient": 0,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": [
-      "Começar a estudar",
-      "Escolher meu instrumento e começar"
-     ]
-    },
-    "surfaces": {
-     "shadowStatic": 0,
-     "shadowOverlay": 0,
-     "shadowSamples": [],
-     "gradients": 0,
-     "scrims": 0,
-     "gradientSamples": [],
-     "gradientText": 0,
-     "hairlines": 0,
-     "hairlineSamples": [],
-     "outlinedBoxes": 0,
-     "dashed": 0,
-     "blurred": 0,
-     "roundedBoxes": 0,
-     "boxRadius": 0,
-     "squareMedia": 7,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
-     "textShadow": 0,
-     "cardRows": []
-    },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.11
-     }
-    ],
-    "nav": {
-     "links": 6,
-     "fixed": false,
-     "height": 90,
-     "floatingPill": false,
-     "blur": false
-    },
-    "fontsLoaded": [
-     "erode"
-    ]
-   },
-   "layout": {
-    "viewport": {
-     "w": 1440,
-     "h": 900
-    },
-    "pageH": 5699,
-    "margins": {
-     "left": 36,
-     "right": 38
-    },
-    "sections": [
-     {
-      "sel": "div.curtain-main",
-      "tag": "div",
-      "top": 0,
-      "height": 5066,
-      "words": 757,
-      "media": 8,
-      "middle": 0,
-      "heading": {
-       "text": "Uma obra,",
-       "size": 70,
-       "tag": "h1"
-      },
-      "left": 36,
-      "right": 36,
-      "textLeft": 36,
-      "textRight": 36,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": false,
-      "pinned": false
-     },
-     {
-      "sel": "footer.curtain-footer.pt-12",
-      "tag": "footer",
-      "top": 5066,
-      "height": 633,
-      "words": 168,
-      "media": 0,
-      "middle": 214,
-      "heading": {
-       "text": "Harmonia",
-       "size": 50,
-       "tag": "h2"
-      },
-      "left": 92,
-      "right": 100,
-      "textLeft": 92,
-      "textRight": 390,
-      "fullBleed": false,
-      "footer": true,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     }
-    ],
-    "gaps": [
-     {
-      "top": 740,
-      "height": 296
-     },
-     {
-      "top": 4220,
-      "height": 364
-     }
-    ],
-    "h1s": [
-     {
-      "text": "Uma obra, quatro graus",
-      "size": 70,
-      "top": 178,
-      "firstScreen": true
-     }
-    ],
-    "edgeText": [],
-    "edges": [
-     {
-      "x": 92,
-      "n": 10
-     },
-     {
-      "x": 36,
-      "n": 5
-     },
-     {
-      "x": 760,
-      "n": 2
-     },
-     {
-      "x": 76,
-      "n": 1
-     },
-     {
-      "x": 386,
-      "n": 1
-     },
-     {
-      "x": 736,
-      "n": 1
-     },
-     {
-      "x": 890,
-      "n": 1
-     },
-     {
-      "x": 1086,
-      "n": 1
-     },
-     {
-      "x": 1128,
-      "n": 1
-     }
-    ],
-    "leftBlocks": 23,
-    "bodySize": 16,
-    "stage": false,
-    "explains": true,
-    "slivers": [],
-    "voidShare": 0.13,
-    "voidBox": {
-     "x": 0,
-     "y": 780,
-     "w": 1440,
-     "h": 120
-    }
-   },
-   "app": null,
-   "consoleErrors": []
-  },
-  {
-   "width": 768,
-   "height": 1024,
-   "load": "load",
-   "screens": 9,
-   "filled": [
-    0.64,
-    0.6,
-    0.81,
-    0.81,
-    0.88,
-    0.86,
-    0.83,
-    0.57,
-    0.57
-   ],
-   "motion": {
-    "elements": 22,
-    "css": 8,
-    "transitions": 14,
-    "scripted": 0,
-    "videos": 1,
-    "playingVideos": 1
-   },
-   "metrics": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "page": {
-     "height": 8348,
-     "screens": 8.2,
-     "words": 888,
-     "img": 7,
-     "video": 1,
-     "canvas": 0,
-     "svg": 4,
-     "sections": 5,
-     "horizontalOverflow": 0,
-     "overflowCulprits": [],
-     "uiFragments": 0,
-     "uiAbuse": false,
-     "realPictures": 7,
-     "videoCount": 1,
-     "uiPictures": 0,
-     "pictureSamples": [
-      "a-tuning-fork-placed-on-sheet-music.jpg",
-      "music-sheet-mozart-s-alla-turca.jpg",
-      "woman-looking-at-sheet-music-posed-beside.jpg",
-      "man-playing-an-acoustic-brazilian-guitar-violao.",
-      "grand-piano.jpg",
-      "overture-for-the-woman-from-seville-for.jpg"
-     ],
-     "blendText": 0,
-     "sideScrollers": 0,
-     "brokenImages": [],
-     "emoji": [],
-     "videosNoPoster": 0
-    },
-    "hero": {
-     "text": "Uma obra, quatro graus",
-     "words": 4,
-     "chars": 22,
-     "lines": 2,
-     "size": 50.8,
-     "vw": 6.6,
-     "font": "Erode",
-     "weight": 500,
-     "tracking": -0.028,
-     "leading": 0.95,
-     "upper": false,
-     "italic": true,
-     "mono": false,
-     "align": "left",
-     "position": "center",
-     "widthRatio": 0.84,
-     "top": 152,
-     "tag": "h1",
-     "kind": "heading"
-    },
-    "h1": {
-     "text": "Uma obra, quatro graus",
-     "words": 4,
-     "lines": 2,
-     "size": 50.8,
-     "font": "Erode"
-    },
-    "headings": [
-     {
-      "text": "Uma obra, quatro graus",
-      "words": 4,
-      "chars": 22,
-      "lines": 2,
-      "size": 50.8,
-      "vw": 6.6,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.028,
-      "leading": 0.95,
-      "upper": false,
-      "italic": true,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.84,
-      "top": 152,
-      "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "Como funciona a nossa didática",
-      "words": 5,
-      "chars": 30,
-      "lines": 2,
-      "size": 39.3,
-      "vw": 5.1,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.64,
-      "top": 1421,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Você evolui dentro da própria música",
-      "words": 6,
-      "chars": 36,
-      "lines": 1,
-      "size": 39.3,
-      "vw": 5.1,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.91,
-      "top": 3921,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "O que o aluno encontra na plataforma",
-      "words": 7,
-      "chars": 36,
-      "lines": 1,
-      "size": 39.3,
-      "vw": 5.1,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.82,
-      "top": 4492,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Abra seu caderno de estudo",
-      "words": 5,
-      "chars": 26,
-      "lines": 1,
-      "size": 39.3,
-      "vw": 5.1,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.82,
-      "top": 7141,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Harmonia",
-      "words": 1,
-      "chars": 8,
-      "lines": 1,
-      "size": 39.3,
-      "vw": 5.1,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.82,
-      "top": 7655,
-      "tag": "h2",
-      "kind": "heading"
-     }
-    ],
-    "headingSummary": {
-     "count": 6,
-     "maxLines": 2,
-     "over2Lines": 0,
-     "statements": 0,
-     "centered": 2,
-     "medianWords": 5,
-     "mixedFontHeadings": 0
-    },
-    "type": {
-     "families": [
-      {
-       "family": "Erode",
-       "share": 1,
-       "mono": false
-      }
-     ],
-     "familyCount": 1,
-     "sizes": [
-      14,
-      15,
-      16,
-      18,
-      20,
-      22,
-      24,
-      39,
-      51
-     ],
-     "sizeCount": 9,
-     "notLoaded": [],
-     "body": {
-      "font": "Erode",
-      "size": 16,
-      "leading": 1.45,
-      "weight": 400,
-      "tracking": 0,
-      "contrast": 8.4
-     },
-     "measureChars": 79,
-     "max": {
-      "size": 50.8,
-      "vw": 6.6,
-      "font": "Erode",
-      "text": "Uma obra,"
-     },
-     "monoShare": 0,
-     "monoProseShare": 0,
-     "monoFamilies": [],
-     "monoSamples": [],
-     "microLabels": 0,
-     "microLabelShare": 0,
-     "microSamples": [],
-     "upperShare": 0.01,
-     "centerShare": 0.2,
-     "smallText": 0
-    },
-    "eyebrows": [],
-    "numbered": [],
-    "color": {
-     "bodyBg": "#f7f9f8",
-     "bodyBgHsl": {
-      "h": 150,
-      "s": 0.14,
-      "l": 0.97
-     },
-     "dark": false,
-     "sectionBgs": [
-      {
-       "color": "#f7f9f8",
-       "top": 0,
-       "hsl": {
-        "h": 150,
-        "s": 0.14,
-        "l": 0.97
-       }
-      },
-      {
-       "color": "#ebf0ee",
-       "top": 96,
-       "hsl": {
-        "h": 156,
-        "s": 0.14,
-        "l": 0.93
-       }
-      },
-      {
-       "color": "#06525c",
-       "top": 6780,
-       "hsl": {
-        "h": 187,
-        "s": 0.88,
-        "l": 0.19
-       }
-      }
-     ],
-     "textColors": [
-      {
-       "color": "#06525c",
-       "share": 0.73
-      },
-      {
-       "color": "#0d4a52",
-       "share": 0.2
-      },
-      {
-       "color": "#f7f9f8",
-       "share": 0.05
-      },
-      {
-       "color": "#dce8ea",
-       "share": 0.02
-      }
-     ],
-     "button": {
-      "bg": "#06525c",
-      "hsl": {
-       "h": 187,
-       "s": 0.88,
-       "l": 0.19
-      },
-      "fg": "#f7f9f8"
-     },
-     "lowContrast": []
-    },
-    "buttons": {
-     "count": 5,
-     "inHero": 2,
-     "radius": 0,
-     "height": 56,
-     "withShadow": 0,
-     "withGradient": 0,
-     "mono": 0,
-     "upper": 0,
-     "heroLabels": [
-      "Começar a estudar",
-      "Escolher meu instrumento e começar"
-     ]
-    },
-    "surfaces": {
-     "shadowStatic": 0,
-     "shadowOverlay": 0,
-     "shadowSamples": [],
-     "gradients": 0,
-     "scrims": 0,
-     "gradientSamples": [],
-     "gradientText": 0,
-     "hairlines": 0,
-     "hairlineSamples": [],
-     "outlinedBoxes": 0,
-     "dashed": 0,
-     "blurred": 0,
-     "roundedBoxes": 0,
-     "boxRadius": 0,
-     "squareMedia": 7,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
-     "textShadow": 0,
-     "cardRows": []
-    },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.15
-     }
-    ],
-    "nav": {
-     "links": 6,
-     "fixed": false,
-     "height": 96,
-     "floatingPill": false,
-     "blur": false
-    },
-    "fontsLoaded": [
-     "erode"
-    ]
-   },
-   "layout": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "pageH": 8348,
-    "margins": {
-     "left": 20,
-     "right": 22
-    },
-    "sections": [
-     {
-      "sel": "div.curtain-main",
-      "tag": "div",
-      "top": 0,
-      "height": 7559,
-      "words": 757,
-      "media": 8,
-      "middle": 0,
-      "heading": {
-       "text": "Uma obra,",
-       "size": 51,
-       "tag": "h1"
-      },
-      "left": 20,
-      "right": 20,
-      "textLeft": 20,
-      "textRight": 22,
-      "fullBleed": false,
-      "footer": false,
-      "hero": true,
-      "continues": false,
-      "pinned": false
-     },
-     {
-      "sel": "footer.curtain-footer.pt-12",
-      "tag": "footer",
-      "top": 7559,
-      "height": 789,
-      "words": 168,
-      "media": 0,
-      "middle": 0,
-      "heading": {
-       "text": "Harmonia",
-       "size": 39,
-       "tag": "h2"
-      },
-      "left": 68,
-      "right": 72,
-      "textLeft": 68,
-      "textRight": 72,
-      "fullBleed": false,
-      "footer": true,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     }
-    ],
-    "gaps": [],
-    "h1s": [
-     {
-      "text": "Uma obra, quatro graus",
-      "size": 51,
-      "top": 152,
-      "firstScreen": true
-     }
-    ],
-    "edgeText": [],
-    "edges": [
-     {
-      "x": 60,
-      "n": 10
-     },
-     {
-      "x": 20,
-      "n": 6
-     },
-     {
-      "x": 36,
-      "n": 2
-     },
-     {
-      "x": 400,
-      "n": 2
-     },
-     {
-      "x": 48,
-      "n": 1
-     },
-     {
-      "x": 84,
-      "n": 1
-     },
-     {
-      "x": 470,
-      "n": 1
-     }
-    ],
-    "leftBlocks": 23,
-    "bodySize": 16,
-    "stage": false,
-    "explains": true,
-    "slivers": [],
-    "voidShare": 0,
-    "voidBox": null
-   },
-   "app": null,
-   "consoleErrors": []
-  },
-  {
-   "width": 390,
-   "height": 844,
-   "load": "load",
-   "screens": 12,
-   "filled": [
-    0.7,
-    0.73,
-    0.59,
-    0.82,
-    0.74,
-    0.62,
-    0.71,
-    0.85,
-    0.92,
-    0.79,
-    0.81,
-    0.57
-   ],
-   "motion": {
-    "elements": 22,
-    "css": 8,
-    "transitions": 14,
-    "scripted": 0,
-    "videos": 1,
-    "playingVideos": 1
-   },
-   "metrics": {
-    "viewport": {
-     "w": 390,
-     "h": 844
-    },
-    "page": {
-     "height": 10749,
-     "screens": 12.7,
-     "words": 877,
-     "img": 7,
-     "video": 1,
-     "canvas": 0,
-     "svg": 4,
-     "sections": 5,
-     "horizontalOverflow": 0,
-     "overflowCulprits": [],
-     "uiFragments": 0,
-     "uiAbuse": false,
-     "realPictures": 7,
-     "videoCount": 1,
-     "uiPictures": 0,
-     "pictureSamples": [
-      "a-tuning-fork-placed-on-sheet-music.jpg",
-      "music-sheet-mozart-s-alla-turca.jpg",
-      "woman-looking-at-sheet-music-posed-beside.jpg",
-      "man-playing-an-acoustic-brazilian-guitar-violao.",
-      "grand-piano.jpg",
-      "overture-for-the-woman-from-seville-for.jpg"
-     ],
-     "blendText": 0,
-     "sideScrollers": 0,
-     "brokenImages": [],
-     "emoji": [],
-     "videosNoPoster": 0
-    },
-    "hero": {
-     "text": "Uma obra, quatro graus",
-     "words": 4,
-     "chars": 22,
-     "lines": 2,
-     "size": 36.4,
-     "vw": 9.3,
-     "font": "Erode",
-     "weight": 500,
-     "tracking": -0.028,
-     "leading": 0.95,
-     "upper": false,
-     "italic": true,
-     "mono": false,
-     "align": "left",
-     "position": "center",
-     "widthRatio": 0.77,
-     "top": 130,
-     "tag": "h1",
-     "kind": "heading"
-    },
-    "h1": {
-     "text": "Uma obra, quatro graus",
-     "words": 4,
-     "lines": 2,
-     "size": 36.4,
-     "font": "Erode"
-    },
-    "headings": [
-     {
-      "text": "Uma obra, quatro graus",
-      "words": 4,
-      "chars": 22,
-      "lines": 2,
-      "size": 36.4,
-      "vw": 9.3,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.028,
-      "leading": 0.95,
-      "upper": false,
-      "italic": true,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 130,
-      "tag": "h1",
-      "kind": "heading"
-     },
-     {
-      "text": "Como funciona a nossa didática",
-      "words": 5,
-      "chars": 30,
-      "lines": 2,
-      "size": 30.6,
-      "vw": 7.8,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.9,
-      "top": 1963,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Como a aula evolui em cada nível",
-      "words": 7,
-      "chars": 32,
-      "lines": 2,
-      "size": 24,
-      "vw": 6.2,
-      "font": "Erode",
-      "weight": 600,
-      "tracking": 0,
-      "leading": 1.33,
-      "upper": false,
-      "italic": true,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 4915,
-      "tag": "p",
-      "kind": "statement"
-     },
-     {
-      "text": "Você evolui dentro da própria música",
-      "words": 6,
-      "chars": 36,
-      "lines": 2,
-      "size": 30.6,
-      "vw": 7.8,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.86,
-      "top": 5947,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "O que o aluno encontra na plataforma",
-      "words": 7,
-      "chars": 36,
-      "lines": 2,
-      "size": 30.6,
-      "vw": 7.8,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.75,
-      "top": 6589,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Abra seu caderno de estudo",
-      "words": 5,
-      "chars": 26,
-      "lines": 2,
-      "size": 30.6,
-      "vw": 7.8,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "center",
-      "position": "center",
-      "widthRatio": 0.73,
-      "top": 9175,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Harmonia",
-      "words": 1,
-      "chars": 8,
-      "lines": 1,
-      "size": 30.6,
-      "vw": 7.8,
-      "font": "Erode",
-      "weight": 500,
-      "tracking": -0.025,
-      "leading": 1.02,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.73,
-      "top": 9700,
-      "tag": "h2",
-      "kind": "heading"
-     }
-    ],
-    "headingSummary": {
-     "count": 7,
-     "maxLines": 2,
-     "over2Lines": 0,
-     "statements": 1,
-     "centered": 2,
-     "medianWords": 6,
-     "mixedFontHeadings": 0
-    },
-    "type": {
-     "families": [
-      {
-       "family": "Erode",
-       "share": 1,
-       "mono": false
-      }
-     ],
-     "familyCount": 1,
-     "sizes": [
-      14,
-      15,
-      16,
-      17,
-      18,
-      20,
-      24,
-      31,
-      36
-     ],
-     "sizeCount": 9,
-     "notLoaded": [],
-     "body": {
-      "font": "Erode",
-      "size": 16,
-      "leading": 1.45,
-      "weight": 400,
-      "tracking": 0,
-      "contrast": 8.4
-     },
-     "measureChars": 36,
-     "max": {
-      "size": 36.4,
-      "vw": 9.3,
-      "font": "Erode",
-      "text": "Uma obra,"
-     },
-     "monoShare": 0,
-     "monoProseShare": 0,
-     "monoFamilies": [],
-     "monoSamples": [],
-     "microLabels": 0,
-     "microLabelShare": 0,
-     "microSamples": [],
-     "upperShare": 0.01,
-     "centerShare": 0.2,
-     "smallText": 0
-    },
-    "eyebrows": [],
-    "numbered": [],
-    "color": {
-     "bodyBg": "#f7f9f8",
-     "bodyBgHsl": {
-      "h": 150,
-      "s": 0.14,
-      "l": 0.97
-     },
-     "dark": false,
-     "sectionBgs": [
-      {
-       "color": "#f7f9f8",
-       "top": 0,
-       "hsl": {
-        "h": 150,
-        "s": 0.14,
-        "l": 0.97
-       }
-      },
-      {
-       "color": "#ebf0ee",
-       "top": 90,
-       "hsl": {
-        "h": 156,
-        "s": 0.14,
-        "l": 0.93
-       }
-      },
-      {
-       "color": "#06525c",
-       "top": 8795,
+       "top": 4507,
        "hsl": {
         "h": 187,
         "s": 0.88,
@@ -1418,7 +369,1047 @@
      "blurred": 0,
      "roundedBoxes": 0,
      "boxRadius": 0,
-     "squareMedia": 7,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.11
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 90,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 5799,
+    "margins": {
+     "left": 36,
+     "right": 49
+    },
+    "sections": [
+     {
+      "sel": "div.curtain-main",
+      "tag": "div",
+      "top": 0,
+      "height": 5166,
+      "words": 733,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Uma obra,",
+       "size": 70,
+       "tag": "h1"
+      },
+      "left": 36,
+      "right": 36,
+      "textLeft": 36,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.curtain-footer.pt-12",
+      "tag": "footer",
+      "top": 5166,
+      "height": 633,
+      "words": 168,
+      "media": 0,
+      "middle": 214,
+      "heading": {
+       "text": "Harmonia",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 92,
+      "right": 100,
+      "textLeft": 92,
+      "textRight": 390,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 740,
+      "height": 296
+     },
+     {
+      "top": 4324,
+      "height": 360
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Uma obra, três graus",
+      "size": 70,
+      "top": 178,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 92,
+      "n": 10
+     },
+     {
+      "x": 36,
+      "n": 5
+     },
+     {
+      "x": 760,
+      "n": 2
+     },
+     {
+      "x": 76,
+      "n": 1
+     },
+     {
+      "x": 503,
+      "n": 1
+     },
+     {
+      "x": 890,
+      "n": 1
+     },
+     {
+      "x": 969,
+      "n": 1
+     },
+     {
+      "x": 1128,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 22,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 780,
+     "w": 1440,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.65,
+    0.59,
+    0.79,
+    0.84,
+    0.81,
+    0.71,
+    0.81,
+    0.92,
+    0.79,
+    0.5,
+    0.56
+   ],
+   "motion": {
+    "elements": 21,
+    "css": 8,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 10308,
+     "screens": 10.1,
+     "words": 867,
+     "img": 6,
+     "video": 1,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-tuning-fork-placed-on-sheet-music.jpg",
+      "music-sheet-mozart-s-alla-turca.jpg",
+      "woman-looking-at-sheet-music-posed-beside.jpg",
+      "man-playing-an-acoustic-brazilian-guitar-violao.",
+      "overture-for-the-woman-from-seville-for.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Uma obra, três graus",
+     "words": 4,
+     "chars": 20,
+     "lines": 2,
+     "size": 50.8,
+     "vw": 6.6,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.028,
+     "leading": 0.95,
+     "upper": false,
+     "italic": true,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 152,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Uma obra, três graus",
+     "words": 4,
+     "lines": 2,
+     "size": 50.8,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Uma obra, três graus",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 50.8,
+      "vw": 6.6,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.028,
+      "leading": 0.95,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 152,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Como funciona a nossa didática",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 39.3,
+      "vw": 5.1,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 1421,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Você evolui dentro da própria música",
+      "words": 6,
+      "chars": 36,
+      "lines": 1,
+      "size": 39.3,
+      "vw": 5.1,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 5909,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "O que o aluno encontra na plataforma",
+      "words": 7,
+      "chars": 36,
+      "lines": 1,
+      "size": 39.3,
+      "vw": 5.1,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 6452,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Abra seu caderno de estudo",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 39.3,
+      "vw": 5.1,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 9101,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Harmonia",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 39.3,
+      "vw": 5.1,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 9615,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      20,
+      22,
+      24,
+      39,
+      51
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.4
+     },
+     "measureChars": 79,
+     "max": {
+      "size": 50.8,
+      "vw": 6.6,
+      "font": "Erode",
+      "text": "Uma obra,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.21,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f9f8",
+       "top": 0,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ebf0ee",
+       "top": 96,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#06525c",
+       "top": 8740,
+       "hsl": {
+        "h": 187,
+        "s": 0.88,
+        "l": 0.19
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#06525c",
+       "share": 0.72
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.21
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.05
+      },
+      {
+       "color": "#dce8ea",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#06525c",
+      "hsl": {
+       "h": 187,
+       "s": 0.88,
+       "l": 0.19
+      },
+      "fg": "#f7f9f8"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 2,
+     "radius": 0,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Começar a estudar",
+      "Escolher meu instrumento e começar"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.15
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "erode"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 10308,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.curtain-main",
+      "tag": "div",
+      "top": 0,
+      "height": 9519,
+      "words": 733,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Uma obra,",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.curtain-footer.pt-12",
+      "tag": "footer",
+      "top": 9519,
+      "height": 789,
+      "words": 168,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Harmonia",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 68,
+      "right": 72,
+      "textLeft": 68,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Uma obra, três graus",
+      "size": 51,
+      "top": 152,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 60,
+      "n": 10
+     },
+     {
+      "x": 20,
+      "n": 7
+     },
+     {
+      "x": 36,
+      "n": 2
+     },
+     {
+      "x": 48,
+      "n": 1
+     },
+     {
+      "x": 84,
+      "n": 1
+     },
+     {
+      "x": 470,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 22,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.7,
+    0.73,
+    0.59,
+    0.82,
+    0.73,
+    0.66,
+    0.86,
+    0.86,
+    0.86,
+    0.82,
+    0.63,
+    0.6
+   ],
+   "motion": {
+    "elements": 21,
+    "css": 8,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 10132,
+     "screens": 12,
+     "words": 856,
+     "img": 6,
+     "video": 1,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-tuning-fork-placed-on-sheet-music.jpg",
+      "music-sheet-mozart-s-alla-turca.jpg",
+      "woman-looking-at-sheet-music-posed-beside.jpg",
+      "man-playing-an-acoustic-brazilian-guitar-violao.",
+      "overture-for-the-woman-from-seville-for.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Uma obra, três graus",
+     "words": 4,
+     "chars": 20,
+     "lines": 2,
+     "size": 36.4,
+     "vw": 9.3,
+     "font": "Erode",
+     "weight": 500,
+     "tracking": -0.028,
+     "leading": 0.95,
+     "upper": false,
+     "italic": true,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.77,
+     "top": 130,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Uma obra, três graus",
+     "words": 4,
+     "lines": 2,
+     "size": 36.4,
+     "font": "Erode"
+    },
+    "headings": [
+     {
+      "text": "Uma obra, três graus",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 36.4,
+      "vw": 9.3,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.028,
+      "leading": 0.95,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 130,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Como funciona a nossa didática",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 30.6,
+      "vw": 7.8,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1963,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Como a aula evolui em cada nível",
+      "words": 7,
+      "chars": 32,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Erode",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 4298,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Você evolui dentro da própria música",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 30.6,
+      "vw": 7.8,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 5330,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "O que o aluno encontra na plataforma",
+      "words": 7,
+      "chars": 36,
+      "lines": 2,
+      "size": 30.6,
+      "vw": 7.8,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 5972,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Abra seu caderno de estudo",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 30.6,
+      "vw": 7.8,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.73,
+      "top": 8558,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Harmonia",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30.6,
+      "vw": 7.8,
+      "font": "Erode",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.73,
+      "top": 9083,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 2,
+     "medianWords": 6,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Erode",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      24,
+      31,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Erode",
+      "size": 16,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.4
+     },
+     "measureChars": 36,
+     "max": {
+      "size": 36.4,
+      "vw": 9.3,
+      "font": "Erode",
+      "text": "Uma obra,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.21,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f9f8",
+     "bodyBgHsl": {
+      "h": 150,
+      "s": 0.14,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f9f8",
+       "top": 0,
+       "hsl": {
+        "h": 150,
+        "s": 0.14,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ebf0ee",
+       "top": 90,
+       "hsl": {
+        "h": 156,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#06525c",
+       "top": 8178,
+       "hsl": {
+        "h": 187,
+        "s": 0.88,
+        "l": 0.19
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#06525c",
+       "share": 0.72
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.21
+      },
+      {
+       "color": "#f7f9f8",
+       "share": 0.05
+      },
+      {
+       "color": "#dce8ea",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#06525c",
+      "hsl": {
+       "h": 187,
+       "s": 0.88,
+       "l": 0.19
+      },
+      "fg": "#f7f9f8"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 2,
+     "radius": 0,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Começar a estudar",
+      "Escolher meu instrumento e começar"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
@@ -1441,7 +1432,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 10749,
+    "pageH": 10132,
     "margins": {
      "left": 20,
      "right": 20
@@ -1451,9 +1442,9 @@
       "sel": "div.curtain-main",
       "tag": "div",
       "top": 0,
-      "height": 9620,
-      "words": 746,
-      "media": 8,
+      "height": 9003,
+      "words": 722,
+      "media": 7,
       "middle": 0,
       "heading": {
        "text": "Uma obra,",
@@ -1473,7 +1464,7 @@
      {
       "sel": "footer.curtain-footer.pt-12",
       "tag": "footer",
-      "top": 9620,
+      "top": 9003,
       "height": 1129,
       "words": 168,
       "media": 0,
@@ -1497,7 +1488,7 @@
     "gaps": [],
     "h1s": [
      {
-      "text": "Uma obra, quatro graus",
+      "text": "Uma obra, três graus",
       "size": 36,
       "top": 130,
       "firstScreen": true
@@ -1511,14 +1502,14 @@
      },
      {
       "x": 20,
-      "n": 10
+      "n": 9
      },
      {
       "x": 64,
       "n": 2
      }
     ],
-    "leftBlocks": 23,
+    "leftBlocks": 22,
     "bodySize": 16,
     "stage": false,
     "explains": true,

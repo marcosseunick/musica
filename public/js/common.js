@@ -30,22 +30,11 @@ const LEVELS = [
     label: 'Difícil',
     slug: 'dificil',
     dot: 'lvl-dot-3',
-    text: 'text-[#05424a]',
+    text: 'text-[#06525c]',
     border: '',
     bar: 'lvl-bar-3',
     badge: 'lvl-badge-3',
     activeTab: 'lvl-tab-active-3',
-  },
-  {
-    level: 4,
-    label: 'Avançado',
-    slug: 'avancado',
-    dot: 'lvl-dot-4',
-    text: 'text-[#06525c]',
-    border: '',
-    bar: 'lvl-bar-4',
-    badge: 'lvl-badge-4',
-    activeTab: 'lvl-tab-active-4',
   },
 ];
 

@@ -1,5 +1,5 @@
 // Seed - Fase 2: usuários (admin + aluno) e trilha "Rumo ao Lar" com
-// 4 níveis x 3 aulas por instrumento, cada aula com seus materiais.
+// 3 níveis x 3 aulas por instrumento, cada aula com seus materiais.
 // Idempotente: limpa as tabelas e reinicia os IDs a cada execução.
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
@@ -19,14 +19,12 @@ const DESCRIPTIONS = {
   Teclado: {
     1: 'Melodia principal com a mão direita e acordes em bloco (tríades) na mão esquerda, apenas nos tempos fortes.',
     2: 'Acordes com inversões para suavizar as transições e baixo simples na mão esquerda acompanhando a harmonia.',
-    3: 'Arranjo a duas mãos com arpejos na mão esquerda, dinâmica (piano/forte) e uso do pedal de sustentação.',
-    4: 'Arranjo completo de acompanhamento coral: rearmonização, notas de passagem, introdução e interlúdios.',
+    3: 'Arranjo completo a duas mãos com arpejos na mão esquerda, dinâmica expressiva e condução harmônica.',
   },
   'Violão': {
     1: 'Acordes abertos básicos com batida simples para baixo, acompanhando a melodia do coral.',
     2: 'Introdução de pestanas e batida com variação (baixo-cima), respeitando as dinâmicas da música.',
-    3: 'Dedilhado (fingerstyle) com padrão polegar-indicador-médio e baixos alternados.',
-    4: 'Arranjo solo com melodia e harmonia simultâneas, acordes com tensões e condução de vozes.',
+    3: 'Arranjo completo com dedilhado (fingerstyle), baixos alternados e condução de vozes.',
   },
 };
 
@@ -34,8 +32,7 @@ const DESCRIPTIONS = {
 const LESSON_TITLES = {
   1: ['Conhecendo a música e os acordes', 'Estrofe passo a passo', 'Refrão e música completa'],
   2: ['Revisão e novas posições', 'Transições suaves entre acordes', 'Tocando junto com o coral'],
-  3: ['Técnica do arranjo', 'Construindo a estrofe e o refrão', 'Dinâmica e interpretação'],
-  4: ['Análise harmônica do arranjo', 'Introdução e interlúdios', 'Performance completa'],
+  3: ['Técnica do arranjo', 'Construindo a estrofe e o refrão', 'Dinâmica e interpretação completa'],
 };
 
 // Aula 1 traz partitura + cifra do nível; as demais trazem a partitura daquela aula
@@ -96,7 +93,7 @@ async function main() {
   ];
 
   for (const { record, slug } of instruments) {
-    // Nested write: trilha -> 4 módulos -> 3 aulas cada -> materiais
+    // Nested write: trilha -> 3 módulos -> 3 aulas cada -> materiais
     const trail = await prisma.songInstrument.create({
       data: {
         song_id: song.id,

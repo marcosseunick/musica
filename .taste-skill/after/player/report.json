@@ -1,6 +1,6 @@
 {
  "url": "public/player.html",
- "at": "2026-10-26T13:10:35.159Z",
+ "at": "2026-11-13T12:09:57.339Z",
  "allow": [],
  "viewports": [
   {
@@ -10,7 +10,7 @@
    "screens": 2,
    "filled": [
     0.64,
-    0.58
+    0.57
    ],
    "motion": {
     "elements": 2,
@@ -28,7 +28,7 @@
     "page": {
      "height": 1146,
      "screens": 1.3,
-     "words": 133,
+     "words": 124,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -49,25 +49,29 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
+     "chars": 20,
      "lines": 1,
      "size": 20,
      "vw": 1.4,
      "font": "Erode",
      "weight": 600,
-     "tracking": -0.02,
+     "tracking": -0.025,
      "leading": 1.4,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.6,
      "top": 6,
      "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
+     "kind": "heading"
     },
     "h1": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
      "lines": 1,
      "size": 20,
      "font": "Erode"
@@ -114,7 +118,7 @@
       "size": 20,
       "vw": 1.4,
       "font": "Erode",
-      "text": "Rumo ao Lar · Teclado"
+      "text": "Rumo ao Lar: Teclado"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -140,16 +144,16 @@
      "sectionBgs": [],
      "textColors": [
       {
-       "color": "#24636c",
-       "share": 0.44
-      },
-      {
        "color": "#06525c",
        "share": 0.41
       },
       {
+       "color": "#24636c",
+       "share": 0.38
+      },
+      {
        "color": "#0d4a52",
-       "share": 0.09
+       "share": 0.14
       },
       {
        "color": "#f7f9f8",
@@ -168,8 +172,8 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 10,
-     "inHero": 10,
+     "count": 9,
+     "inHero": 9,
      "radius": 0,
      "height": 83,
      "withShadow": 0,
@@ -181,7 +185,7 @@
       "Fácil Grau 1",
       "Médio Grau 2",
       "Difícil Grau 3",
-      "Avançado Grau 4"
+      "1. Aula 1: Posição das Tríades Fundament"
      ]
     },
     "surfaces": {
@@ -236,7 +240,7 @@
     "gaps": [],
     "h1s": [
      {
-      "text": "Rumo ao Lar · Teclado",
+      "text": "Rumo ao Lar: Teclado",
       "size": 20,
       "top": 6,
       "firstScreen": true
@@ -274,96 +278,7 @@
      "h": 120
     }
    },
-   "app": {
-    "viewport": {
-     "w": 1440,
-     "h": 900
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 132,
-     "right": 156
-    },
-    "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
-     "lines": 1,
-     "size": 20,
-     "vw": 1.4,
-     "font": "Erode",
-     "weight": 600,
-     "tracking": -0.02,
-     "leading": 1.4,
-     "top": 6,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 7,
-     "firstScreen": 7,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 9,
-     "radii": [
-      [
-       0,
-       9
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 3,
-     "tabularShare": 1,
-     "kpiMax": 16
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      14,
-      16,
-      18,
-      19,
-      20,
-      24
-     ]
-    },
-    "title": {
-     "text": "Rumo ao Lar · Teclado",
-     "size": 20,
-     "top": 6
-    },
-    "colourShare": 0.009
-   },
+   "app": null,
    "consoleErrors": []
   },
   {
@@ -391,7 +306,7 @@
     "page": {
      "height": 1696,
      "screens": 1.7,
-     "words": 133,
+     "words": 124,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -412,25 +327,29 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
+     "chars": 20,
      "lines": 1,
      "size": 20,
      "vw": 2.6,
      "font": "Erode",
      "weight": 600,
-     "tracking": -0.02,
+     "tracking": -0.025,
      "leading": 1.4,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.53,
      "top": 6,
      "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
+     "kind": "heading"
     },
     "h1": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
      "lines": 1,
      "size": 20,
      "font": "Erode"
@@ -476,7 +395,7 @@
       "size": 20,
       "vw": 2.6,
       "font": "Erode",
-      "text": "Rumo ao Lar · Teclado"
+      "text": "Rumo ao Lar: Teclado"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -512,16 +431,16 @@
      ],
      "textColors": [
       {
-       "color": "#24636c",
-       "share": 0.44
-      },
-      {
        "color": "#06525c",
        "share": 0.41
       },
       {
+       "color": "#24636c",
+       "share": 0.38
+      },
+      {
        "color": "#0d4a52",
-       "share": 0.09
+       "share": 0.14
       },
       {
        "color": "#f7f9f8",
@@ -540,8 +459,8 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 10,
-     "inHero": 5,
+     "count": 9,
+     "inHero": 4,
      "radius": 0,
      "height": 83,
      "withShadow": 0,
@@ -552,8 +471,7 @@
       "Estante",
       "Fácil Grau 1",
       "Médio Grau 2",
-      "Difícil Grau 3",
-      "Avançado Grau 4"
+      "Difícil Grau 3"
      ]
     },
     "surfaces": {
@@ -610,7 +528,7 @@
       "tag": "section",
       "top": 96,
       "height": 865,
-      "words": 56,
+      "words": 52,
       "media": 1,
       "middle": 0,
       "heading": {
@@ -633,7 +551,7 @@
       "tag": "aside",
       "top": 993,
       "height": 552,
-      "words": 55,
+      "words": 51,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -655,7 +573,7 @@
     "gaps": [],
     "h1s": [
      {
-      "text": "Rumo ao Lar · Teclado",
+      "text": "Rumo ao Lar: Teclado",
       "size": 20,
       "top": 6,
       "firstScreen": true
@@ -684,104 +602,17 @@
     "voidShare": 0,
     "voidBox": null
    },
-   "app": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 24,
-     "right": 24
-    },
-    "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
-     "lines": 1,
-     "size": 20,
-     "vw": 2.6,
-     "font": "Erode",
-     "weight": 600,
-     "tracking": -0.02,
-     "leading": 1.4,
-     "top": 6,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 7,
-     "firstScreen": 5,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 9,
-     "radii": [
-      [
-       0,
-       9
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 3,
-     "tabularShare": 1,
-     "kpiMax": 16
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      14,
-      16,
-      18,
-      20,
-      24
-     ]
-    },
-    "title": {
-     "text": "Rumo ao Lar · Teclado",
-     "size": 20,
-     "top": 6
-    },
-    "colourShare": 0.002
-   },
+   "app": null,
    "consoleErrors": []
   },
   {
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 2,
+   "screens": 3,
    "filled": [
-    0.63,
+    0.7,
+    0.78,
     0.78
    ],
    "motion": {
@@ -798,9 +629,9 @@
      "h": 938
     },
     "page": {
-     "height": 1629,
-     "screens": 1.7,
-     "words": 121,
+     "height": 1724,
+     "screens": 1.8,
+     "words": 112,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -821,25 +652,29 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
+     "chars": 20,
      "lines": 1,
      "size": 18,
      "vw": 4.2,
      "font": "Erode",
      "weight": 600,
-     "tracking": -0.02,
+     "tracking": -0.025,
      "leading": 1.56,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.69,
      "top": 6,
      "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
+     "kind": "heading"
     },
     "h1": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
+     "text": "Rumo ao Lar: Teclado",
+     "words": 4,
      "lines": 1,
      "size": 18,
      "font": "Erode"
@@ -916,11 +751,11 @@
       },
       {
        "color": "#24636c",
-       "share": 0.41
+       "share": 0.35
       },
       {
        "color": "#0d4a52",
-       "share": 0.1
+       "share": 0.15
       },
       {
        "color": "#f7f9f8",
@@ -939,20 +774,15 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 9,
-     "inHero": 4,
+     "count": 5,
+     "inHero": 0,
      "radius": 0,
-     "height": 83,
+     "height": 47,
      "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
      "upper": 0,
-     "heroLabels": [
-      "Fácil Grau 1",
-      "Médio Grau 2",
-      "Difícil Grau 3",
-      "Avançado Grau 4"
-     ]
+     "heroLabels": []
     },
     "surfaces": {
      "shadowStatic": 0,
@@ -997,7 +827,7 @@
      "w": 433,
      "h": 938
     },
-    "pageH": 1629,
+    "pageH": 1724,
     "margins": {
      "left": 16,
      "right": 0
@@ -1007,8 +837,8 @@
       "sel": "section.lg:col-span-8.space-y-6",
       "tag": "section",
       "top": 96,
-      "height": 798,
-      "words": 52,
+      "height": 893,
+      "words": 48,
       "media": 1,
       "middle": 0,
       "heading": {
@@ -1029,9 +859,9 @@
      {
       "sel": "aside.lg:col-span-4.space-y-6",
       "tag": "aside",
-      "top": 926,
+      "top": 1021,
       "height": 552,
-      "words": 55,
+      "words": 51,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -1053,7 +883,7 @@
     "gaps": [],
     "h1s": [
      {
-      "text": "Rumo ao Lar · Teclado",
+      "text": "Rumo ao Lar: Teclado",
       "size": 18,
       "top": 6,
       "firstScreen": true
@@ -1082,100 +912,79 @@
     "voidShare": 0,
     "voidBox": null
    },
-   "app": {
-    "viewport": {
-     "w": 433,
-     "h": 938
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 16,
-     "right": 0
-    },
-    "hero": {
-     "text": "Rumo ao Lar · Teclado",
-     "words": 5,
-     "chars": 21,
-     "lines": 1,
-     "size": 18,
-     "vw": 4.2,
-     "font": "Erode",
-     "weight": 600,
-     "tracking": -0.02,
-     "leading": 1.56,
-     "top": 6,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 7,
-     "firstScreen": 5,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 9,
-     "radii": [
-      [
-       0,
-       9
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 3,
-     "tabularShare": 1,
-     "kpiMax": 16
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      14,
-      16,
-      17,
-      18,
-      20,
-      24
-     ]
-    },
-    "title": {
-     "text": "Rumo ao Lar · Teclado",
-     "size": 18,
-     "top": 6
-    },
-    "colourShare": 0.004
-   },
+   "app": null,
    "consoleErrors": []
   }
  ],
- "findings": [],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (5.9:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 20px (1.4vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 132px on the left, 156px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "small-title",
+   "width": 1440,
+   "message": "The h1 is 20px (\"Rumo ao Lar: Teclado\").",
+   "fix": "Set the title at display size, or make the large text of the first screen the h1.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 2 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  }
+ ],
  "images": [
   {
    "viewport": "desktop",

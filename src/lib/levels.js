@@ -4,7 +4,6 @@ const LEVELS = [
   { level: 1, slug: 'facil', label: 'Fácil' },
   { level: 2, slug: 'medio', label: 'Médio' },
   { level: 3, slug: 'dificil', label: 'Difícil' },
-  { level: 4, slug: 'avancado', label: 'Avançado' },
 ];
 
 const isValidLevel = (n) => LEVELS.some((l) => l.level === n);

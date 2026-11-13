@@ -1,6 +1,6 @@
 {
  "url": "public/dashboard.html",
- "at": "2026-10-26T13:10:23.822Z",
+ "at": "2026-11-13T12:10:13.749Z",
  "allow": [],
  "viewports": [
   {
@@ -49,21 +49,25 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Olá, Clara",
-     "words": 2,
-     "chars": 10,
+     "text": "RA",
+     "words": 1,
+     "chars": 2,
      "lines": 1,
-     "size": 30,
-     "vw": 2.1,
+     "size": 68,
+     "vw": 4.7,
      "font": "Erode",
-     "weight": 700,
-     "tracking": -0.02,
-     "leading": 1.1,
-     "top": 128,
-     "tag": "h1",
-     "kind": "heading",
+     "weight": 500,
+     "tracking": -0.04,
+     "leading": 0.9,
+     "upper": false,
+     "italic": true,
+     "mono": false,
      "align": "left",
-     "position": "left"
+     "position": "left",
+     "widthRatio": 0.05,
+     "top": 643,
+     "tag": "span",
+     "kind": "heading"
     },
     "h1": {
      "text": "Olá, Clara",
@@ -205,7 +209,7 @@
      "textColors": [
       {
        "color": "#24636c",
-       "share": 0.54
+       "share": 0.45
       },
       {
        "color": "#06525c",
@@ -214,6 +218,10 @@
       {
        "color": "#05424a",
        "share": 0.1
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.09
       },
       {
        "color": "#f7f9f8",
@@ -383,96 +391,7 @@
      "h": 360
     }
    },
-   "app": {
-    "viewport": {
-     "w": 1440,
-     "h": 900
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 182,
-     "right": 182
-    },
-    "hero": {
-     "text": "Olá, Clara",
-     "words": 2,
-     "chars": 10,
-     "lines": 1,
-     "size": 30,
-     "vw": 2.1,
-     "font": "Erode",
-     "weight": 700,
-     "tracking": -0.02,
-     "leading": 1.1,
-     "top": 128,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 5,
-     "firstScreen": 5,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 7,
-     "radii": [
-      [
-       0,
-       7
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 0,
-     "tabularShare": null,
-     "kpiMax": null
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      14,
-      16,
-      20,
-      24,
-      30,
-      68
-     ]
-    },
-    "title": {
-     "text": "Olá, Clara",
-     "size": 30,
-     "top": 128
-    },
-    "colourShare": 0.002
-   },
+   "app": null,
    "consoleErrors": []
   },
   {
@@ -521,21 +440,25 @@
      "videosNoPoster": 0
     },
     "hero": {
-     "text": "Olá, Clara",
-     "words": 2,
-     "chars": 10,
+     "text": "RA",
+     "words": 1,
+     "chars": 2,
      "lines": 1,
-     "size": 30,
-     "vw": 3.9,
+     "size": 68,
+     "vw": 8.9,
      "font": "Erode",
-     "weight": 700,
-     "tracking": -0.02,
-     "leading": 1.1,
-     "top": 128,
-     "tag": "h1",
-     "kind": "heading",
+     "weight": 500,
+     "tracking": -0.04,
+     "leading": 0.9,
+     "upper": false,
+     "italic": true,
+     "mono": false,
      "align": "left",
-     "position": "left"
+     "position": "left",
+     "widthRatio": 0.09,
+     "top": 785,
+     "tag": "span",
+     "kind": "heading"
     },
     "h1": {
      "text": "Olá, Clara",
@@ -677,7 +600,7 @@
      "textColors": [
       {
        "color": "#24636c",
-       "share": 0.54
+       "share": 0.45
       },
       {
        "color": "#06525c",
@@ -686,6 +609,10 @@
       {
        "color": "#05424a",
        "share": 0.1
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.09
       },
       {
        "color": "#f7f9f8",
@@ -850,96 +777,7 @@
     "voidShare": 0,
     "voidBox": null
    },
-   "app": {
-    "viewport": {
-     "w": 768,
-     "h": 1024
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 24,
-     "right": 24
-    },
-    "hero": {
-     "text": "Olá, Clara",
-     "words": 2,
-     "chars": 10,
-     "lines": 1,
-     "size": 30,
-     "vw": 3.9,
-     "font": "Erode",
-     "weight": 700,
-     "tracking": -0.02,
-     "leading": 1.1,
-     "top": 128,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 5,
-     "firstScreen": 5,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 7,
-     "radii": [
-      [
-       0,
-       7
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 0,
-     "tabularShare": null,
-     "kpiMax": null
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      14,
-      16,
-      20,
-      24,
-      30,
-      68
-     ]
-    },
-    "title": {
-     "text": "Olá, Clara",
-     "size": 30,
-     "top": 128
-    },
-    "colourShare": 0.006
-   },
+   "app": null,
    "consoleErrors": []
   },
   {
@@ -996,13 +834,17 @@
      "vw": 6.2,
      "font": "Erode",
      "weight": 700,
-     "tracking": -0.02,
+     "tracking": -0.025,
      "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
      "top": 112,
      "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
+     "kind": "heading"
     },
     "h1": {
      "text": "Olá, Clara",
@@ -1076,7 +918,7 @@
       "kind": "heading"
      },
      {
-      "text": "4",
+      "text": "3",
       "words": 1,
       "chars": 1,
       "lines": 1,
@@ -1256,7 +1098,7 @@
      "textColors": [
       {
        "color": "#24636c",
-       "share": 0.54
+       "share": 0.44
       },
       {
        "color": "#06525c",
@@ -1265,6 +1107,10 @@
       {
        "color": "#05424a",
        "share": 0.11
+      },
+      {
+       "color": "#0d4a52",
+       "share": 0.1
       },
       {
        "color": "#f7f9f8",
@@ -1331,7 +1177,7 @@
     "pageH": 1298,
     "margins": {
      "left": 16,
-     "right": 28
+     "right": 23
     },
     "sections": [
      {
@@ -1348,9 +1194,9 @@
        "tag": "h1"
       },
       "left": 16,
-      "right": 28,
+      "right": 23,
       "textLeft": 16,
-      "textRight": 28,
+      "textRight": 23,
       "fullBleed": false,
       "footer": false,
       "hero": true,
@@ -1413,98 +1259,73 @@
     "voidShare": 0,
     "voidBox": null
    },
-   "app": {
-    "viewport": {
-     "w": 390,
-     "h": 844
-    },
-    "dark": false,
-    "ground": "#f7f9f8",
-    "sidebar": null,
-    "topbar": {
-     "h": 64
-    },
-    "canvas": {
-     "left": 16,
-     "right": 16
-    },
-    "hero": {
-     "text": "Olá, Clara",
-     "words": 2,
-     "chars": 10,
-     "lines": 1,
-     "size": 24,
-     "vw": 6.2,
-     "font": "Erode",
-     "weight": 700,
-     "tracking": -0.02,
-     "leading": 1.1,
-     "top": 112,
-     "tag": "h1",
-     "kind": "heading",
-     "align": "left",
-     "position": "left"
-    },
-    "charts": 0,
-    "layout": {
-     "panels": 5,
-     "firstScreen": 5,
-     "ragged": [],
-     "voids": []
-    },
-    "tiles": 0,
-    "panels": {
-     "count": 7,
-     "radii": [
-      [
-       0,
-       7
-      ]
-     ],
-     "heavyBorders": 0,
-     "borderSamples": [],
-     "heavyShadows": 0,
-     "softShadows": 0,
-     "shadowSamples": [],
-     "glass": 0
-    },
-    "chips": {
-     "count": 0,
-     "hues": 0,
-     "samples": []
-    },
-    "numbers": {
-     "cells": 0,
-     "leftAligned": 0,
-     "figures": 0,
-     "tabularShare": null,
-     "kpiMax": null
-    },
-    "rows": null,
-    "chartHues": 0,
-    "placeholders": [],
-    "type": {
-     "under13": 0,
-     "tiny": 0,
-     "tinySamples": [],
-     "sizes": [
-      16,
-      20,
-      24,
-      68
-     ]
-    },
-    "title": {
-     "text": "Olá, Clara",
-     "size": 24,
-     "top": 112
-    },
-    "colourShare": 0.004
-   },
+   "app": null,
    "consoleErrors": []
   }
  ],
- "findings": [],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Cat. 1\" above \"RA\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-title",
+   "width": 1440,
+   "message": "The h1 is 30px (\"Olá, Clara\").",
+   "fix": "Set the title at display size, or make the large text of the first screen the h1.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"Olá, Clara\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 1 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  }
+ ],
  "images": [
   {
    "viewport": "desktop",

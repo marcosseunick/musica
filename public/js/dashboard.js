@@ -65,7 +65,7 @@ function renderSongs(songs, instrument) {
     .map((song, i) => {
       const hue = getSongCoverHue(song.id, song.title);
       const initials = getInitials(song.title);
-      const songLevels = Array.isArray(song.levels) && song.levels.length > 0 ? song.levels : [1, 2, 3, 4];
+      const songLevels = Array.isArray(song.levels) && song.levels.length > 0 ? song.levels : [1, 2, 3];
 
       return `
         <a href="player.html?songId=${song.id}&instrumentId=${instrument.id}"
@@ -105,7 +105,7 @@ function renderSongs(songs, instrument) {
             <div class="mt-5 pt-3 bg-[#ebf0ee] p-3">
               <div class="flex items-center justify-between small-copy text-[#24636c] mb-2">
                 <span>Graus publicados</span>
-                <span class="nums font-semibold text-[#06525c]">${songLevels.length} de 4</span>
+                <span class="nums font-semibold text-[#06525c]">${songLevels.length} de 3</span>
               </div>
               <div class="flex items-center gap-1.5" aria-label="Níveis disponíveis para esta música">
                 ${LEVELS.map((lvl) => {
@@ -133,7 +133,7 @@ async function loadTrack() {
           id: 1,
           title: 'Rumo ao Lar',
           artist: 'Coral UNASP',
-          levels: [1, 2, 3, 4]
+          levels: [1, 2, 3]
         }
       ],
       { id: 1, name: 'Teclado' }

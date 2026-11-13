@@ -206,7 +206,7 @@ async function loadUsers() {
           <td>
             <span class="inline-flex items-center px-2.5 py-0.5 small-copy font-semibold ${
               isAdmin
-                ? 'lvl-badge-4'
+                ? 'lvl-badge-3'
                 : 'lvl-badge-1'
             }">
               ${u.role}
@@ -253,8 +253,8 @@ async function loadSongsGrid() {
             title: 'Rumo ao Lar',
             artist: 'Coral UNASP',
             tracks: [
-              { id: 1, instrument: 'Teclado', modules: 4 },
-              { id: 2, instrument: 'Violão', modules: 4 }
+              { id: 1, instrument: 'Teclado', modules: 3 },
+              { id: 2, instrument: 'Violão', modules: 3 }
             ]
           }
         ]
@@ -357,7 +357,7 @@ async function loadSongEdit(songId) {
             </span>
             <div>
               <h3 class="text-lg font-semibold text-[#06525c]">Trilha: ${escapeHtml(track.instrument.name)}</h3>
-              <p class="small-copy text-[#24636c] nums">${modules.length} de 4 graus configurados</p>
+              <p class="small-copy text-[#24636c] nums">${modules.length} de 3 graus configurados</p>
             </div>
           </div>
 
