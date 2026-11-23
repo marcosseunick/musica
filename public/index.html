@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harmonia | Ensino Musical por Progressão em Três Graus</title>
+  <title>Harmonia | Ensino Musical por Progressão em Três Níveis</title>
   <meta name="description" content="Aprenda música no seu instrumento com a didática progressiva da Harmonia: cada obra do catálogo possui 3 níveis de arranjo, videoaulas passo a passo e materiais em PDF." />
 
   <link rel="preconnect" href="https://api.fontshare.com" />
@@ -35,7 +35,7 @@
         </a>
 
         <nav class="hidden md:flex items-center gap-8 text-base" aria-label="Navegação principal">
-          <a href="#didatica" class="link-editorial">Didática em 3 graus</a>
+          <a href="#didatica" class="link-editorial">Didática em 3 níveis</a>
           <a href="#metodo-vivo" class="link-editorial">Demonstrador do método</a>
           <a href="#beneficios" class="link-editorial">Benefícios para o aluno</a>
         </nav>
@@ -58,11 +58,11 @@
               <div>
                 <h1 class="display-title lines italic">
                   <span class="line"><span data-line style="--i:0">Uma obra,</span></span>
-                  <span class="line"><span data-line style="--i:1">três graus</span></span>
+                  <span class="line"><span data-line style="--i:1">três níveis</span></span>
                 </h1>
 
                 <p class="mt-8 statement-copy" data-rise style="--i:2">
-                  Escolha o seu instrumento e aprenda repertório real desde a primeira semana: na Harmonia, cada música possui três arranjos progressivos para você evoluir do Fácil ao Difícil sem abandonar a canção.
+                  Escolha o seu instrumento e aprenda repertório real desde a primeira semana: na Harmonia, cada música possui três arranjos progressivos para você evoluir do Fácil ao Avançado sem abandonar a canção.
                 </p>
 
                 <div class="mt-9 flex flex-wrap items-center gap-5" data-rise style="--i:3">
@@ -140,14 +140,14 @@
         </div>
       </section>
 
-      <!-- SEÇÃO 1 (how-it-works): A Didática em Três Graus -->
+      <!-- SEÇÃO 1 (how-it-works): A Didática em Três Níveis -->
       <section id="didatica" class="py-24 lg:py-32" style="background-color: var(--bg);">
         <div class="page-wrap">
           <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-5">
             <div data-reveal>
               <h2 class="section-title">Como funciona a nossa didática</h2>
               <p class="mt-3 body-copy">
-                Em vez de travar o iniciante em músicas complexas ou entediar quem já toca, cada obra é escrita em três degraus pedagógicos claros.
+                Em vez de travar o iniciante em músicas complexas ou entediar quem já toca, cada obra é escrita em três níveis pedagógicos claros.
               </p>
             </div>
             <p class="small-copy font-semibold nums" data-reveal style="--d:1">Progressão contínua na mesma obra</p>
@@ -159,11 +159,11 @@
           </div>
 
           <!-- Grade de momentos com alturas escalonadas como notas na pauta -->
-          <div id="moments-track" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch" role="region" aria-label="Progressão nos três graus de estudo">
+          <div id="moments-track" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch" role="region" aria-label="Progressão nos três níveis de estudo">
             <!-- Coluna 1 -->
             <article class="flex flex-col justify-between" data-reveal style="--d:0">
               <div>
-                <p class="text-xl font-semibold">Primeiro grau: Fácil</p>
+                <p class="text-xl font-semibold">Primeiro nível: Fácil</p>
                 <p class="body-copy mt-2">
                   Posições fundamentais, ritmo direto e estrutura simplificada para você tocar a música inteira já nos primeiros dias de estudo.
                 </p>
@@ -183,7 +183,7 @@
             <!-- Coluna 2 -->
             <article class="flex flex-col justify-between" data-reveal style="--d:1">
               <div>
-                <p class="text-xl font-semibold">Segundo grau: Médio</p>
+                <p class="text-xl font-semibold">Segundo nível: Intermediário</p>
                 <p class="body-copy mt-2">
                   Transições suaves entre regiões do instrumento, inversões, variações rítmicas e condução melódica sem saltos bruscos.
                 </p>
@@ -203,7 +203,7 @@
             <!-- Coluna 3 -->
             <article class="flex flex-col justify-between" data-reveal style="--d:2">
               <div>
-                <p class="text-xl font-semibold">Terceiro grau: Difícil</p>
+                <p class="text-xl font-semibold">Terceiro nível: Avançado</p>
                 <p class="body-copy mt-2">
                   Arranjo completo com articulação refinada, dedilhados elaborados, independência de vozes e controle consciente de dinâmica e expressão.
                 </p>
@@ -251,10 +251,10 @@
                   </div>
                 </div>
 
-                <!-- Pauta Musical Interativa com Estrutura e Densidade do Grau -->
+                <!-- Pauta Musical Interativa com Estrutura e Densidade do Nível -->
                 <div class="mt-4 p-5 sm:p-6" style="background-color: var(--surface);">
                   <div class="flex items-center justify-between text-sm font-semibold mb-3">
-                    <span id="live-measure-label">Densidade da escrita no grau selecionado</span>
+                    <span id="live-measure-label">Densidade da escrita no nível selecionado</span>
                     <span id="live-tempo-label" class="nums" style="color: var(--muted);">Semínima = 72 bpm</span>
                   </div>
 
@@ -266,7 +266,7 @@
                     <span>F</span>
                   </div>
 
-                  <!-- Pauta SVG que redesenha a densidade de vozes conforme o grau -->
+                  <!-- Pauta SVG que redesenha a densidade de vozes conforme o nível -->
                   <div class="mt-4">
                     <svg id="live-staff-svg" viewBox="0 0 520 110" class="w-full h-24" aria-label="Representação na pauta da densidade de notas do arranjo selecionado">
                       <g stroke="#06525c" stroke-opacity="0.28" stroke-width="1">
@@ -307,22 +307,22 @@
               </div>
 
               <p id="live-audio-status" class="small-copy mt-5" style="color: var(--muted);" aria-live="polite">
-                Clique nos graus ao lado ou ouça a amostra sonora para perceber como o arranjo ganha riqueza a cada nível.
+                Clique nos níveis ao lado ou ouça a amostra sonora para perceber como o arranjo ganha riqueza a cada etapa.
               </p>
             </div>
 
-            <!-- Metade Direita: Abas de Grau, Explicação Pedagógica e Duas Células de Ação -->
+            <!-- Metade Direita: Abas de Nível, Explicação Pedagógica e Duas Células de Ação -->
             <div class="lg:col-span-6 flex flex-col justify-between p-2 sm:p-4" data-reveal style="--d:1">
-              <!-- Abas de texto planas para os 3 graus -->
-              <div class="flex flex-wrap items-center gap-6" role="tablist" aria-label="Graus de dificuldade">
+              <!-- Abas de texto planas para os 3 níveis -->
+              <div class="flex flex-wrap items-center gap-6" role="tablist" aria-label="Níveis de dificuldade">
                 <button type="button" role="tab" data-level="1" aria-selected="true" class="live-level-tab text-lg font-semibold pb-1" style="color: var(--ink); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px;">
                   1. Fácil
                 </button>
                 <button type="button" role="tab" data-level="2" aria-selected="false" class="live-level-tab text-lg font-normal pb-1" style="color: var(--muted);">
-                  2. Médio
+                  2. Intermediário
                 </button>
                 <button type="button" role="tab" data-level="3" aria-selected="false" class="live-level-tab text-lg font-normal pb-1" style="color: var(--muted);">
-                  3. Difícil
+                  3. Avançado
                 </button>
               </div>
 
@@ -330,7 +330,7 @@
               <div class="my-10 lg:my-0">
                 <h2 id="live-heading" class="section-title">Você evolui dentro da própria música</h2>
                 <p id="live-description" class="mt-6 body-copy" style="color: var(--ink); max-width: 40ch;">
-                  No ensino tradicional, o aluno iniciante passa meses longe do repertório real. Na Harmonia, você começa tocando o Grau Fácil hoje e, quando estiver seguro, sobe para o Médio e o Difícil na mesma tela.
+                  No ensino tradicional, o aluno iniciante passa meses longe do repertório real. Na Harmonia, você começa tocando o Nível Fácil hoje e, quando estiver seguro, sobe para o Intermediário e o Avançado na mesma tela.
                 </p>
               </div>
 
@@ -341,7 +341,7 @@
                   id="live-play-btn"
                   class="h-[72px] px-6 flex items-center justify-between font-semibold text-base text-left"
                   style="background-color: var(--ink); color: var(--accent-ink);">
-                  <span id="live-play-label">Ouvir evolução do grau</span>
+                  <span id="live-play-label">Ouvir evolução do nível</span>
                   <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0"><polygon points="6 4 20 12 6 20 6 4"/></svg>
                 </button>
 
@@ -394,7 +394,7 @@
                     <div class="flex items-baseline justify-between text-lg font-medium">
                       <span>Três arranjos graduados por obra</span>
                       <span class="dot-leader" aria-hidden="true"></span>
-                      <span class="nums font-semibold">Graus 1 a 3</span>
+                      <span class="nums font-semibold">Níveis 1 a 3</span>
                     </div>
                     <p class="small-copy mt-1" style="max-width: 44ch;">
                       Toque no nível adequado à sua técnica atual e use a mesma música como escada para alcançar arranjos mais elaborados.
@@ -426,7 +426,7 @@
                       <span class="nums font-semibold">Teclas 1 a 3</span>
                     </div>
                     <p class="small-copy mt-1" style="max-width: 44ch;">
-                      Compare como uma passagem soa no nível Fácil, Médio ou Difícil com um único atalho, sem sair da página de estudo.
+                      Compare como uma passagem soa no nível Fácil, Intermediário ou Avançado com um único atalho, sem sair da página de estudo.
                     </p>
                   </div>
 
@@ -448,7 +448,7 @@
                       <span class="font-semibold">Guia de estudo</span>
                     </div>
                     <p class="small-copy mt-1" style="max-width: 44ch;">
-                      Saiba exatamente qual habilidade técnica, rítmica ou harmônica você está desenvolvendo em cada grau antes de dar o play.
+                      Saiba exatamente qual habilidade técnica, rítmica ou harmônica você está desenvolvendo em cada nível antes de dar o play.
                     </p>
                   </div>
                 </div>
@@ -490,7 +490,7 @@
             <!-- Colunas 1–5: Parágrafo de declaração alinhado à base -->
             <div class="lg:col-span-5 pb-2" data-reveal>
               <p class="statement-copy" style="color: var(--field-1-ink);">
-                Não espere anos para tocar as músicas que você admira. Comece no Grau 1 hoje e descubra o prazer de evoluir compasso por compasso no seu instrumento.
+                Não espere anos para tocar as músicas que você admira. Comece no Nível 1 hoje e descubra o prazer de evoluir compasso por compasso no seu instrumento.
               </p>
               <p class="small-copy mt-6" style="color: #dce8ea;">
                 Matrícula gratuita com acesso imediato à trilha do seu instrumento, player em 3 níveis e materiais em PDF.
@@ -537,7 +537,7 @@
           <div class="lg:col-span-6">
             <h2 class="section-title">Harmonia</h2>
             <p class="mt-4 body-copy" style="max-width: 38ch;">
-              Sistema de ensino musical com progressão didática em três graus de dificuldade, trilhas por instrumento, videoaulas e partituras de apoio.
+              Sistema de ensino musical com progressão didática em três níveis de dificuldade, trilhas por instrumento, videoaulas e partituras de apoio.
             </p>
           </div>
 
@@ -546,7 +546,7 @@
             <ul class="space-y-3 text-lg">
               <li><a href="register.html" class="link-editorial font-medium">Criar matrícula gratuita</a></li>
               <li><a href="login.html" class="link-editorial font-medium">Acessar painel do aluno</a></li>
-              <li><a href="#didatica" class="link-editorial font-medium">Conhecer os 3 graus didáticos</a></li>
+              <li><a href="#didatica" class="link-editorial font-medium">Conhecer os 3 níveis didáticos</a></li>
               <li><a href="#beneficios" class="link-editorial font-medium">Ver recursos da sala de ensaio</a></li>
             </ul>
 
@@ -647,7 +647,7 @@
             `
           },
           2: {
-            label: 'Médio',
+            label: 'Intermediário',
             chords: ['C', 'G/B', 'Am7', 'F/A'],
             freqs: [[261.63, 329.63, 392.00, 523.25], [246.94, 293.66, 392.00, 493.88], [220.00, 261.63, 329.63, 392.00], [220.00, 261.63, 349.23, 440.00]],
             technique: 'Foco didático: inversões e encadeamento próximo para conectar os compassos com fluidez e menor deslocamento.',
@@ -668,7 +668,7 @@
             `
           },
           3: {
-            label: 'Difícil',
+            label: 'Avançado',
             chords: ['C9', 'G/B', 'Am7(9)', 'F7M'],
             freqs: [[261.63, 293.66, 329.63, 392.00, 523.25], [246.94, 293.66, 392.00, 587.33], [220.00, 261.63, 329.63, 392.00, 493.88], [174.61, 220.00, 261.63, 329.63, 440.00]],
             technique: 'Foco didático: independência entre melodia e acompanhamento, arpejos contínuos e controle de nuances dinâmicas.',
@@ -704,10 +704,10 @@
             `
           },
           2: {
-            label: 'Médio',
+            label: 'Intermediário',
             chords: ['C', 'G/B', 'Am7', 'F'],
             freqs: [[130.81, 196.00, 261.63, 329.63], [123.47, 196.00, 246.94, 293.66], [110.00, 164.81, 196.00, 261.63], [87.31, 130.81, 174.61, 220.00]],
-            technique: 'Foco didático: baixos invertidos, introdução de pestanas ou posições médias no braço e subdivisão rítmica.',
+            technique: 'Foco didático: baixos invertidos, introdução de pestanas ou posições centrais no braço e subdivisão rítmica.',
             lessons: [
               'Etapa 1: Domínio das pestanas e condução do grave',
               'Etapa 2: Levada com acentuação e subdivisão',
@@ -721,7 +721,7 @@
             `
           },
           3: {
-            label: 'Difícil',
+            label: 'Avançado',
             chords: ['C9', 'G/B', 'Am7', 'F6(9)'],
             freqs: [[130.81, 164.81, 196.00, 293.66], [123.47, 196.00, 246.94, 293.66], [110.00, 164.81, 196.00, 261.63], [87.31, 146.83, 196.00, 293.66]],
             technique: 'Foco didático: dedilhado elaborado (fingerstyle ou arco articulado) com baixos alternados e notas de extensão.',
@@ -757,7 +757,7 @@
             `
           },
           2: {
-            label: 'Médio',
+            label: 'Intermediário',
             chords: ['3ª Voz', '6ª Voz', 'Contracanto', 'Uníssono'],
             freqs: [[329.63, 523.25], [293.66, 493.88], [261.63, 440.00], [220.00, 349.23]],
             technique: 'Foco didático: segunda voz em terças e sextas, ligaduras de expressão e equilíbrio de volume em naipe.',
@@ -774,7 +774,7 @@
             `
           },
           3: {
-            label: 'Difícil',
+            label: 'Avançado',
             chords: ['Canto + Adorno', 'Contraponto', 'Mudança Reg.', 'Crescendo'],
             freqs: [[329.63, 392.00, 587.33], [293.66, 392.00, 587.33], [261.63, 329.63, 493.88], [220.00, 349.23, 440.00]],
             technique: 'Foco didático: contraponto ativo, mudança de registro com timbre homogêneo e controle de vibrato.',
@@ -842,7 +842,7 @@
 
         const AudioContextClass = window.AudioContext || window.webkitAudioContext;
         if (!AudioContextClass) {
-          audioStatus.textContent = `Grau ${entry.label}: ${entry.chords.join(' / ')}`;
+          audioStatus.textContent = `Nível ${entry.label}: ${entry.chords.join(' / ')}`;
           return;
         }
 
@@ -850,8 +850,8 @@
         if (audioCtx.state === 'suspended') audioCtx.resume();
 
         const now = audioCtx.currentTime;
-        playLabel.textContent = `Ouvindo grau ${entry.label}...`;
-        audioStatus.textContent = `Demonstrando escrita do grau ${entry.label}: ${entry.chords.join(' – ')}.`;
+        playLabel.textContent = `Ouvindo nível ${entry.label}...`;
+        audioStatus.textContent = `Demonstrando escrita do nível ${entry.label}: ${entry.chords.join(' – ')}.`;
 
         entry.freqs.forEach((chord, idx) => {
           const chordStart = now + idx * 0.65;
@@ -876,7 +876,7 @@
         });
 
         setTimeout(() => {
-          playLabel.textContent = 'Ouvir evolução do grau';
+          playLabel.textContent = 'Ouvir evolução do nível';
         }, 2700);
       }
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aula | Harmonia</title>
-  <meta name="description" content="Assista à aula em vídeo e alterne entre os níveis Fácil, Médio e Difícil, com partituras e cifras de apoio." />
+  <meta name="description" content="Assista à aula em vídeo e alterne entre os níveis Fácil, Intermediário e Avançado, com partituras e cifras de apoio." />
 
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=erode@400,401,500,600,700&display=swap" rel="stylesheet" />
@@ -71,8 +71,8 @@
         <!-- Estado vazio caso o nível não tenha nenhuma aula -->
         <div id="video-empty-state" class="hidden absolute inset-0 bg-[#ebf0ee] flex flex-col items-center justify-center p-6 text-center z-20">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-12 w-12 text-[#24636c] mb-3"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
-          <h3 class="text-lg font-semibold text-[#06525c]">Nenhuma aula gravada neste grau</h3>
-          <p class="mt-1 small-copy text-[#24636c] max-w-sm">Este arranjo ainda não possui vídeos cadastrados. Selecione outro grau abaixo para continuar estudando.</p>
+          <h3 class="text-lg font-semibold text-[#06525c]">Nenhuma aula gravada neste nível</h3>
+          <p class="mt-1 small-copy text-[#24636c] max-w-sm">Este arranjo ainda não possui vídeos cadastrados. Selecione outro nível abaixo para continuar estudando.</p>
         </div>
       </div>
 
@@ -93,10 +93,10 @@
         </button>
       </div>
 
-      <!-- Seletor de Dificuldade (3 Graus) -->
+      <!-- Seletor de Dificuldade (3 Níveis) -->
       <div>
         <div class="flex items-baseline justify-between mb-3">
-          <h2 class="text-lg font-semibold text-[#06525c]">Grau de escrita do arranjo</h2>
+          <h2 class="text-lg font-semibold text-[#06525c]">Nível de escrita do arranjo</h2>
           <span class="hidden small-copy text-[#24636c] sm:inline">
             Atalho no teclado: teclas <kbd class="kbd">1</kbd> a <kbd class="kbd">3</kbd>
           </span>
@@ -113,7 +113,7 @@
           <div id="level-progress" class="flex flex-1 items-center gap-1.5" aria-hidden="true"></div>
         </div>
 
-        <h3 class="mt-5 text-xl font-semibold text-[#06525c]">Objetivo pedagógico deste grau</h3>
+        <h3 class="mt-5 text-xl font-semibold text-[#06525c]">Objetivo pedagógico deste nível</h3>
         <p id="level-description" class="mt-2 body-copy text-[#24636c]">
           Carregando informações pedagógicas...
         </p>
@@ -124,10 +124,10 @@
     <aside class="lg:col-span-4 space-y-6" aria-labelledby="playlist-heading">
       <div class="lg:sticky lg:top-8 space-y-6">
 
-        <!-- Lista de Aulas do Grau -->
+        <!-- Lista de Aulas do Nível -->
         <div class="card p-6">
           <div class="flex items-baseline justify-between mb-4">
-            <h2 id="playlist-heading" class="text-lg font-semibold text-[#06525c]">Aulas do grau</h2>
+            <h2 id="playlist-heading" class="text-lg font-semibold text-[#06525c]">Aulas do nível</h2>
             <span id="playlist-count" class="small-copy text-[#24636c] font-medium nums"></span>
           </div>
           <ul id="playlist-list" class="space-y-2">
@@ -154,7 +154,7 @@
   </main>
 
   <footer class="mt-12 py-6 bg-[#ebf0ee] text-center small-copy text-[#0d4a52]">
-    Harmonia / Ensino musical por graus de arranjo
+    Harmonia / Ensino musical por níveis de arranjo
   </footer>
 
   <script src="js/common.js"></script>

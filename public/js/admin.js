@@ -290,7 +290,7 @@ async function loadSongsGrid() {
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 small-copy font-semibold lvl-badge-1 nums">
                 ${tracksCount} ${tracksCount === 1 ? 'trilha' : 'trilhas'}
               </span>
-              <span class="small-copy text-[#24636c] font-medium nums">${totalModules} graus publicados</span>
+              <span class="small-copy text-[#24636c] font-medium nums">${totalModules} níveis publicados</span>
             </div>
             <h3 class="text-2xl font-semibold text-[#06525c] mt-3">
               ${escapeHtml(song.title)}
@@ -357,14 +357,14 @@ async function loadSongEdit(songId) {
             </span>
             <div>
               <h3 class="text-lg font-semibold text-[#06525c]">Trilha: ${escapeHtml(track.instrument.name)}</h3>
-              <p class="small-copy text-[#24636c] nums">${modules.length} de 3 graus configurados</p>
+              <p class="small-copy text-[#24636c] nums">${modules.length} de 3 níveis configurados</p>
             </div>
           </div>
 
           <div class="flex items-center gap-2">
             <button onclick="openAddModuleModal(${track.id})" class="btn btn-primary btn-sm">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="M12 4v16m8-8H4"/></svg>
-              <span>Adicionar Grau</span>
+              <span>Adicionar Nível</span>
             </button>
             <button onclick="deleteTrack(${track.id}, '${escapeHtml(track.instrument.name)}')" class="btn btn-danger btn-icon" title="Excluir Trilha inteira deste instrumento">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
@@ -374,7 +374,7 @@ async function loadSongEdit(songId) {
 
         <!-- Lista de Níveis -->
         <div class="p-6 space-y-6">
-          ${modules.length === 0 ? '<p class="small-copy text-[#24636c] text-center py-4 italic">Nenhum grau cadastrado para este instrumento. Clique em "Adicionar Grau".</p>' : ''}
+          ${modules.length === 0 ? '<p class="small-copy text-[#24636c] text-center py-4 italic">Nenhum nível cadastrado para este instrumento. Clique em "Adicionar Nível".</p>' : ''}
 
           ${modules
             .map((mod) => {
@@ -387,12 +387,12 @@ async function loadSongEdit(songId) {
                   <div class="flex items-center gap-2.5">
                     <span class="inline-flex items-center gap-2 px-3 py-1 small-copy font-semibold ${meta.badge}">
                       <span class="h-2 w-2 ${meta.dot}"></span>
-                      Grau ${mod.difficulty_level}: ${meta.label}
+                      Nível ${mod.difficulty_level}: ${meta.label}
                     </span>
                     <button onclick="openEditModuleModal(${mod.id}, ${mod.difficulty_level}, \`${escapeHtml(mod.description)}\`)" class="text-[#24636c] hover:text-[#06525c] transition-colors p-1" title="Editar descrição">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
                     </button>
-                    <button onclick="deleteModule(${mod.id})" class="text-[#24636c] hover:text-[#69221e] transition-colors p-1" title="Excluir este grau">
+                    <button onclick="deleteModule(${mod.id})" class="text-[#24636c] hover:text-[#69221e] transition-colors p-1" title="Excluir este nível">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
                     </button>
                   </div>
@@ -461,7 +461,7 @@ async function loadSongEdit(songId) {
                       })
                       .join('')}
                   </ul>`
-                    : '<p class="small-copy text-[#24636c] italic">Nenhuma aula gravada neste grau ainda.</p>'
+                    : '<p class="small-copy text-[#24636c] italic">Nenhuma aula gravada neste nível ainda.</p>'
                 }
               </div>`;
             })
@@ -509,7 +509,7 @@ window.deleteTrack = async function (trackId, instrumentName) {
 };
 
 window.openAddModuleModal = function (songInstrumentId) {
-  document.getElementById('modal-module-title').textContent = 'Adicionar Grau';
+  document.getElementById('modal-module-title').textContent = 'Adicionar Nível';
   document.getElementById('module-id').value = '';
   document.getElementById('module-song-instrument-id').value = songInstrumentId;
   document.getElementById('module-difficulty-select').disabled = false;
@@ -518,7 +518,7 @@ window.openAddModuleModal = function (songInstrumentId) {
 };
 
 window.openEditModuleModal = function (moduleId, difficultyLevel, description) {
-  document.getElementById('modal-module-title').textContent = `Editar Grau ${difficultyLevel}`;
+  document.getElementById('modal-module-title').textContent = `Editar Nível ${difficultyLevel}`;
   document.getElementById('module-id').value = moduleId;
   document.getElementById('module-song-instrument-id').value = '';
   document.getElementById('module-difficulty-select').value = difficultyLevel;
@@ -528,10 +528,10 @@ window.openEditModuleModal = function (moduleId, difficultyLevel, description) {
 };
 
 window.deleteModule = async function (moduleId) {
-  if (!confirm('Deseja excluir este grau e todas as suas aulas?')) return;
+  if (!confirm('Deseja excluir este nível e todas as suas aulas?')) return;
   try {
     await fetchJSON(`/api/admin/modules/${moduleId}`, { method: 'DELETE' });
-    showToast('Grau excluído com sucesso.');
+    showToast('Nível excluído com sucesso.');
     await loadSongEdit(activeSongId);
   } catch (err) {
     showToast(err.message, true);
@@ -699,14 +699,14 @@ function setupForms() {
             method: 'PATCH',
             body: JSON.stringify({ difficulty_level, description })
           });
-          showToast('Grau atualizado!');
+          showToast('Nível atualizado!');
         } else {
           // Criação
           await fetchJSON('/api/admin/modules', {
             method: 'POST',
             body: JSON.stringify({ song_instrument_id, difficulty_level, description })
           });
-          showToast('Grau adicionado com sucesso!');
+          showToast('Nível adicionado com sucesso!');
         }
         closeModal('modal-module');
         await loadSongEdit(activeSongId);

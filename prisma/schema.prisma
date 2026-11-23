@@ -54,7 +54,7 @@ model SongInstrument {
   @@unique([song_id, instrument_id])
 }
 
-// Nível de dificuldade: 1 = Fácil, 2 = Médio, 3 = Difícil
+// Nível de dificuldade: 1 = Fácil, 2 = Intermediário, 3 = Avançado
 model Module {
   id                 Int            @id @default(autoincrement())
   song_instrument_id Int

@@ -68,7 +68,7 @@ function renderTabs() {
           <span class="flex items-center gap-2 text-base font-semibold">
             <span class="h-2.5 w-2.5 ${lvl.dot}"></span>${lvl.label}
           </span>
-          <span class="small-copy opacity-80 nums">Grau ${module.difficulty_level}</span>
+          <span class="small-copy opacity-80 nums">Nível ${module.difficulty_level}</span>
         </button>`;
     })
     .join('');
@@ -103,7 +103,7 @@ function renderLevelPanel(module) {
   levelBadge.className = `inline-flex items-center gap-2 px-3 py-1 small-copy font-semibold ${lvl.badge}`;
   levelBadge.innerHTML = `
     <span class="h-2 w-2 ${lvl.dot}"></span>
-    <span>Grau ${module.difficulty_level}: ${lvl.label}</span>`;
+    <span>Nível ${module.difficulty_level}: ${lvl.label}</span>`;
 
   // Barra de progressão preenchida até o nível atual
   levelProgress.innerHTML = LEVELS.map(
@@ -122,7 +122,7 @@ function renderPlaylist(module) {
   playlistCount.textContent = `${lessons.length} ${lessons.length === 1 ? 'aula' : 'aulas'}`;
 
   if (lessons.length === 0) {
-    playlistList.innerHTML = `<li class="small-copy text-[#24636c] py-3 text-center italic">Nenhuma aula neste grau.</li>`;
+    playlistList.innerHTML = `<li class="small-copy text-[#24636c] py-3 text-center italic">Nenhuma aula neste nível.</li>`;
     return;
   }
 
@@ -334,7 +334,7 @@ function getPreviewLessonData() {
             title: 'Aula 1: Posição das Tríades Fundamentais',
             video_url: 'about:blank',
             materials: [
-              { id: 1, title: 'Cifra Simplificada (Grau I)', file_url: 'materials/teclado/facil/aula1_cifra_simplificada.pdf', type: 'pdf' },
+              { id: 1, title: 'Cifra Simplificada (Nível I)', file_url: 'materials/teclado/facil/aula1_cifra_simplificada.pdf', type: 'pdf' },
               { id: 2, title: 'Mapa de Acordes no Teclado', file_url: 'materials/teclado/facil/aula1_mapa_acordes.pdf', type: 'pdf' }
             ]
           },

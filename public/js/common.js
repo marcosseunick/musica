@@ -16,8 +16,8 @@ const LEVELS = [
   },
   {
     level: 2,
-    label: 'Médio',
-    slug: 'medio',
+    label: 'Intermediário',
+    slug: 'intermediario',
     dot: 'lvl-dot-2',
     text: 'text-[#06525c]',
     border: '',
@@ -27,8 +27,8 @@ const LEVELS = [
   },
   {
     level: 3,
-    label: 'Difícil',
-    slug: 'dificil',
+    label: 'Avançado',
+    slug: 'avancado',
     dot: 'lvl-dot-3',
     text: 'text-[#06525c]',
     border: '',

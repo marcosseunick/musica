@@ -9,8 +9,8 @@ MVP de plataforma web (VOD) para o ensino de repertório musical por níveis de 
 Ao contrário de plataformas convencionais que dividem o aprendizado por músicas isoladas, a **Harmonia** estrutura cada canção em uma progressão contínua de **3 níveis de arranjo**:
 
 1. **Fácil (Nível 1):** Acordes básicos em bloco e estrutura tonal fundamental.
-2. **Médio (Nível 2):** Inversões de acordes e transições suaves.
-3. **Difícil (Nível 3):** Dedilhado, arpejos, dinâmicas de interpretação e arranjo completo.
+2. **Intermediário (Nível 2):** Inversões de acordes e transições suaves.
+3. **Avançado (Nível 3):** Dedilhado, arpejos, dinâmicas de interpretação e arranjo completo.
 
 O aluno pode alternar instantaneamente entre os níveis de dificuldade através da interface do player ou usando os atalhos de teclado `1` a `3`.
 

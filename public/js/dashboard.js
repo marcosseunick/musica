@@ -104,7 +104,7 @@ function renderSongs(songs, instrument) {
             <!-- Níveis reais disponíveis para esta música -->
             <div class="mt-5 pt-3 bg-[#ebf0ee] p-3">
               <div class="flex items-center justify-between small-copy text-[#24636c] mb-2">
-                <span>Graus publicados</span>
+                <span>Níveis publicados</span>
                 <span class="nums font-semibold text-[#06525c]">${songLevels.length} de 3</span>
               </div>
               <div class="flex items-center gap-1.5" aria-label="Níveis disponíveis para esta música">
