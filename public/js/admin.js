@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   setupLogout();
   setupForms();
+  setupMaterialDropzone();
   await loadInstrumentsSelect();
   initSPA();
 });
@@ -575,8 +576,219 @@ window.openAddMaterialModal = function (lessonId) {
   document.getElementById('material-lesson-id').value = lessonId;
   document.getElementById('material-title-input').value = '';
   document.getElementById('material-file-input').value = '';
+  resetMaterialDropzoneUI();
   openModal('modal-material');
+  refreshDropboxStatus();
 };
+
+async function refreshDropboxStatus() {
+  const badge = document.getElementById('dropbox-status-badge');
+  const authBox = document.getElementById('dropbox-auth-box');
+  const authLink = document.getElementById('dropbox-auth-link');
+  if (!badge) return;
+
+  if (isFilePreview && !localStorage.getItem('token')) {
+    badge.textContent = 'Dropbox configurado';
+    return;
+  }
+
+  try {
+    const status = await fetchJSON('/api/admin/dropbox/status');
+    if (status.isConnected) {
+      badge.textContent = 'Dropbox conectado';
+      badge.className = 'px-2.5 py-0.5 lvl-badge-2 font-semibold';
+      if (authBox) authBox.classList.add('hidden');
+    } else if (status.hasAppCredentials) {
+      badge.textContent = 'Aguardando vinculação (modo local ativo)';
+      badge.className = 'px-2.5 py-0.5 bg-[#dfe7e4] font-semibold text-[#06525c]';
+      if (authLink && status.authorizeUrl) authLink.href = status.authorizeUrl;
+      if (authBox) authBox.classList.remove('hidden');
+    } else {
+      badge.textContent = 'Armazenamento local (/materials/uploads)';
+      badge.className = 'px-2.5 py-0.5 bg-[#dfe7e4] font-semibold text-[#06525c]';
+      if (authBox) authBox.classList.add('hidden');
+    }
+  } catch {
+    badge.textContent = 'Armazenamento local';
+  }
+}
+
+function resetMaterialDropzoneUI() {
+  const title = document.getElementById('material-dropzone-title');
+  const subtitle = document.getElementById('material-dropzone-subtitle');
+  const progressWrap = document.getElementById('material-upload-progress-wrap');
+  const progressBar = document.getElementById('material-upload-bar');
+  const filePicker = document.getElementById('material-file-picker');
+
+  if (title) title.textContent = 'Arraste e solte o PDF da aula aqui ou clique para escolher';
+  if (subtitle) subtitle.textContent = 'Envio automático para o Dropbox (até 25 MB)';
+  if (progressWrap) progressWrap.classList.add('hidden');
+  if (progressBar) progressBar.style.width = '0%';
+  if (filePicker) filePicker.value = '';
+}
+
+function formatTitleFromFilename(fileName) {
+  const withoutExt = String(fileName || '').replace(/\.[^.]+$/, '');
+  const words = withoutExt
+    .replace(/[_-]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  if (words.length === 0) return 'Partitura da Aula (PDF)';
+  return words.map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function uploadFileToBackend(file) {
+  const maxBytes = 25 * 1024 * 1024;
+  if (file.size > maxBytes) {
+    showToast('O arquivo excede o limite máximo de 25 MB.', true);
+    return;
+  }
+
+  const titleInput = document.getElementById('material-title-input');
+  const fileInput = document.getElementById('material-file-input');
+  const typeSelect = document.getElementById('material-type-select');
+  const lessonId = document.getElementById('material-lesson-id')?.value || '';
+  const dzTitle = document.getElementById('material-dropzone-title');
+  const dzSubtitle = document.getElementById('material-dropzone-subtitle');
+  const progressWrap = document.getElementById('material-upload-progress-wrap');
+  const progressBar = document.getElementById('material-upload-bar');
+  const submitBtn = document.getElementById('material-submit-btn');
+
+  // Preenche o título e o tipo automaticamente caso o admin ainda não tenha digitado
+  if (titleInput && !titleInput.value.trim()) {
+    titleInput.value = formatTitleFromFilename(file.name);
+  }
+  if (typeSelect) {
+    const lower = file.name.toLowerCase();
+    if (lower.endsWith('.gp') || lower.endsWith('.gp5') || lower.endsWith('.gpx')) {
+      typeSelect.value = 'gp';
+    } else if (lower.endsWith('.pdf')) {
+      typeSelect.value = 'pdf';
+    }
+  }
+
+  if (dzTitle) dzTitle.textContent = `Enviando "${file.name}"...`;
+  if (dzSubtitle) dzSubtitle.textContent = 'Aguarde a conclusão do envio';
+  if (progressWrap) progressWrap.classList.remove('hidden');
+  if (progressBar) progressBar.style.width = '8%';
+  if (submitBtn) submitBtn.disabled = true;
+
+  const xhr = new XMLHttpRequest();
+  const query = new URLSearchParams({
+    filename: file.name,
+    ...(lessonId ? { lesson_id: lessonId } : {}),
+  });
+
+  xhr.open('POST', `/api/admin/materials/upload?${query.toString()}`, true);
+  const token = localStorage.getItem('token');
+  if (token) xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+  xhr.setRequestHeader('Content-Type', file.type || 'application/octet-stream');
+
+  xhr.upload.onprogress = (event) => {
+    if (event.lengthComputable && progressBar) {
+      const pct = Math.max(10, Math.round((event.loaded / event.total) * 100));
+      progressBar.style.width = `${pct}%`;
+    }
+  };
+
+  xhr.onload = () => {
+    if (submitBtn) submitBtn.disabled = false;
+    let data = {};
+    try {
+      data = JSON.parse(xhr.responseText || '{}');
+    } catch {
+      data = {};
+    }
+
+    if (xhr.status >= 200 && xhr.status < 300 && data.file_url) {
+      if (fileInput) fileInput.value = data.file_url;
+      if (progressBar) progressBar.style.width = '100%';
+      const destLabel = data.provider === 'dropbox' ? 'Dropbox' : 'armazenamento local';
+      if (dzTitle) dzTitle.textContent = `Arquivo carregado: ${file.name}`;
+      if (dzSubtitle) dzSubtitle.textContent = `Pronto no ${destLabel}. Clique em "Salvar Material" abaixo.`;
+      showToast(`Arquivo enviado para o ${destLabel}!`);
+    } else {
+      resetMaterialDropzoneUI();
+      showToast(data.error || 'Falha ao enviar o arquivo.', true);
+    }
+  };
+
+  xhr.onerror = () => {
+    if (submitBtn) submitBtn.disabled = false;
+    resetMaterialDropzoneUI();
+    showToast('Erro de conexão durante o upload do arquivo.', true);
+  };
+
+  xhr.send(file);
+}
+
+function setupMaterialDropzone() {
+  const dropzone = document.getElementById('material-dropzone');
+  const filePicker = document.getElementById('material-file-picker');
+  const connectBtn = document.getElementById('dropbox-connect-btn');
+  const codeInput = document.getElementById('dropbox-code-input');
+
+  if (connectBtn && codeInput) {
+    connectBtn.addEventListener('click', async () => {
+      const code = codeInput.value.trim();
+      if (!code) {
+        showToast('Cole o código gerado pelo Dropbox para vincular.', true);
+        return;
+      }
+      connectBtn.disabled = true;
+      try {
+        await fetchJSON('/api/admin/dropbox/connect', {
+          method: 'POST',
+          body: JSON.stringify({ code }),
+        });
+        codeInput.value = '';
+        showToast('Dropbox vinculado com sucesso! O token foi salvo no .env.');
+        await refreshDropboxStatus();
+      } catch (err) {
+        showToast(err.message, true);
+      } finally {
+        connectBtn.disabled = false;
+      }
+    });
+  }
+
+  if (!dropzone || !filePicker) return;
+
+  dropzone.addEventListener('click', () => filePicker.click());
+  dropzone.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      filePicker.click();
+    }
+  });
+
+  filePicker.addEventListener('change', () => {
+    const file = filePicker.files?.[0];
+    if (file) uploadFileToBackend(file);
+  });
+
+  ['dragenter', 'dragover'].forEach((evt) => {
+    dropzone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.add('lvl-badge-2');
+    });
+  });
+
+  ['dragleave', 'drop'].forEach((evt) => {
+    dropzone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.remove('lvl-badge-2');
+    });
+  });
+
+  dropzone.addEventListener('drop', (e) => {
+    const file = e.dataTransfer?.files?.[0];
+    if (file) uploadFileToBackend(file);
+  });
+}
 
 window.deleteMaterial = async function (materialId) {
   if (!confirm('Deseja remover este anexo?')) return;

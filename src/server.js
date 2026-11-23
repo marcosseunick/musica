@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 // Frontend e API são servidos na mesma origem, por isso CORS não é necessário.
 app.disable('x-powered-by');
+app.use('/api/admin/materials/upload', express.raw({ type: '*/*', limit: '25mb' }));
 app.use(express.json({ limit: '100kb' }));
 // No Express 5, req.body fica undefined quando não há corpo JSON; padroniza como objeto vazio
 app.use((req, res, next) => {

@@ -391,14 +391,68 @@
         <input type="hidden" name="material_id" id="material-id" />
         <input type="hidden" name="lesson_id" id="material-lesson-id" />
         <div class="p-6 space-y-4">
+
+          <!-- Status e Autorização Única do Dropbox -->
+          <div id="dropbox-status-bar" class="bg-[#ebf0ee] p-3.5 small-copy">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-semibold text-[#06525c]">Destino do upload</span>
+              <span id="dropbox-status-badge" class="px-2 py-0.5 bg-[#dfe7e4] font-semibold text-[#06525c]">Verificando Dropbox...</span>
+            </div>
+
+            <div id="dropbox-auth-box" class="hidden mt-3 pt-3 bg-[#f7f9f8] p-3 space-y-2.5">
+              <p class="small-copy text-[#06525c]">
+                Suas chaves do Dropbox estão configuradas. Para ativar o envio direto à nuvem (única vez):
+              </p>
+              <div>
+                <a id="dropbox-auth-link" href="#" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#06525c] link-editorial">
+                  1. Gerar código de permissão no Dropbox →
+                </a>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input type="text" id="dropbox-code-input" placeholder="2. Cole aqui o código gerado pelo Dropbox" class="field mt-0 flex-1" />
+                <button type="button" id="dropbox-connect-btn" class="btn btn-primary btn-sm shrink-0">
+                  Vincular Dropbox
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zona de Arrastar e Soltar (Drag & Drop) -->
+          <div>
+            <label class="field-label">Upload de PDF (Arraste e Solte)</label>
+            <input type="file" id="material-file-picker" accept=".pdf,.gp,.gp5,.gpx,application/pdf" class="hidden" />
+            <div
+              id="material-dropzone"
+              tabindex="0"
+              role="button"
+              aria-label="Arraste e solte o arquivo PDF aqui ou clique para selecionar"
+              class="mt-1.5 bg-[#ebf0ee] hover:bg-[#dfe7e4] transition-colors p-6 text-center cursor-pointer select-none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-8 w-8 mx-auto text-[#06525c]">
+                <path d="M12 16V4m0 0-4 4m4-4 4 4" />
+                <path d="M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2" />
+              </svg>
+              <p id="material-dropzone-title" class="mt-2 small-copy font-semibold text-[#06525c]">
+                Arraste e solte o PDF da aula aqui ou clique para escolher
+              </p>
+              <p id="material-dropzone-subtitle" class="mt-1 small-copy text-[#24636c]">
+                Envio automático para o Dropbox (até 25 MB)
+              </p>
+
+              <!-- Barra de Progresso do Upload -->
+              <div id="material-upload-progress-wrap" class="hidden mt-4 bg-[#f7f9f8] h-2 w-full overflow-hidden">
+                <div id="material-upload-bar" class="h-full bg-[#06525c]" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
           <div>
             <label class="field-label">Título do Documento</label>
             <input type="text" name="title" id="material-title-input" required placeholder="Ex: Partitura Completa (PDF)" class="field" />
           </div>
           <div>
             <label class="field-label">Caminho ou URL do Arquivo</label>
-            <input type="text" name="file_url" id="material-file-input" required placeholder="Ex: /materials/teclado/facil/aula1_partitura.pdf" class="field" />
-            <p class="field-hint">Insira o caminho local em /materials ou uma URL completa com https://</p>
+            <input type="text" name="file_url" id="material-file-input" required placeholder="Preenchido automaticamente pelo upload ou cole uma URL https://" class="field" />
+            <p class="field-hint">Ao arrastar um PDF acima, este link é preenchido automaticamente.</p>
           </div>
           <div>
             <label class="field-label">Tipo de Arquivo</label>
@@ -412,7 +466,7 @@
         </div>
         <div class="p-4 px-6 bg-[#ebf0ee] flex justify-end gap-3">
           <button type="button" onclick="closeModal('modal-material')" class="btn btn-ghost btn-sm">Cancelar</button>
-          <button type="submit" class="btn btn-primary btn-sm">Salvar Material</button>
+          <button type="submit" id="material-submit-btn" class="btn btn-primary btn-sm">Salvar Material</button>
         </div>
       </form>
     </div>

@@ -3,6 +3,7 @@
 const { Router } = require('express');
 const prisma = require('../lib/prisma');
 const { isValidLevel, LEVELS } = require('../lib/levels');
+const { getDropboxConfig, exchangeAuthorizationCode, uploadMaterialFile } = require('../lib/dropbox');
 const {
   badRequest,
   notFound,
@@ -270,8 +271,40 @@ router.delete('/lessons/:id', async (req, res) => {
 });
 
 // ==========================================
-// MATERIAIS
+// MATERIAIS & INTEGRAÇÃO DROPBOX
 // ==========================================
+
+router.get('/dropbox/status', (req, res) => {
+  const cfg = getDropboxConfig();
+  res.json({
+    hasAppCredentials: cfg.hasAppCredentials,
+    isConnected: cfg.isConnected,
+    authorizeUrl: cfg.authorizeUrl,
+  });
+});
+
+router.post('/dropbox/connect', async (req, res) => {
+  const result = await exchangeAuthorizationCode(req.body.code);
+  res.json(result);
+});
+
+router.post('/materials/upload', async (req, res) => {
+  const rawName = req.query.filename || req.headers['x-file-name'] || 'material.pdf';
+  const lessonId = req.query.lesson_id ? requireId(req.query.lesson_id, 'Aula') : null;
+  const buffer = Buffer.isBuffer(req.body) ? req.body : null;
+
+  if (!buffer || buffer.length === 0) {
+    throw badRequest('Nenhum arquivo recebido para upload.');
+  }
+
+  const uploaded = await uploadMaterialFile({
+    buffer,
+    originalName: decodeURIComponent(String(rawName)),
+    lessonId,
+  });
+
+  res.status(201).json(uploaded);
+});
 
 router.post('/materials', async (req, res) => {
   const lessonId = requireId(req.body.lesson_id, 'Aula');
